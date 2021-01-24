@@ -1,0 +1,12 @@
+@import 'base';
+
+.p-student-guides {
+	&__container {
+	  padding-bottom: $spacer-y * 5;
+	}
+
+	&__heading {
+	  background-color: $white-color;
+	  border-bottom: solid #b9c2cb 1px;
+	}
+}

@@ -1,0 +1,12 @@
+@import 'base';
+
+.c-session-test {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  bottom: 0;
+  height: 100%;
+  background-color: #fff;
+  z-index: $session-test-zindex;
+}

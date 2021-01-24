@@ -1,0 +1,40 @@
+@import 'base';
+
+.Signup-NonOmaniRules {
+	list-style-type: none;
+	font-family: $neo;
+	counter-reset: nonomani-rules-counter;
+
+	&__item {
+		counter-increment: nonomani-rules-counter;
+		font-size: rem-calc(16px);
+		color: #777d84;
+		line-height: 2.4;
+		position: relative;
+
+		b{ 
+			color: #50555a;
+		}
+
+		&::before {
+			  content: counter(nonomani-rules-counter);
+			  font-weight: bold;
+			  position: absolute;
+			  --size: 27px;
+			  right: calc(-1 * var(--size) - 4px);
+			  line-height: var(--size);
+			  width: var(--size);
+			  height: var(--size);
+			  top: 8px;
+			  color: #003247;
+			  font-size: 13px;
+			  background-color: #e0f6ff;
+			  border-radius: 50%;
+			  text-align: center;
+
+			  @include media-breakpoint-up(md) {
+			  	right: calc(-1 * var(--size) - 50px);
+			  }
+		}
+	}
+}

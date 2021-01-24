@@ -1,0 +1,237 @@
+@import 'base';
+
+.c-session-block {
+  -webkit-perspective: 1000;
+  transform-origin: center;
+
+  &__others {
+    background-color: #f7f8fa;
+    border-bottom: solid #dde1e6 1px;
+
+    &__container {
+      background-color: #f7f8fa;
+      border-top: solid #dde1e6 1px;
+    }
+
+    &-title {
+      color: #50555a;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    &-duration {
+      color: #50555a;
+      font-size: 14px;
+    }
+
+    &-link {
+      color: #50555a;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    &-toggle {
+      background: none;
+      color: #777d84;
+      font-size: 15px;
+      display: block;
+      width: 250px;
+      border: none;
+    }
+  }
+
+&__panel {
+  position: relative;
+  @include clearfix;
+  border-radius: $border-radius;
+  overflow: hidden;
+  background-color: #FFF;
+  font-size: 17px;
+  color: $gray-dark;
+  box-shadow: 0 1px 3px rgba(0,0,0, .12), 0 1px 2px rgba(0,0,0, .24);
+  transition: transform  .3s cubic-bezier(.25, .8, .25, 1);
+  backface-visibility: hidden;
+  &:hover {
+    box-shadow: 0 3px 6px rgba(0,0,0, .16), 0 3px 6px rgba(0,0,0, .23);
+    transform: translate3d(0, 0, 20px);
+  }
+
+  @include media-breakpoint-down(sm) {
+    // padding: .5rem;
+    &.is-past {
+      padding-bottom: 0;
+    }
+  }
+}
+  &__dropdown-menu {
+    margin-top: -3px !important;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 0 5px 5px;
+    border: none;
+  }
+  &__excuse-comment-text {
+    color: $gray;
+    font-size: 15px;
+  }
+  &__excuse-comment {
+    border-top: solid $gray-lighter 1px;
+    background-color: $gray-lightest;
+  }
+  &__excuse-plus {
+    font-size: 30px;
+    line-height: 0;
+    top: 8px;
+    position: relative;
+    left: -8px;
+  }
+  &__excuse-icon {
+        float: left;
+    position: relative;
+    right: 0;
+    top: 4px;
+  }
+  &__dropdown-icon {
+    float: left;
+    top: 8px;
+    position: relative;
+    left: 0;
+  }
+  &__dropdown-item {
+    border-top: solid #50555a 1px;
+    &:hover {
+      background-color: $gray-dark;
+    }
+  }
+&__title {
+  margin-bottom: 0;
+
+  @include media-breakpoint-down(sm) {
+    margin-top: $spacer-y;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 16px;
+  }
+}
+&__description {
+  margin: 0;
+
+  @include media-breakpoint-down(sm) {
+    // margin-top: $spacer-y;
+    font-size: 13px;
+  }
+}
+&__countdown {
+  @include media-breakpoint-down(sm) {
+    padding: 1rem 0;
+    text-align: center;
+    margin-bottom: 0;
+  }
+}
+&__date {
+  @include media-breakpoint-down(sm) {
+    font-size: rem-calc(16px);
+    text-align: center;
+  }
+}
+
+&__recording, &__excuse-button {
+ @include media-breakpoint-down(sm) {
+  width: 50%;
+  position: absolute;
+  font-size: 15px;
+  right: 0;
+  border-radius: 0;
+  bottom: 0;
+
+  &.is-full {
+    width: 110%;
+    text-align: center;
+  }
+ }
+}
+&__excuse-button {
+  margin-left: rem-calc(10px);
+ @include media-breakpoint-down(sm) {
+  left: 0;
+  margin-left: 0;
+  right: auto;
+  }
+}
+&__lessons {
+  margin: 0;
+
+  @include media-breakpoint-down(sm) {
+    margin-top: $spacer-y;
+    font-size: 15px;
+  }
+}
+&__mobile-button {
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    display: block;
+    margin-bottom: $spacer-y;
+  }
+
+  &.has-right {
+      @include media-breakpoint-up(md) {
+        margin-right: $spacer-y;
+      }
+  }
+}
+
+&__icon {
+  margin-top: 5px;
+}
+
+&__running {
+  @include media-breakpoint-down(sm) {
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    border-radius: 0;
+  }
+}
+
+&__indicator {
+  position: relative;
+  display: inline-block;
+
+  &:after {
+    width:6px;
+    height: 6px;
+    background-color: $gray-light;
+    content: ' ';
+    position: absolute;
+    bottom: 5px;
+    right: 4px;
+    border-radius: 100%;
+    display: block;
+  }
+
+  &.is-active {
+    &:after {
+      background-color: $brand-success;
+      animation-name: blink;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: easein;
+
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    top: rem-calc(5px);
+  }
+}
+}
+.no-pos-relative {
+  position: initial;
+}
+@keyframes blink {
+  0% {opacity: 1}
+  50% {opacity: 0}
+  100% {opacity:1}
+}

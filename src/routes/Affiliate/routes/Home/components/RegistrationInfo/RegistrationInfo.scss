@@ -1,0 +1,100 @@
+@import 'base';
+
+.Affiliate-RegistrationInfo {
+	&.is-hidden {
+		pointer-events: none;
+	}
+	&.is-hidden &__content {
+		box-shadow: none;
+		animation: RegInfoAnimateRight 500ms forwards cubic-bezier(0, 1, 0.5, 1);
+	}
+	&.is-hidden &__backdrop {
+		background-color: rgba(#091a1c, .4);
+		animation: RegInfoBackDropOpaqueOut 300ms forwards cubic-bezier(0, 1, 0.5, 1);
+	}
+
+	&__content {
+		box-shadow: 0 0 50px rgba(#091a1c, 0.23), 0 0 50px rgba(#091a1c, 0.46);
+		position: fixed;
+		width: 50%;
+		left: 0;
+		transform: translateX(-100%);
+		background-color: $white-color;
+		z-index: 11;
+		overflow: scroll;
+		top: 0;
+		bottom: 0;
+		animation: RegInfoAnimateLeft 300ms forwards cubic-bezier(0, 1, 0.5, 1);
+	}
+
+	&__backdrop {
+		display: block;
+		position: fixed;
+		z-index: 10;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		animation: RegInfoBackDropOpaque 800ms forwards cubic-bezier(0, 1, 0.5, 1);
+		left: 0;
+		background-color: rgba(#091a1c, 0);
+	}
+
+	&__cancel {
+		position: absolute;
+		border-width: 0;
+		left: 20px;
+		cursor: pointer;
+		top: 40px;
+		background-color: transparent;
+	}
+
+	&__body {
+		font-family: $neo;
+		font-size: rem-calc(14px);
+		color: #777d84;
+
+		b {
+			color: #50555a;
+			font-weight: 700;
+		}
+	}
+
+	hr {
+		border-top: solid #b9c2cb dashed 1px;
+		background-color: transparent;
+	}
+}
+
+@keyframes RegInfoAnimateLeft {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+@keyframes RegInfoAnimateRight {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+@keyframes RegInfoBackDropOpaque {
+	0% {
+		background-color: rgba(#091a1c, 0);
+	}
+	100% {
+		background-color: rgba(#091a1c, .4);
+	}
+}
+
+@keyframes RegInfoBackDropOpaqueOut {
+	0% {
+		background-color: rgba(#091a1c, .4);
+	}
+	100% {
+		background-color: rgba(#091a1c, 0);
+	}
+}

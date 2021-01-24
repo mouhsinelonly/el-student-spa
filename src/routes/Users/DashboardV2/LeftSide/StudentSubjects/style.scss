@@ -1,0 +1,27 @@
+@import 'base';
+
+.v2-ticket-student-subjects {
+  border-bottom: solid $v2-border-color 1px;
+
+  &__title {
+    cursor: pointer;
+    font-size: rem-calc(14px);
+    font-weight: 700;
+    color: $v2-text-light;
+
+    &.is-active {
+      color: $v2-text-dark;
+    }
+  }
+
+  &__item {
+    font-size: rem-calc(13px);
+    color: $v2-text-light;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    &-success {
+      font-size: rem-calc(11px);
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import 'base';
+
+.p-student-profile {
+&__container {
+  min-height: 600px;
+}
+
+&__email-text {
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
+}
+&__face-block {
+  padding-bottom: 200px;
+  margin-top: $spacer-y * 5;
+  position: relative;
+  border-top: solid 1px #b9c2cb;
+}
+&__apps-block {
+  margin-top: $spacer-y * 5;
+  opacity: .5;
+  position: relative;
+  border-top: solid 1px #b9c2cb;
+
+  &__gmail-icon {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+&__right-col {
+  position: relative;
+
+  &::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 1px;
+    background-color: $gray-light;
+    top: 0;
+    display: block;
+  }
+}
+}

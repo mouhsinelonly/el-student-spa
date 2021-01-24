@@ -1,0 +1,13 @@
+.ThesisDraft {
+	&__fh {
+		height: 100%;
+		// position: fixed;
+	}
+	&__img {
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		overflow: hidden;
+		background-color: #dadada;
+	}
+}

@@ -1,0 +1,59 @@
+@import 'base.scss';
+
+.SpecialtyTabs {
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  background-color: #fff;
+
+  @include media-breakpoint-down(xs) {
+    // box-shadow: 0 3px 5px rgba(0,0,0, .12), 0 3px 4px rgba(0,0,0, .24);
+  }
+
+  &__item {
+    display: block;
+    width: 100%;
+    font-size: rem-calc(20px);
+    color: #50555a;
+    border-radius: 0;
+    border: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background-color: transparent;
+    border-bottom: solid transparent 1px;
+
+    border-left: solid #50555a 1px;
+
+    @include media-breakpoint-down(xs) {
+      font-size: rem-calc(16px);
+      padding-left: rem-calc(5px);
+      padding-top: rem-calc(10px);
+      padding-right: rem-calc(5px);
+      padding-bottom: rem-calc(10px);
+    }
+
+    &.is-active {
+      font-weight: 700;
+      color:#990ef0;
+      border-bottom-color: #990ef0;
+      border-bottom-width: 4px;
+    }
+
+    &.is-last {
+      // border-right: #990ef0 solid 1px;
+    }
+
+    &.is-first {
+      border-left-color: #990ef0;
+    }
+  }
+
+  div {
+    &:last-child  {
+      button {
+        border-left-width: 0;
+      }
+    }
+  }
+}

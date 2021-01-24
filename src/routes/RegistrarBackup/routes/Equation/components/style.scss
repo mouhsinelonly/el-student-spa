@@ -1,0 +1,13 @@
+@import "base.scss";
+
+.c-equation {
+&__container {
+	position: relative;
+}
+
+&__cta {
+	position: absolute;
+	top: 70px;
+	left: 20px;
+}
+}

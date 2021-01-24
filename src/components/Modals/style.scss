@@ -1,0 +1,56 @@
+@import "base.scss";
+
+.c-modals {
+&__is-fixed {
+  top: 5%;
+  position: fixed;
+  max-height: 90%;
+  overflow: hidden;
+  border-radius: 5px;
+}
+&__dialog {
+  &.is-fixed {
+    overflow: scroll;
+    max-height: 100%;
+    margin: 0 auto;
+    @include media-breakpoint-down(xs) {
+      width: 96%;
+      margin: 0;
+      right: 2%;
+      top: 50%;
+      margin-top: -35%;
+    }
+  }
+}
+&__content {
+  &.is-fixed {
+    overflow: scroll;
+    height: 100%;
+  }
+}
+&__normal {
+  display: 'block';
+}
+
+&__small {
+  width: 450px;
+}
+
+&__medium {
+  width: 552px;
+}
+
+&__full {
+   width: 80%;
+    margin-top:30%;
+    height: 50%;
+    right:5%;
+
+    @include media-breakpoint-up(md) {
+      width: 80%;
+      margin-top: 50px;
+      height: 80%;
+      right: auto;
+    }
+}
+}

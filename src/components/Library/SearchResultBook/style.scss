@@ -1,0 +1,156 @@
+@import 'base';
+
+.c-library-search-result-book {
+  border-bottom: solid #eff0eb 1px;
+
+  &__title {
+    font-size: 24px;
+    line-height: 1.8;
+    vertical-align: top;
+  }
+
+  &__cover {
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+    }
+  }
+
+  &__more-pages {
+    border-radius: 30px;
+  }
+
+  &__sticky {
+    background-color: $white-color;
+    // z-index: 10;
+  }
+  &__times {
+    color: #50555a;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  &__meta {
+    color: #777d84;
+    font-size: 15px;
+  }
+  &__pages {
+    cursor: pointer;
+    position: relative;
+    // background-color: $white-color;
+    // z-index: 10;
+    &-shadow {
+      background: linear-gradient(to top, #ffffff 0%, transparent 80%);
+      height: 100%;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+    }
+  }
+  &__content {
+    line-height: 1.5;
+    font-family: Adobe;
+    font-size: 22px;
+    margin: 20px 0;
+    border-top: 1px solid #eff0eb;
+
+    span {
+      color: $brand-warning !important;
+    }
+  }
+
+  &__cover-container {
+    position: relative;
+    overflow: hidden;
+    display: block;
+  }
+
+  &__cover-overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: .2;
+  }
+  &__cover-title {
+    width: 70%;
+    right: 15%;
+    font-size: 15px;
+    line-height: 2;
+    text-align: center;
+    top: 100px;
+    position: absolute;
+  }
+
+  &__author-name {
+    font-size: 15px;
+  }
+
+  &__adding-loading {
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  &__padding {
+    padding: 7px 0;
+
+    &.is-gray {
+      color: #777d84;
+    }
+  }
+  &__desc {
+    line-height: 2;
+  }
+  &__download,
+  &__browse,
+  &__add,
+  &__rent {
+    background-color: $white-color;
+    margin-left: 10px;
+
+    @include media-breakpoint-down (sm) {
+      margin: 10px 10px 0 0;
+    }
+  }
+
+  &__download {
+    border-color: $brand-warning;
+    color: $brand-warning;
+
+    &:hover {
+      background-color: $brand-warning;
+      color: $white-color;
+    }
+  }
+  &__browse {
+    border-color: $brand-success;
+    color: $brand-success;
+
+    &:hover {
+      background-color: $brand-success;
+      color: $white-color;
+    }
+  }
+  &__add {
+    border-color: $brand-brown;
+    color: $brand-brown;
+
+    &:hover {
+      background-color: $brand-brown;
+      color: $white-color;
+    }
+  }
+  &__rent {
+    border-color: $brand-purple;
+    color: $brand-purple;
+
+    &:hover,
+    &:disabled {
+      background-color: $brand-purple;
+      border-color: $brand-purple;
+      color: $white-color;
+    }
+  }
+}

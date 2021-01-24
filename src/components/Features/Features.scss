@@ -1,0 +1,78 @@
+@import 'base.scss';
+
+.c-features {
+  padding: 0rem 0;
+
+  &__title {
+    margin-bottom: 5rem;
+    font-size: 18px;
+    color: #777d84;
+    line-height: 1.9;
+  }
+
+  &__item {
+    &__title {
+      color: $brand-info;
+      font-size: 22px;
+
+      &--odd {
+        color: #8372b5;
+      }
+
+      &--cyan {
+        color: #00c6a8;
+      }
+
+      &--blue {
+        color: $brand-info;
+      }
+
+      &--orange {
+        color: $brand-warning;
+      }
+
+      &--purple {
+        color: #8372b5;
+      }
+    }
+
+    &__content {
+      padding: 1.5rem 1.5rem 0;
+      font-size: 16px;
+      line-height: 1.7rem;
+      color: #505558;
+      font-family: 'Helvetica Neue';
+    }
+
+    &__hint {
+      background-color: #fff8d2;
+      color: #787358;
+      padding: 5px;
+    }
+
+    &__more {
+      color: #505359;
+      font-weight: 700;
+      font-size: 16px;
+
+      &:hover {
+        text-decoration: none;
+        color: darken(#3a3a3a, 20);
+      }
+    }
+
+    border-bottom: solid $gray-lighter 1px;
+    padding-bottom: 20px;
+
+    @include media-breakpoint-up(sm) {
+      border-left: solid $gray-lighter 1px;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    &--last {
+      border-left: none;
+      border-bottom: none;
+    }
+  }
+}

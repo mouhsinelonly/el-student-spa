@@ -1,0 +1,51 @@
+@import 'base';
+
+.p-lesson-download {
+
+  &__header {
+    border-bottom: solid #b9c2cb 1px;
+  }
+  &__go-home-link {
+    color: $gray-dark;
+
+    &:hover {
+      color: rgba($gray-dark, .8);
+    }
+  }
+
+  &__action {
+    position: relative;
+    font-size: rem-calc(14px);
+    padding-right: rem-calc(45px);
+
+    &:focus,&:active {
+      color: $gray-dark;
+    }
+
+    &:hover {
+      background-color: $gray-lightest;
+      color: $gray-dark;
+    }
+
+    .icon {
+      position: absolute;
+      top: rem-calc(12px);
+      right: rem-calc(14px);
+    }
+
+    &:after {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: rem-calc(39px);
+        width: 1px;
+        height: 100%;
+        background-color: #dad7e1;
+    }
+
+    &-size {
+      font-size: rem-calc(11px);
+    }
+  }
+}

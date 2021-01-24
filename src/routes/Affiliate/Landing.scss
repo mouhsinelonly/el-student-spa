@@ -1,0 +1,20 @@
+@import 'base';
+
+.affiliate-landing {
+	background-color: #fff;
+
+	&__section {
+		font-family: $neo;
+		font-size: rem-calc(18px);
+		color: #50555a;
+		font-weight: 400;
+		line-height: rem-calc(34px);
+		padding-top: rem-calc(94px);
+	}
+
+	&__list {
+		list-style: none;
+		margin-top: rem-calc(65px);
+		counter-reset: affiliate-rules-counter;
+	}
+}

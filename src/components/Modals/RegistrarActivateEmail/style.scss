@@ -1,0 +1,31 @@
+@import 'base';
+
+.c-registrar-activate-email {
+&__footer {
+  background-color: $gray-lighter;
+
+  a {
+    cursor:pointer;
+    color: $brand-success;
+    text-decoration: underline;
+    position: relative;
+}
+
+  > div {
+    @include media-breakpoint-up(md) {
+      &:first-child {
+        &:after {
+          content:' ';
+          position: absolute;
+          left: 0;
+          top: 10%;
+          height:60%;
+          width:1px;
+          display: block;
+          background-color: $gray-light;
+        }
+      }
+      }
+  }
+}
+}

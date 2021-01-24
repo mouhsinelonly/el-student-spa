@@ -1,0 +1,44 @@
+@import 'base.scss';
+
+.LibraryFolderPage {
+	background-color: #edf0f5;
+	min-height: 100%;
+
+	&__title {
+		color: #4f5357;
+	}
+	
+	&__label {
+		font-size: 12px;
+		color: #4f5357;
+	}
+	&__pages {
+		overflow: hidden;
+	}
+	&__img {
+		height: 200px;
+		cursor: pointer;
+		overflow: hidden;
+	}
+	&__page {
+		position: relative;
+		
+		
+		&:after {
+			content: ' ';
+			background-color: $gray-lighter;
+			position: absolute;
+			z-index: 2;
+			height: 1px;
+			right: 10px;
+			left: 10px;
+			bottom: 0;
+		}
+
+		&:hover {
+			 box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      		color: $gray-dark;
+      		transform: translate3d(0, 0, 20px);
+		}
+	}
+}

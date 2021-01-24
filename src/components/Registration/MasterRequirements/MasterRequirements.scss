@@ -1,0 +1,30 @@
+@import "base.scss";
+
+.MasterRequirements {
+  &__item {
+    min-height: 280px;
+  }
+
+  &__item-title {
+    font-size: 20px;
+    color: #0dc7a9;
+    font-weight: 400;
+    &.is-odd {
+      color: #990ff0;
+    }
+  }
+
+  &__item-desc {
+    color: #777d84;
+    font-size: 16px;
+    line-height: 2;
+  }
+
+  &__note {
+    font-size: 16px;
+    color: #787358;
+    font-weight: 400;
+    border-radius: 4px;
+    background-color: #fff8d2;
+  }
+}

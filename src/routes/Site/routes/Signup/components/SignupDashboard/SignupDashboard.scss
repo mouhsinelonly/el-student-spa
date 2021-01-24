@@ -1,0 +1,63 @@
+@import "base";
+
+.signup-page {
+
+	&__container {
+		padding-bottom: 60px;
+	}
+	&__heading {
+		font-weight: 700;
+		padding-top: 60px;
+		font-size: 40px;
+	}
+
+	&__loading {
+		padding: 100px 0;
+	}
+
+	&__specialities {
+		margin-top: 80px;
+		margin-bottom: 80px;
+	}
+
+	&__button {
+		color: $gray-dark;
+		outline: none;
+
+		&:focus, &:hover, &:active {
+			outline: 0;
+		}
+	}
+
+	&__more-button {
+		padding: 12px 24px 12px 24px;
+		border: 1px solid #cccccc;
+		border-radius: 24px;
+		font-family: $neo;
+		font-size: rem-calc(14px);
+		color: #50555a;
+
+		&:hover, &:focus, &:active {
+			background-color: $white-color;
+			color: $gray-dark;
+		}
+	}
+
+	&__plus,&__minus {
+		vertical-align: middle;
+		display: inline-block;
+		// position: absolute;
+	    // right: 15px;
+	    // top: 0px;
+	    // font-size: 40px;
+	    // font-weight: 100;
+	}
+
+	&__plus {
+	    top: 0px;
+	}
+
+	&__minus {
+	    top: -10px;
+	}
+}

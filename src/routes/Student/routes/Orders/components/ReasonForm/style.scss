@@ -1,0 +1,22 @@
+@import 'base';
+
+.c-order-reason-form {
+  background-color: $white-color;
+  border-radius: $border-radius;
+  overflow: hidden;
+  height: 267px;
+
+  &__title {
+    font-size: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 1.8;
+    height: 84px;
+  }
+
+  &__desc {
+    height: 78px;
+    overflow: hidden;
+    font-size: 15px;
+  }
+}

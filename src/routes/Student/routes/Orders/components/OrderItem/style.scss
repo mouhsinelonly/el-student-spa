@@ -1,0 +1,18 @@
+@import 'base';
+
+.c-student-order-item {
+  background-color: $white-color;
+  border-radius: $border-radius;
+
+  &__title {
+    font-weight: 700;
+  }
+
+  &__meta {
+    background-color: $gray-lightest;
+    border-bottom: solid 1px $gray-lighter;
+    border-top: solid 1px $gray-lighter;
+    color: $gray;
+    font-size: 14px;
+  }
+}

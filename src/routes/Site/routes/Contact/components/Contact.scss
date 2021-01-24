@@ -1,0 +1,70 @@
+@import "base";
+
+.contact-page {
+&__container {
+	padding-bottom: 100px;
+}
+
+&__heading {
+	color:$gray-dark;
+	font-size: 44px;
+	font-weight: 700;
+	padding-top: 80px;
+}
+
+&__description {
+	line-height: 2;
+	margin-bottom: 50px;
+	// margin-top: 20px;
+}
+
+
+&__sidebar {
+
+	@include media-breakpoint-down(xs) {
+		margin-top: 50px;
+	}
+	@include media-breakpoint-up(md) {
+		padding-right: 50px;
+		border-right: solid lighten($gray, 50) 1px;
+	}
+}
+
+&__info-title {
+	color:#696969;
+	font-weight: 700;
+}
+
+&__send-button {
+	padding-left: 50px;
+	padding-right: 50px;
+	margin-top: 20px;
+	font-size: 18px;
+	// font-weight: 700;
+}
+
+&__more-faq {
+	color: $gray;
+	font-size: 17px;
+	font-weight: 700;
+}
+
+&__thank-you {
+	&__title {
+		font-size: 25px;
+	}
+
+	&__text {
+		font-size: 19px;
+		color:#777d84;
+	}
+
+	a {
+		color:#777d84;
+		font-size: 19px;
+		font-family: "Helvetica Neue";
+		text-decoration: underline;
+		cursor: pointer;
+	}
+}
+}

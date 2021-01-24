@@ -1,0 +1,31 @@
+@import 'base';
+
+.c-research-progress {
+  position: fixed;
+  top: 100px;
+  left: 70px;
+  @include media-breakpoint-down(xs) {
+    left: 2px;
+  }
+
+  &__pack {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  &__item {
+    margin: 10px auto;
+    list-style-type: none;
+    display: block;
+    border-radius: 100%;
+    width: 9px;
+    height: 9px;
+    background-color: $gray-light;
+    transition: background-color 300ms;
+    padding: 0;
+    &.is-active {
+      background-color: $brand-success;
+      transition: background-color 300ms;
+    }
+  }
+}

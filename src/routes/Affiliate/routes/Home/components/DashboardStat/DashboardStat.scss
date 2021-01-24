@@ -1,0 +1,50 @@
+@import 'base';
+
+.Affiliate-DashboardStat {
+	background-color: $white-color;
+	border-radius: 3px;
+	border-top: solid #b9c2cb 5px;
+	padding: rem-calc(23px) rem-calc(25px) rem-calc(19px);
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+
+	&__value {
+		direction: ltr;
+		font-weight: 700;
+		font-family: $neo;
+		font-size: rem-calc(28px);
+		color: #344142;
+	}
+
+	&__title {
+		font-family: $neo;
+		font-size: rem-calc(12px);
+		color: #777d84;
+	}
+
+	&__minus {
+		direction: ltr;
+		position: absolute;
+		color: #ef8508;
+		font-family: $neo;
+		margin: 5px 5px;
+		font-weight: 400;
+		font-size: rem-calc(14px);
+	}
+
+	&__hint {
+		display: inline-block;
+		vertical-align: middle;
+		position: absolute;
+
+		&.arrow_drop_up {
+			color: $brand-success;
+			margin-top: -2px;
+		}
+
+		&.info {
+			margin-right: 5px;
+			font-size: rem-calc(16px);
+			color: #b9c2cb;
+		}
+	}
+}

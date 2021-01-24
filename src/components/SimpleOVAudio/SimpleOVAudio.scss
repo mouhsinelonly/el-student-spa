@@ -1,0 +1,16 @@
+.SimpleOVAudio {
+	position: relative;
+	width: 100%;
+	height: 6px;
+	overflow: hidden;
+	border-radius: 5px;
+    margin-bottom: 5px;
+
+	&__volume {
+		border-radius: 5px;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+	}
+}

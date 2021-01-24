@@ -1,0 +1,58 @@
+@import 'base';
+
+.center-chooser {
+  &__centers {
+    border-top: solid $gray-light 1px;
+    background-color: $gray-lighter;
+
+    @include media-breakpoint-down(sm) {
+      padding: 20px !important;
+    }
+    @include media-breakpoint-up(sm) {
+      padding: 120px !important;
+    }
+  }
+  &__edit {
+    font-size: 20px;
+  }
+  &__chosen {
+    border-top: solid $gray-light 1px;
+    background-color: $gray-lighter;
+  }
+
+  &__icon {
+      padding-top: 35px;
+       @include media-breakpoint-down(sm) {
+          min-height: 10px;
+       }
+  }
+  &__item {
+
+    overflow: hidden;
+
+    &-text {
+      overflow: hidden;
+      min-height: 130px;
+
+      &.is-active {
+        background-color: $brand-success;
+        > span ,h5 {
+          color: $white-color;
+        }
+      }
+    }
+    &-button {
+      border-radius: 0 0 5px 5px;
+    }
+    &-title {
+      font-size: 15px;
+      color: $gray-dark;
+      font-weight: 700;
+    }
+
+    &-meta {
+      font-size: 15px;
+      color: $gray-light;
+    }
+  }
+}

@@ -1,0 +1,164 @@
+@import 'base';
+
+.c-video-confirm-availability {
+
+  &__loader {
+    background-color: #fff;
+    border-radius: 5px;
+  }
+
+  &__dot {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: $brand-success;
+  }
+
+  &__container {
+    position: fixed;
+    border-radius: 5px;
+    z-index: $video-confirm-available-z-index;
+    bottom: 20px;
+    // padding: 5px;
+    right: 10px;
+    animation: slideUp 2s;
+    @include media-breakpoint-down(xs) {
+        left: 10px;
+    }
+    // box-shadow: rgba(0,0,0, .3) 0 0 5px;
+    cursor: pointer;
+    color: $gray-dark;
+    background-color: $white-color;
+  }
+
+  &__grademessage {
+    position: absolute;
+    left: 20px;
+    z-index: 999;
+    bottom: 40px;
+    padding: 10px;
+  }
+
+  &__bar {
+    text-shadow: rgba(0, 0, 0, 0.3) 1px 1px 0px;
+    text-align: left;
+    color: $white-color;
+    width:0;
+    height: 100%;
+    transition: width 300ms;
+    // border-left: #242627 solid 2px;
+    background-color: $brand-danger;
+  }
+
+  &__seek {
+    text-shadow: rgba(0, 0, 0, 0.3) 1px 1px 0px;
+    text-align: left;
+    color: $white-color;
+    width:0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: width 300ms;
+    background-color: $brand-success;
+  }
+
+  &__overlay {
+    display:block;
+    z-index: $video-confirm-bar-z-index;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: transparent;
+    bottom: 0;
+    right: 0;
+    }
+
+  &__bar-outer {
+    display:block;
+    z-index: $video-confirm-bar-z-index;
+    height: 15px;
+    width: 100%;
+    position: absolute;
+    background-color: rgba($gray-dark, .7);
+    bottom: 0;
+    right: 0;
+
+    &:before {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 50px;
+      content: " "
+    }
+  }
+
+
+  &__duration, &__seconds {
+    font-size: 11px;
+    position: relative;
+    top: -13px;
+    color: $white-color;
+  }
+
+  &__duration {
+    position: absolute;
+    left: 2px;
+    color: #fff;
+    top: 0;
+    bottom: 2px;
+  }
+  &__timer {
+    font-weight: 700;
+    color: $brand-danger;
+  }
+}
+
+@keyframes slideUp {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  from {
+    opacity: 0;
+    transform: translate3d(0, 3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(0, -20px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, 10px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, -5px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animated-background {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: linear-gradient(to right, #eeeeee 8%, $brand-danger 18%, #eeeeee 33%);
+    background-size: 852px 172px;
+}
+.animated-blink {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: blink;
+    animation-timing-function: linear;
+}

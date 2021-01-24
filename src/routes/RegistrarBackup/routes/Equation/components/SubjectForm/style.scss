@@ -1,0 +1,19 @@
+@import "base";
+
+.c-reg-equ-subject-form {
+&__panel {
+	border:solid $gray-light 2px;
+	box-shadow: rgba($gray, .3) 0 3px 19px;
+	border-radius: 5px;
+	overflow: hidden;
+	background-color: #FFF;
+
+	img {
+		width: 100%;
+	}
+}
+
+&__footer {
+	border-top: solid #dad7e1 2px;
+}
+}

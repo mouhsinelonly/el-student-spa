@@ -1,0 +1,11 @@
+@import "base.scss";
+
+.c-reg-eqution-list {
+&__list-item {
+	background-color: #FFF;
+	border:solid $gray-light 2px;
+	border-radius: $border-radius;
+	list-style-type: none;
+	box-shadow: rgba($gray ,.3) 0 2px 4px;
+}
+}

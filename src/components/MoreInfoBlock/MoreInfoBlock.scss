@@ -1,0 +1,27 @@
+@import 'base';
+
+.c-moreinfo {
+&__container {
+
+	color:#fff;
+	font-weight: 700;
+	border:solid $gray-lighter 1px;
+	margin-bottom: 30px;
+	border-radius:5px;
+	overflow: hidden;
+	background: url('../../static/img/hero.jpg') top right;
+}
+
+&__content {
+	padding: 50px;
+	color:#fff;
+	font-size: 28px;
+	background-color: rgba($brand-primary, .8);
+	margin: 0;
+}
+
+&__footer {
+	padding: 20px 30px;
+	background-color: #FFF;
+}
+}

@@ -1,0 +1,11 @@
+@import 'base';
+
+.registration-fees-modal {
+  &__text {
+    line-height: 1.6;
+  }
+
+  &__loading {
+    display: inline-block;
+  }
+}

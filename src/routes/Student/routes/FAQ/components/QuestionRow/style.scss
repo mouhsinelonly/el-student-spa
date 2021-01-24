@@ -1,0 +1,10 @@
+@import 'base';
+
+.c-question-row {
+  display: block;
+
+  &__title {
+    color: #777d84;
+    font-size: 16px;
+  }
+}

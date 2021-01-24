@@ -1,0 +1,37 @@
+@import 'base';
+
+.c-library-search-switch {
+  color: #6e5340;
+
+  &__radiolabel {
+    background-color: $white-color;
+    color: $library-primary;
+    margin: 0 10px 0 0;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 400ms, border-color 400ms, color 400ms;
+    padding: 7px 10px;
+    font-size: 16px;
+    border-radius: 30px;
+    border: solid $library-border-color 1px;
+
+    input {
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      opacity: 0;
+    }
+    &.is-first {
+      margin-right: 0;
+    }
+
+    &.is-checked {
+      border: solid $library-primary 1px;
+      background-color: $library-primary;
+      color: $white-color;
+    }
+  }
+}

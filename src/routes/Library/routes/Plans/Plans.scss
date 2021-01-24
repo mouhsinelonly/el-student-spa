@@ -1,0 +1,41 @@
+@import 'base';
+
+.p-lib-plans {
+  min-height: 100%;
+  &__blur-bg {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #eff0eb;
+    filter: blur(10px);
+    mix-blend-mode: normal;
+    opacity: .4;
+
+    &__left, &__right {
+      margin-top: -102px;
+       position: absolute;
+      top: 30%;
+    }
+    &__left {
+      left: 0px;
+    }
+
+    &__right {
+      right: 0px;
+    }
+  }
+
+  &__content {
+    z-index: 2;
+    position: relative;
+    font-family: $neo;
+  }
+
+  &__title {
+    font-size: rem-calc(24px);
+    color: #382f2a;
+  }
+}

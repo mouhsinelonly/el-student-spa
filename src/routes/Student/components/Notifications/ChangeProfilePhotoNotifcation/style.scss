@@ -1,0 +1,21 @@
+@import 'base';
+
+.notification-examappupdate {
+  background-color: #fcf0b9;
+  font-size: 17px;
+  color: #8e8154;
+
+  &__guide {
+    background-color: #8e8154;
+    border-color: #8e8154;
+
+    &:hover {
+      background-color: darken(#8e8154, 10);
+      border-color: darken(#8e8154, 10);
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
+  }
+}

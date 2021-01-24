@@ -1,0 +1,22 @@
+[ignore]
+..*/node_modules/editions/es2015/.*
+..*/node_modules/serviceworker-webpack-plugin/.*
+..*/node_modules/react-motion/lib/.*
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+module.name_mapper.extension='css' -> '<PROJECT_ROOT>/flow/CSSModule.js.flow'
+module.name_mapper.extension='scss' -> '<PROJECT_ROOT>/flow/CSSModule.js.flow'
+module.name_mapper.extension='png' -> '<PROJECT_ROOT>/flow/WebpackAsset.js.flow'
+module.name_mapper.extension='jpg' -> '<PROJECT_ROOT>/flow/WebpackAsset.js.flow'
+esproposal.class_static_fields=enable
+module.system.node.resolve_dirname=src
+module.system.node.resolve_dirname=node_modules
+esproposal.class_instance_fields=enable
+suppress_comment=\\(.\\|\n\\)*\\$FlowFixMe
+suppress_comment=\\(.\\|\n\\)*\\$FlowIssue

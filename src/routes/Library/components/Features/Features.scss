@@ -1,0 +1,17 @@
+@import 'base';
+
+.c-library-description {
+  &__title {
+    font-size: rem-calc(20px);
+    color: $lib-primary;
+    font-weight: 700;
+
+    &.is-odd {
+      color: $lib-secondary;
+    }
+  }
+
+  &__desc {
+    color: $lib-primary;
+  }
+}

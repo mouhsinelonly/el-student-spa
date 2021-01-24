@@ -1,0 +1,64 @@
+@import "base";
+$chatbox-width: 353px;
+.chatbox {
+	position: fixed;
+	top: 0;
+	right: 0;
+	padding-bottom: 30px;
+	transition: transform 300ms;
+	z-index: $chatbox-zindex;
+	width: $chatbox-width;
+	height: 100%;
+	border-left: solid $gray-light 2px;
+	background-color: #f5f5f5;
+	transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(.2,.5,.3,1);
+	transform: translateX($chatbox-width + 20);
+	// padding: 50px;
+
+	@include media-breakpoint-down(sm) {
+		width: 100%;
+		box-shadow: none;
+		transform: translateX(100%);
+	}
+	&.is-open {
+		transform: translateX(0);
+		border-left-width: 0;
+	}
+
+	&__header {
+		border-bottom: solid #cbcbcb 1px;
+		background-color: $white-color;
+		padding:20px 0;
+		color:#a2a2a2;
+		font-size: 18px;
+	}
+
+	&__close {
+		position: absolute;
+		left: 10px;
+		top: 10px;
+		background-color: transparent;
+		border-radius:100%;
+		width: 40px;
+		padding:10px 0 0;
+		outline:0;
+		cursor: pointer;
+		height: 40px;
+		font-size: 32px;
+		line-height: .5;
+		border:none;
+		color: $gray-dark;
+
+		&:hover {
+			color: $brand-info;
+		}
+
+	}
+
+	&__pointer {
+		cursor: pointer;
+		color: $gray-dark;
+	}
+}

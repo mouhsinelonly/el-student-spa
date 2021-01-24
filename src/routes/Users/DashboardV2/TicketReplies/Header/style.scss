@@ -1,0 +1,72 @@
+@import 'base';
+
+.v2-ticket-replies-header {
+  padding: rem-calc(10px);
+  position: relative;
+  background-color: $white-color;
+  border-bottom: 1px solid #e5e5e5;
+  box-shadow: rgba(#8c9d80, .5) 0 0 2px;
+  @include media-breakpoint-down(md) {
+    padding-right: rem-calc(35px);
+  }
+  @include media-breakpoint-up(md) {
+    height: rem-calc(52px);
+  }
+
+  .material-icons {
+    vertical-align: middle;
+    top: -2px;
+    position: relative;
+  }
+
+  &__menu {
+    background: transparent;
+    border: none;
+    position: fixed;
+    top: rem-calc(50px);
+    right: 0;
+
+    &.is-left {
+      left: 0;
+      right: auto;
+    }
+  }
+  &__action {
+    position: relative;
+    @include media-breakpoint-up(sm) {
+      width: 25%;
+    }
+    &:disabled {
+      background-color: transparent;
+      color: #dfdfdf;
+      &:hover {
+        color: #dfdfdf;
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      float: none !important;
+    }
+    color: #858c9d;
+    display: inline-block;
+    border: none;
+    background-color: $white-color;
+
+    &:hover {
+      color: #3d4d71;
+    }
+    &.is-right {
+      @include media-breakpoint-up(sm) {
+        width: 50%;
+      }
+    }
+
+    select {
+      outline: none;
+      background-color: #fff;
+      border: none;
+      height: 35px;
+      max-width: rem-calc(200px);
+      -webkit-appearance: none;
+    }
+  }
+}

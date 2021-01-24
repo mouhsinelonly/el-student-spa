@@ -1,0 +1,93 @@
+@import 'base';
+
+.user2-dashboard {
+  background-color: #edf0f6;
+  height: calc(100% - 40px);
+  overflow: hidden;
+  &__side,
+  &__middle {
+    height: 100%;
+    overflow: hidden;
+  }
+  &__middle {
+    @include media-breakpoint-up(md) {
+      width: 54%;
+    }
+  }
+  &__loading {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  &__side {
+    background-color: $white-color;
+    border: solid $v2-border-color 0;
+    @include media-breakpoint-up(md) {
+      width: 23%;
+    }
+
+    &.is-menu {
+      @include media-breakpoint-down(sm) {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          border: none;
+          height: 100%;
+          z-index: 10;
+          transform: translateX(100%);
+          box-shadow: none;
+          transition: transform 300ms;
+      }
+    }
+    &.is-left-menu {
+      @include media-breakpoint-down(sm) {
+          transform: translateX(-100%);
+      }
+    }
+    &.is-visible {
+      @include media-breakpoint-down(sm) {
+          transform: translateX(0%);
+          box-shadow: #00000026 0 0 10px;
+      }
+    }
+    &.is-border-left {
+      border-left-width: 1px;
+    }
+    // &.no-user {
+    //   width: 0;
+    //   visibility: hidden;
+    // }
+    &-studentdata {
+      height: 100%;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      // border-radius: 3px;
+        // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 3px;
+        background-color: rgba(0,0,0,.2);
+    }
+      // height: calc(100% - 217px) !important;
+      transform-origin: 0 50%;
+      transition: transform 300ms;
+
+      &.is-hidden {
+        transform: translateX(-100%);
+      }
+    }
+
+    &.is-border-right {
+      border-right-width: 1px;
+    }
+
+    &.is-table {
+      display: table;
+    }
+  }
+}

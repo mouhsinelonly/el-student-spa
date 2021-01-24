@@ -1,0 +1,64 @@
+@import 'base';
+
+.c-exam-row-complaint-element {
+  overflow: hidden;
+  cursor: default;
+  transition: box-shadow 300ms, transform 300ms;
+  border-top: solid $gray-light 1px;
+  color: $gray-dark;
+
+  &.can-checked {
+    cursor: pointer;
+
+    &:hover {
+       box-shadow: rgba(#000000, .1) 0 1px 1px;
+      transform: scale(1.01);
+    }
+  }
+  &.is-checked {
+    box-shadow: rgba(#000000, .1) 0 1px 1px;
+    transform: scale(1.01);
+  }
+  &__original-grade {
+    color: $gray;
+    position: relative;
+    margin-right: -30px;
+    font-weight: 100;
+  }
+  &__grade-container {
+    cursor: pointer;
+    position: unset;
+    .c-grade-info {
+      width: 200px;
+      border-radius: 5px;
+      font-size: 13px;
+      padding: 10px;
+      font-weight: 100;
+      color: gray;
+      background-color: $white-color;
+      border: solid $white-color 1px;
+      position: absolute;
+      z-index: 999;
+      margin-top: -95px;
+      margin-right: -100px;
+      display: none;
+
+      >div:first-child {
+        border-left: solid $gray-light 1px;
+      }
+    }
+    &:hover {
+      .c-grade-info {
+        display: block;
+      }
+    }
+
+    .material-icons {
+      font-size: 22px;
+      margin-left: 5px;
+      margin-top: -1px;
+      vertical-align: middle;
+      color: $brand-info;
+    }
+  }
+}

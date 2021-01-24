@@ -1,0 +1,50 @@
+@import 'base';
+
+.SiminarSession {
+	border-top: solid 4px;
+	overflow: hidden;
+
+	&.is-future {
+		border-top-color: $brand-info;
+	}
+	&.is-live {
+		border-top-color: $brand-success;
+	}
+	
+	&__heading {
+		font-size: 18px;
+	}
+	
+	&__icon {
+		position: absolute;
+		font-size: 100px;
+		right: 80px;
+		top: 80px;
+		opacity: .1;
+	}
+	&.is-future &__heading {
+		color: #00567a;
+
+	}
+	&.is-future &__time {
+		color: $brand-info;
+	}
+
+	&__footer {
+		display: block;
+		border-top: lighten($brand-info, 40) 1px solid;
+		background-color: lighten($brand-info, 50);
+		color: darken($brand-info, 10);
+		font-size: 14px;
+	}
+
+	&.is-live &__footer {
+		background-color: $brand-success;
+		border-top-color: lighten($brand-success, 40);
+		color: white;
+
+		&:hover {
+			background-color: lighten($brand-success, 20);
+		}
+	}
+}

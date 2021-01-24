@@ -1,0 +1,51 @@
+@import "base.scss";
+
+.c-studnet-lesson-elements {
+  @include media-breakpoint-up(sm) {
+    padding-right: rem-calc(10px);
+  }
+&__heading {
+  font-size: 20px;
+  font-weight: 700;
+}
+  &__download {
+    &:hover, &:focus {
+      background-color: $brand-success;
+      color: $white-color;
+      border-color: $brand-success;
+    }
+  }
+&__intro-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color:#777d84;
+}
+
+&__meta-info {
+  border-top: solid #b9c2cb 2px;
+  @include clearfix;
+  border-bottom: solid #b9c2cb 2px;
+
+  > div {
+    position: relative;
+
+    &:after {
+      content: ' ';
+      position: absolute;
+      left: 20px;
+      background-color: #b9c2cb;
+      height:70%;
+      top:15%;
+      width: 1px;
+      display: block;
+    }
+
+    &:last-child {
+      &:after {
+        display: none;
+        visibility: hidden;
+      }
+    }
+  }
+}
+}

@@ -1,0 +1,53 @@
+@import 'base';
+
+.c-activity-block {
+  position: relative;
+
+  &__dates ,&__actions ,&__content {
+    min-height: 125px;
+  }
+  &__content, &__dates {
+    box-shadow: $gray-lighter -1px 0 0 0;
+  }
+  &__content {
+    padding-right: 80px;
+  }
+
+  &__grade {
+    font-size: 25px;
+    font-weight: 700;
+  }
+  &__title {
+    font-size: 20px;
+    color: $gray-dark;
+  }
+
+  &__icon {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+  }
+
+  &__dates {
+    color: #777d84;
+    font-size: 15px;
+  }
+
+  &__actions-meta {
+    color: #777d84;
+    font-size: 15px;
+  }
+
+  &__notes {
+    border-top: solid $gray-lighter 1px;
+
+    &-title {
+      font-size: 16px;
+    }
+    &-text {
+      color: #777d84;
+      font-size: 15px;
+      line-height: 2;
+    }
+  }
+}

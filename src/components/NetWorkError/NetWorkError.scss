@@ -1,0 +1,18 @@
+@import "base.scss";
+
+.network-error-container {
+	margin:0;
+	border-radius:0;
+	position:fixed;
+	bottom:0;
+	left:0;
+	width:100%;
+	border:0;
+	background-color: $brand-danger;
+	color: $white-color;
+
+	padding:20px 0;
+	font-size: 20px;
+	z-index: $network-error-z-index;
+	// @include slideInUp($delay:0s, $duration:.5s);
+}

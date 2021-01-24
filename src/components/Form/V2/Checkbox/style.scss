@@ -1,0 +1,54 @@
+@import 'base';
+$bg-color: #f7f8fa;
+$border-color: #dad7e1;
+$text-color: #777d84;
+
+.input-checkbox-v2 {
+  margin: rem-calc(2px);
+  background-color: $bg-color;
+  border: solid $border-color 1px;
+  border-radius: rem-calc(4px);
+  color: $text-color;
+  min-width: rem-calc(160px);
+  font-size: rem-calc(24px);
+  padding: rem-calc(2px) rem-calc(20px);
+  position: relative;
+  font-family: Adobe;
+  padding-left: rem-calc(40px);
+
+  input {
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  &:hover:not(.is-checked) {
+    border-color: $brand-success;
+    background-color: $white-color;
+  }
+
+  &.is-checked {
+    border-color: $brand-success;
+    background-color: $brand-success;
+    color: $white-color;
+  }
+
+  &.is-checked &__checkbox {
+    background-position: $icon-checkbox-gray-checked-offset-x $icon-checkbox-gray-checked-offset-y;
+  }
+
+  &:hover:not(.is-checked) &__checkbox {
+    background-position: $icon-checkbox-gray-hover-offset-x $icon-checkbox-gray-hover-offset-y;
+  }
+
+  &__checkbox {
+    position: absolute;
+    left: rem-calc(15px);
+    top: rem-calc(12px);
+  }
+}

@@ -1,0 +1,44 @@
+@import 'base';
+
+.v2-tickets-tabs {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  .badge {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    color: #fff;
+    font-size: 11px;
+    background: #ce4a4a;
+    line-height: 1;
+    pointer-events: none;
+    pointer-events: none;
+    padding: 3px 3px 1px;
+    border-radius: 3px;
+    box-shadow: #0000004f 0 1px 0 0;
+  }
+  &__item {
+    cursor: pointer;
+    position: relative;
+    background-color: #e1e6ee;
+    border-bottom: solid $v2-border-color 1px;
+    box-shadow: $v2-border-color inset 1px 0 0;
+    color: #97a0b4;
+    display: inline-block;
+    font-size: rem-calc(16px);
+    font-weight: 700;
+    width: 50%;
+
+    &.is-active {
+      background-color: $white-color;
+      border-bottom-color: transparent;
+      color: #3d4d71;
+      font-weight: 700;
+    }
+
+    &:last-child {
+      box-shadow: none;
+    }
+  }
+}

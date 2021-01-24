@@ -1,0 +1,248 @@
+@import 'base';
+
+.c-classroom-chooser {
+  &__panel {
+    background-color: $gray-lightest;
+    overflow: hidden;
+    border-radius: $border-radius;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    &:hover {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
+
+    &__head {
+      background-color: #fff;
+      border-bottom: solid $gray-light 1px;
+      &__title {
+        color: $gray-dark;
+        font-size: 20px;
+        margin: 0;
+      }
+
+      &__subheading {
+        font-size: 15px;
+        color: #777d84;
+      }
+    }
+
+    &__footer {
+      position: relative;
+
+      border-top: solid #e4e2e9 1px;
+
+      &__goback {
+        top: 50%;
+        margin-top: -(25/2)+px;
+        position: absolute;
+        right: $spacer * 2;
+        border-bottom: solid $gray-light 1px;
+        color: $gray-light;
+
+        &.is-active {
+          color: $gray-dark;
+          border-bottom-color: $gray-dark;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &__choice {
+    box-shadow: rgba(#000, 0.2) 0 1px 3px;
+    background-color: #f7f8fa;
+    border-radius: 5px;
+    overflow: hidden;
+    color: #b9c2cb;
+    position: relative;
+    margin-bottom: $spacer-y * 3;
+
+    &__loading {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding-top: 60px;
+      border-radius: 5px;
+      z-index: 3;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($gray-dark, 0.5);
+    }
+    &__title {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    &__header {
+      padding-top: $spacer * 3;
+      height: 140px;
+
+      &.is-active {
+        padding-top: $spacer * 1.5;
+      }
+
+      &.is-disabled {
+        color: $white-color;
+        background-color: #a5b3ad;
+      }
+    }
+
+    &.is-active {
+      color: $gray-dark;
+      background-color: #fff;
+    }
+
+    &.is-disabled {
+      background-color: #a5b3ad;
+    }
+
+    &.is-chosen {
+      color: #fff;
+      background-color: $brand-success;
+    }
+
+    &__footer {
+      padding: 16px 0;
+      font-size: 16px;
+      border-top: solid $gray-lighter 1px;
+      &.is-active,
+      .is-chosen {
+        cursor: pointer;
+        background-color: $brand-success;
+        border-top-color: darken($brand-success, 5);
+        color: #fff;
+      }
+
+      &.is-disabled {
+        border-top-color: darken(#a5b3ad, 10);
+        background-color: #a5b3ad;
+        cursor: default;
+      }
+    }
+    &__remaining {
+      font-size: 15px;
+      color: $gray-light;
+    }
+  }
+
+  &__left-bar {
+    position: relative;
+
+    &:after {
+      @include media-breakpoint-up(md) {
+        position: absolute;
+        height: 80%;
+        width: 1px;
+        background-color: #b9c2cb;
+        left: $spacer-x;
+        top: 10%;
+        content: ' ';
+      }
+    }
+  }
+
+  &__cta {
+    position: absolute;
+    left: $spacer-x;
+    top: 0;
+  }
+  &__indicator {
+    position: relative;
+    display: inline-block;
+
+    &:after {
+      width: 16px;
+      height: 16px;
+      background-color: $gray-light;
+      content: ' ';
+      position: absolute;
+      bottom: 14px;
+      right: 12px;
+      border-radius: 100%;
+      display: block;
+    }
+
+    &.is-active {
+      &:after {
+        background-color: $brand-success;
+        animation-name: blink;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: easein;
+      }
+    }
+  }
+
+  // for chosen classroom
+  &__chosen-classroom {
+    background-color: #fff;
+    box-shadow: rgba(#000, 0.25) 0 1px 4px;
+    border-radius: $border-radius;
+    height: 115px;
+    overflow: hidden;
+
+    &__title {
+      font-size: 18px;
+      color: $gray-dark;
+      font-weight: 700;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &__cta {
+      background-color: #fff;
+      color: $gray-dark;
+      border-radius: 0;
+      margin-top: 5px;
+      border-top: solid $gray-light 1px;
+      transition: background-color 300ms, border-top-color 200ms, color 300ms;
+
+      &:hover {
+        background-color: $brand-success;
+        color: #fff;
+        border-top-color: $brand-success;
+      }
+    }
+  }
+  // for chosen classroom
+
+  // for edit notification
+  &__notification {
+    border-radius: $border-radius;
+    background-color: #fff;
+    box-shadow: rgba(#000, 0.2) 0 1px 3px;
+
+    &__icon {
+      transform: scale(0.8);
+    }
+    &__title {
+      font-size: 17px;
+    }
+
+    &__end {
+      padding-top: 9px;
+    }
+
+    &__cta {
+      color: $gray;
+      margin-top: 8px;
+      display: inline-block;
+      padding-bottom: 2px;
+      cursor: pointer;
+      border-bottom: solid $gray-light 1px;
+    }
+  }
+}
+//  end edit norification
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

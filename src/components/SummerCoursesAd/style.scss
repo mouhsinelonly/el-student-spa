@@ -1,0 +1,81 @@
+@import 'base.scss';
+
+.SummerCoursesAd {
+	position: relative;
+	// background-color: #069ee1;
+	background-color: #065B84;
+	display: block;
+	padding: rem-calc(30px) rem-calc(20px);
+	color: #fff;
+	padding-right: rem-calc(200px);
+	border-radius: rem-calc(6px);
+	transition: color 400ms;
+	@include media-breakpoint-down(xs) {
+		padding-right: rem-calc(150px);
+	}
+	
+	&__cont {
+		-webkit-perspective: 1000;
+  transform-origin: center;
+	}
+	transition: transform  .3s cubic-bezier(.25, .8, .25, 1);
+  	backface-visibility: hidden;
+
+
+	&__play {
+		position: absolute;
+		top: -53px;
+    left: -73px;
+    z-index: 4;
+	}
+
+	&:hover {
+		color: lighten(#069ee1, 40);
+		transform: translate3d(0, 0, 20px);
+	}
+	&__icon {
+		position: absolute;
+		right: 50px;
+		bottom: 25px;
+
+		@include media-breakpoint-down(xs) {
+			right: 10px;
+		}
+	}
+	&__box {
+		&__1, &__2, &__3 {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		}
+		&__1 {
+			z-index: 3;
+			width: 118px;
+			height: 76px;
+			display: block;
+			border-radius: 6px;
+			background-color: #ffffff;
+			background-size: cover;
+		}
+
+		&__2 {
+			top: -90px;
+			margin-right: 12px;
+			z-index: 2;
+			width: 93px;
+			height: 105px;
+			border-radius: 6px;
+			background-color: #d9f0ff;
+			background-size: cover;
+		}
+		&__3 {
+			z-index: 1;
+			width: 62px;
+			right: 28px;
+			bottom: -25px;
+			height: 38px;
+			background-color: #b5d9f7;
+			background-size: cover;
+		}
+	}
+}

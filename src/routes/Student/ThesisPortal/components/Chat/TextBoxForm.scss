@@ -1,0 +1,10 @@
+.TextBoxForm{
+	width: 100%;
+	border-top: solid #c3cad6 2px;
+  &__input {
+  	width: 100%;
+  	border-radius: 0;
+  	resize: none;
+  	border-width: 0
+  }
+}

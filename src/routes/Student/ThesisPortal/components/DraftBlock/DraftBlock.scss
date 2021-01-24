@@ -1,0 +1,74 @@
+@import 'base';
+
+.ThesisPortal__draft {
+	overflow: hidden;
+
+	&-footer {
+		border-top: #e0e0e0 solid 1px;
+	background-color: #f7f8fa;
+	font-size: 14px;
+	}
+	&-labels {
+		font-size: 12px;
+	}
+	&-button {
+		border-width: 0;
+		padding: 5px 8px;
+		float: left;
+		top: -4px;
+		position: relative;
+		border-radius: 4px;
+		background-color: #50555a;
+		font-size: 14px;
+		color: #ffffff;
+
+		&.is-last {
+			background-color: #ef8508;
+		}
+	}
+	&-header {	
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+	}
+
+	&-word {
+		background-color: #e0f6ff;
+		border-radius: 5px;
+		padding: 5px 20px;
+	}
+	&-label {
+		display: inline-block;
+		font-weight: 100;
+		padding: 2px 8px 8px;
+		border-radius: 4px;
+		background-color: #e0f6ff;
+		font-size: 14px;
+		color: #009ee0;
+		text-align: center;
+
+		&.is-approval {
+			background-color: #c7ffc7;
+			color: #04a979;
+		}
+	}
+	&-notification {
+		font-size: 14px;
+		border-bottom: #e0e0e0 solid 1px;
+		height: 54px;
+
+		&.is-last {
+			border-bottom-color: #fff5c7;
+			background-color: #fff5c7;
+			color: #ef8508;
+		}
+
+		&.is-success {
+			color: #04a979;
+			border-bottom-color: #c7ffc7;
+			background-color: #c7ffc7;
+		}
+	}
+}

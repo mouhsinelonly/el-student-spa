@@ -1,0 +1,9 @@
+@import 'base.scss';
+
+.c-student-event-row {
+  border-top: solid $gray-light 1px;
+
+  td {
+    border-bottom-width: 0;
+  }
+}

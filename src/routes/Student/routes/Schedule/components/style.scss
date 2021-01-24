@@ -1,0 +1,24 @@
+@import 'base';
+
+.p-student-schedule {
+  &__header {
+    background-color: $white-color;
+    border-bottom: solid #b9c2cb 1px;
+  }
+
+  &__title {
+    font-size: 22px;
+  }
+
+  &__table {
+    border-collapse: collapse;
+  }
+
+  &__timeline {
+    &-header {
+      font-size: 20px;
+      font-weight: 700;
+      color: #50555a;
+    }
+  }
+}

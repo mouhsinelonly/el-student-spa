@@ -1,0 +1,18 @@
+@import 'base';
+
+.c-library-footer-categories {
+
+  &__header {
+    font-size: rem-calc(24px);
+    color: #50555a;
+  }
+
+  &__items {
+    padding: 0;
+  }
+  &__item {
+    cursor: pointer;
+    list-style-type: none;
+    font-size: 16px;
+  }
+}

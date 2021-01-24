@@ -1,0 +1,29 @@
+@import 'base';
+
+.c-choose-classroom-modal {
+&__icon {
+  margin-top: 5px;
+  transform: scale(.77);
+}
+
+&__indicator {
+  position: relative;
+  display: inline-block;
+
+  &__arrow {
+    position: absolute;
+    bottom: 7px;
+    right: 5px;
+    animation-iteration-count: infinite;
+    animation-name: move_me;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+  }
+}
+}
+
+@keyframes move_me {
+  0% {bottom: 12px; right: 10px; transform: scale(.8)}
+  25%, 75% {bottom: 7px; right: 5px; transform: scale(1)}
+  100% {bottom: 12px; right: 10px;transform: scale(.8)}
+}

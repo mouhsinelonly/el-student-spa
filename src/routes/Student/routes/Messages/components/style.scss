@@ -1,0 +1,18 @@
+@import 'base';
+
+.p-student-messages {
+&__container {
+  padding-bottom: $spacer-y * 5;
+}
+&__list {
+  table {
+    width: 100% !important;
+  }
+}
+&__heading {
+  color: $gray-dark;
+  font-size: 32px;
+  font-weight: 700;
+  padding: $spacer-y * 4 0;
+}
+}

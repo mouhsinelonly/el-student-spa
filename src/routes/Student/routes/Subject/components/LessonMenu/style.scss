@@ -1,0 +1,163 @@
+@import 'base.scss';
+
+
+.c-student-lesson-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  @include media-breakpoint-up(sm) {
+    border-left: solid #bfc7d0 1px;
+  }
+    &__item {
+    cursor: pointer;
+    position: relative;
+    height: 68px;
+    display: block;
+    padding-top: $spacer;
+    // transition: background-color 300ms, box-shadow .5s;
+    &__icon {
+      position: absolute;
+      right: 9px;
+      top: 50%;
+      color: #b9c2cb;
+      margin-top: -10px;
+      z-index: 9;
+    }
+    &__watched {
+      position: absolute;
+      left: 10px;
+      top: 24px;
+    }
+
+    &__title {
+      font-size: 16px;
+      color: #50555a;
+      pointer-events: none;
+      // margin-top: 5px;
+    }
+
+    &__subtitle {
+      font-size: 14px;
+      border-bottom: solid #bfc7d0 1px;
+      padding-bottom: $spacer * 1 ;
+      pointer-events: none;
+      margin: 0;
+      color: #777d84;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      width: 80%;
+      left: 0;
+    }
+
+    &:first-child {
+      &:before {
+        top: 50%;
+      }
+
+      &:after {
+        background-color: $gray-dark;
+        border-width: 0;
+      }
+    }
+
+    &:before {
+      content: ' ';
+      position: absolute;
+      right: 20px;
+      top:0;
+      width: 1px;
+      border-right: solid #bfc7d0 1px;
+      display: block;
+      height: 100%;
+    }
+  path {
+    fill: $gray-light;
+  }
+  &.is-active {
+    background-color: #FFF !important;
+    box-shadow: 0 1px 3px rgba(0,0,0, .12), 0 1px 2px rgba(0,0,0, .24);
+    // padding: $spacer * 2 0;
+
+    &:before {
+      display: none;
+      visibility: hidden;
+    }
+
+    &:after {
+      color: $brand-success;
+      background-color: $brand-success;
+    }
+
+    path {
+      fill: $brand-success;
+    }
+  }
+
+
+    &.is-active &__subtitle {
+      border-bottom-width: 0;
+    }
+    &.is-active &__title {
+      color: #50555a;
+      font-weight: 700;
+    }
+
+    &.is-active &__icon {
+    color: $brand-success;
+    }
+
+    &.is-intro {
+      padding-top: 24px;
+    }
+
+    &:after {
+      content: ' ';
+      position: absolute;
+      right: 21px;
+      // transition: background-color 300ms, border-color 300ms;
+      top: 50%;
+      display: block;
+      width: 14px;
+      margin-right: -7px;
+      background-color: #edf0f4;
+      margin-top: -7px;
+      border-radius: 100%;
+      height: 14px;
+      color: #b9c2cb;
+      border:solid 2px;
+    }
+    &.is-forum {
+      &:after {
+        border-radius: 0;
+        background-color: #fff;
+        border-width: 0;
+      }
+    }
+    &.is-session {
+      &:after {
+        border-radius: 0;
+        width: rem-calc(18px);
+        height: rem-calc(18px);
+        background-color: #edf0f4;
+        border-width: 0;
+      }
+
+      &.is-active {
+        &:after {
+          background-color: #fff;
+        }
+      }
+    }
+
+    &:last-child &__subtitle {
+        border-bottom-width: 0;
+      }
+
+    &:last-child {
+      &:before {
+        height: 50%;
+      }
+    }
+  }
+}

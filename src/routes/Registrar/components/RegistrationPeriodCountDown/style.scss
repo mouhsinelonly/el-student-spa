@@ -1,0 +1,18 @@
+@import 'base.scss';
+
+.c-registration-countdown {
+&__remaining-time {
+	font-size: (28/16)+rem;
+	font-weight: 700;
+	color: $brand-primary;
+}
+
+&__container {
+
+  &.has-warning {
+    border-color: #fcf0b9;
+    background-color: #fcf0b9;
+    color: #8e8154;
+  }
+}
+}

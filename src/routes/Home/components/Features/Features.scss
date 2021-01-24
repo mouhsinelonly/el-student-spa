@@ -1,0 +1,107 @@
+@import 'base';
+
+.c-home-features {
+	padding: 0;
+
+	&__title {
+		margin-bottom: 3rem;
+		font-size: 18px;
+		color: #505459;
+		line-height: 1.9;
+	}
+	&__item {
+		padding: $spacer-y *3 0;
+		@include clearfix;
+		border: solid transparent 1px;
+		transition: box-shadow 130ms ease-out;
+		@include media-breakpoint-up(sm) {
+
+		}
+
+		&:hover {
+			box-shadow:rgba($gray-light, .3) 0 3px 19px;
+			border: solid $gray-lighter 1px;
+		}
+
+		&:hover &__more {
+				padding: $spacer-y;
+
+				border-radius:$border-radius;
+		}
+		&--cyan {
+				&:hover  &__more {
+					background-color: #00c6a8;
+					color: #fff;
+					border: solid #00c6a8 1px;
+				}
+		}
+		&--orange {
+				&:hover  &__more {
+					background-color: $brand-warning;
+					color: #fff;
+					border: solid $brand-warning 1px;
+				}
+		}
+		&--blue {
+				&:hover  &__more {
+					background-color: $brand-info;
+					color: #fff;
+					border: solid $brand-info 1px;
+				}
+		}
+		&--last  {
+			border-left: none;
+			border-bottom: none;
+		}
+
+		&__title {
+			color:$brand-info;
+			font-size: 22px;
+
+			&--odd {
+				color: #8372b5;
+			}
+
+			&--cyan {
+				color:#00c6a8;
+			}
+
+			&--blue {
+				color: $brand-info;
+			}
+
+			&--orange {
+				color: $brand-warning;
+			}
+
+			&--purple {
+				color:#8372b5;
+			}
+		}
+
+		&__content {
+			padding:1.5rem 1.5rem;
+			font-size: 16px;
+			line-height: 1.7rem;
+			color: #505558;
+			font-family: "Helvetica Neue";
+		}
+
+		&__hint {
+			background-color: #fff8d2;
+			color:#787358;
+			padding: 5px;
+		}
+
+		&__more {
+			transition: background-color 230ms ease-out;
+			color: #505558;
+			font-weight: 700;
+			font-size: 17px;
+			padding-bottom: 7px;
+			margin-top: $spacer-y *2;
+			border-bottom: solid #505558 1px;
+		}
+
+	}
+}

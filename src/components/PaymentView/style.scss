@@ -1,0 +1,50 @@
+@import 'base';
+
+.c-paymentview {
+  background-color: $white-color;
+  z-index: $paymentview-zindex;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  &__cancel {
+    display: block;
+    cursor: pointer;
+    font-weight: 700;
+    text-decoration: underline;
+    color: $brand-danger;
+  }
+
+  &__title {
+    font-style: 30px;
+    font-weight: 700;
+  }
+
+  &__card {
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover &-header {
+      text-decoration: underline;
+    }
+    &:hover &-box {
+      border-color: $brand-success;
+      box-shadow: $brand-success 0 0 0 1px;
+    }
+    &-header {
+      font-size: 13px;
+      color: $gray;
+    }
+    &-box {
+      transition: 300ms border-color, 300ms box-shadow;
+      width: 250px;
+      height: 160px;
+      display: block;
+      border-radius: 5px;
+      border:solid 1px $gray-light;
+    }
+  }
+}

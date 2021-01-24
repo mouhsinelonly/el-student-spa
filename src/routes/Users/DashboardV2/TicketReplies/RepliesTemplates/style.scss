@@ -1,0 +1,75 @@
+@import 'base';
+
+.v2-ticket-templates {
+  overflow: scroll;
+  height: rem-calc(400px);
+    position: absolute;
+    bottom: rem-calc(50px);
+    background: #fff;
+    border-radius: rem-calc(6px);
+    right: rem-calc(7px);
+    width: rem-calc(320px);
+    border: 1px solid rgb(206, 211, 222);
+    box-shadow: rgba(150, 160, 180, 0.42) 2px 2px 13px 0px;
+    
+    ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    // border-radius: 3px;
+      // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  }
+
+  ::-webkit-scrollbar-thumb {
+      border-radius: 3px;
+      background-color: rgba(0,0,0,.2);
+  }
+  
+    &__title {
+      pointer-events: none;
+      font-size: rem-calc(14px);
+      color: #3d4d71;
+      font-weight: 700;
+    }
+
+    &__item {
+      border-bottom: 1px solid rgb(206, 211, 222);
+      cursor: pointer;
+      &:hover {
+        background-color: #ecf0f6;
+      }
+    }
+
+    &__items {
+      height: calc(100% - 42px);
+    }
+    &__search {
+      box-shadow: rgba(0,0,0,.2) 0 0 3px;
+      input {
+        padding: rem-calc(10px);
+        border-radius: 0;
+        font-size: rem-calc(14px);
+        color: rgb(151, 160, 180);
+        border: 0;
+        border-bottom: 1px solid rgb(206, 211, 222);
+        &:focus, &:active, &:hover {
+          border-bottom: 1px solid rgb(206, 211, 222);
+        }
+      }
+      .material-icons {
+        position: absolute;
+        left: rem-calc(10px);
+        top: rem-calc(10px);
+        color: rgb(79, 97, 135);
+      }
+    }
+    &__content {
+      pointer-events: none;
+      font-size: rem-calc(13px);
+      color: rgb(134, 141, 157);
+      line-height: 1.4em;
+      text-align: right;
+      letter-spacing: normal;
+    }
+}

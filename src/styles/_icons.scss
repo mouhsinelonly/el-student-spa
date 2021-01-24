@@ -1,0 +1,8 @@
+.icon {
+	vertical-align: middle;
+	display: inline-block;
+}
+
+// @include sprites($spritesheet-sprites);
+
+@include retina-sprites($retina-groups);

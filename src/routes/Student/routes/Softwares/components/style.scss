@@ -1,0 +1,55 @@
+@import 'base';
+
+.p-student-softwares {
+  &__container {
+    padding-bottom: $spacer-y * 5;
+  }
+
+  &__heading {
+    background-color: $white-color;
+    border-bottom: solid $gray-light 1px;
+  }
+
+  &__title {
+    color: $gray-dark;
+    font-size: 32px;
+    font-weight: 700;
+    // padding: $spacer-y * 4 0;
+  }
+
+  &__items {
+    &__item {
+      height: 370px;
+      position: relative;
+      background-color: $white-color;
+      border-radius: $border-radius;
+
+      &-icon {
+        max-height: 56px;
+      }
+      &-title {
+        font-size: 20px;
+        height: 72px;
+        font-weight: 700;
+        line-height: 1.8;
+      }
+
+      &-content {
+        height: 87px;
+      }
+
+      &-download {
+        position: absolute;
+        bottom: 20px;
+        left: 10%;
+        width: 80%;
+        // margin-left: -(136/2)+px;
+
+        &:hover,
+        &:focus {
+          background-color: $brand-success;
+        }
+      }
+    }
+  }
+}

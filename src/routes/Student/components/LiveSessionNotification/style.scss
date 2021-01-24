@@ -1,0 +1,53 @@
+@import 'base';
+
+.c-live-session-notificaion {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  width: 100%;
+  max-width: 327px;
+  background-color: $white-color;
+  border-radius: $border-radius;
+  padding-top: $spacer-x;
+  padding-bottom: $spacer-x;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
+
+&__icon {
+  margin-top: 5px;
+  transform: scale(.77);
+}
+
+&__indicator {
+  position: relative;
+  display: inline-block;
+
+  &:after {
+    width:6px;
+    height: 6px;
+    background-color: $gray-light;
+    content: ' ';
+    position: absolute;
+    bottom: 5px;
+    right: 4px;
+    border-radius: 100%;
+    display: block;
+  }
+
+  &.is-active {
+    &:after {
+      background-color: $brand-success;
+      animation-name: blink;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: easein;
+
+    }
+  }
+}
+}
+
+@keyframes blink {
+  0% {opacity: 1}
+  50% {opacity: 0}
+  100% {opacity:1}
+}

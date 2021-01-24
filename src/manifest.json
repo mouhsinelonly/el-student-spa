@@ -1,0 +1,42 @@
+{
+  "icons": [
+    {
+      "src": "https://el-css-cdn.com/dist/icon_512x512.6b8e2825b4f01628959256af972b933a.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "https://el-css-cdn.com/dist/icon_384x384.df6161a3e130ea4f390ff5b5705d00aa.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "https://el-css-cdn.com/dist/icon_256x256.db523c4bb41f6ceb36b0acd9d0b1076b.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "https://el-css-cdn.com/dist/icon_192x192.a3e31fb29d42ee3ad65ff89622721d06.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://el-css-cdn.com/dist/icon_128x128.d9fbd1c4d240aa8a67cc7dd465c2b7b4.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "https://el-css-cdn.com/dist/icon_96x96.1334bc35659aafb5a15e3a187c76ddc9.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ],
+  "name": "مركز التعليم عن بعد",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": "http://localhost:3000",
+  "theme_color": "#fff",
+  "short_name": "EL-CSS",
+  "description": "بوابة الطالب لمركز التعليم عن لعد",
+  "background_color": "#bbe8db"
+}

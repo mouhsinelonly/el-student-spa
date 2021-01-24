@@ -1,0 +1,2 @@
+import EditProfileModalContainer from './EditProfileModalContainer'
+export default EditProfileModalContainer

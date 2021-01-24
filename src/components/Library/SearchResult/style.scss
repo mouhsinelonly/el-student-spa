@@ -1,0 +1,11 @@
+@import 'base';
+
+.p-library-searchresult {
+  background-color: #fff;
+
+  &__count {
+    border-top: solid #eff0eb 1px;
+    font-size: 15px;
+    color: $library-primary;
+  }
+}

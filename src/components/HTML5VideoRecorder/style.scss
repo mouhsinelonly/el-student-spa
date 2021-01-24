@@ -1,0 +1,141 @@
+@import 'base';
+
+.c-html5-recorder {
+  background-color: $white-color;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  max-width: 100%;
+  .material-icons {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &__start {
+    border-radius: 5px;
+    border: none;
+    width: 180px;
+    margin: 0 auto;
+    position: absolute;
+    transition: transform 300ms;
+    bottom: 30px;
+    right: 50%;
+    margin-right: -90px;
+    z-index: 3;
+    &:hover {
+      transform: scale(1.04);
+    }
+
+    &.is-recording {
+      color: $brand-danger;
+      border: solid $gray 1px;
+    }
+  }
+  &__video {
+    width: 100%;
+  }
+  &__percentage {
+    z-index: 2;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+
+    &-current,
+    &-maxtime {
+      position: absolute;
+      bottom: 5px;
+      font-weight: 700;
+      text-shadow: rgba(0, 0, 0, 0.27) 1px 1px;
+      font-size: 14px;
+    }
+    &-current {
+      right: 0;
+      color: $brand-danger;
+      transition: right 500ms;
+      // margin-right: -13px;
+
+      &.is-playing {
+        color: $brand-success;
+      }
+    }
+
+    &-maxtime {
+      left: 8px;
+      color: $white-color;
+    }
+    &-done {
+      transition: width 500ms;
+      background-color: $brand-danger;
+      height: 6px;
+      vertical-align: bottom;
+      border-radius: 0;
+      position: absolute;
+      bottom: 0;
+      position: absolute;
+      right: 0;
+
+      &.is-playing {
+        background-color: $brand-success;
+      }
+    }
+    &:before {
+      width: 100%;
+      content: ' ';
+      height: 6px;
+      right: 0;
+      bottom: 0;
+      display: block;
+      background-color: rgba($white-color, 0.8);
+      position: absolute;
+    }
+  }
+  &__volume {
+    z-index: 1;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba($brand-success, 0.8);
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 5px;
+    right: 50%;
+    margin-right: -40px;
+  }
+}
+
+/*
+ * react-circular-progressbar styles
+ *
+ * All of the styles in this file are optional and configurable!
+ */
+
+.CircularProgressbar {
+  /*
+   * This fixes an issue where the CircularProgressbar svg has
+   * 0 width inside a "display: flex" container, and thus not visible.
+   *
+   * If you're not using "display: flex", you can remove this style.
+   */
+  width: 100%;
+}
+
+.CircularProgressbar .CircularProgressbar-path {
+  stroke: #3e98c7;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+.CircularProgressbar .CircularProgressbar-trail {
+  stroke: #d6d6d6;
+}
+
+.CircularProgressbar .CircularProgressbar-text {
+  fill: #3e98c7;
+  font-size: 20px;
+  dominant-baseline: middle;
+  text-anchor: middle;
+}

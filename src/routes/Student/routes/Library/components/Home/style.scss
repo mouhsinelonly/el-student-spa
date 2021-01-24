@@ -1,0 +1,13 @@
+@import 'base';
+
+.p-library-home {
+
+  &__more {
+    background-color: $white-color;
+    display: block;
+    width: 210px;
+    border: solid $library-border-color 1px;
+    border-radius: 30px;
+    color: $library-primary;
+  }
+}

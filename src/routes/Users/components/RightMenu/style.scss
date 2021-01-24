@@ -1,0 +1,49 @@
+@import 'base';
+
+.c-admin-rightmenu {
+  min-height: 100%;
+  background-color: #1d232a;
+
+  &-name {
+    color: $white-color;
+  }
+
+  &-avatar {
+    border-radius: 100%;
+    overflow: hidden;
+    width: rem-calc(54px);
+    height: rem-calc(54px);
+  }
+
+  &-item {
+    margin-bottom: 7px;
+  }
+
+  &-link {
+    position: relative;
+    color: #797d81;
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+
+    &:hover, &.is-active {
+      color: $white-color;
+      background-color: #343c45;
+    }
+  }
+
+  &-badge {
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    font-size: 14px;
+    color: $white-color;
+  }
+  &-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}

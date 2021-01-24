@@ -1,0 +1,9 @@
+@import 'base.scss';
+
+.Market {
+	&__dep {
+		@include media-breakpoint-up(sm) {
+			padding-left: 0 !important;
+		}
+	}
+}

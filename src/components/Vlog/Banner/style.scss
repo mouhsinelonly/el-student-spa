@@ -1,0 +1,130 @@
+@import 'base';
+$primaryColor: #610dd6;
+.c-vlog-banner {
+  background-color: $white-color;
+  box-shadow: 0px 1px 2px rgba(72,65,49,0.4);
+  padding-top: rem-calc(20px);
+  padding-bottom: 0;
+  position: relative;
+  margin-top: rem-calc(10px);
+
+  @include media-breakpoint-up(sm) {
+    padding-bottom: rem-calc(20px);
+    margin-top: rem-calc(40px);
+    border-radius: rem-calc(6px);
+    border: solid $primaryColor 1px;
+    padding-left: rem-calc(20px);
+    padding-right: rem-calc(20px);
+  }
+  &__footer {
+    @include media-breakpoint-down(xs) {
+      margin-top: rem-calc(18px);
+    }
+  }
+  &__title {
+    font-family: $neo;
+    margin-top: 10px;
+    font-weight: 700;
+    color: $primaryColor;
+    font-size: rem-calc(18px);
+
+    @include media-breakpoint-up(sm) {
+      margin-top: 10px;
+      font-size: rem-calc(20px);
+    }
+  }
+
+  &__subtitle {
+      font-family: $helvetica;
+      font-size: rem-calc(14px);
+      color: #38155e;
+  }
+
+  &__total-cont {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+
+
+    @include media-breakpoint-down(sm) {
+      width: auto !important;
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-family: $neo;
+      font-size: rem-calc(26px);
+      color: #610dd6;
+      font-weight: 400;
+      background-color: #f3e8ff;
+    }
+
+    @include media-breakpoint-up(sm) {
+      position: relative;
+      left: auto;
+      top: auto;
+
+    }
+  }
+  &__total {
+    position: relative;
+    font-family: $neo;
+    line-height: 1;
+    padding: rem-calc(2px) 0 0;
+    font-size: rem-calc(26px);
+    color: $primaryColor;
+    font-weight: 700;
+
+    @include media-breakpoint-down(xs) {
+
+    }
+    @include media-breakpoint-up(sm) {
+      padding: 0;
+      line-height: .7;
+      margin-top: rem-calc(20px);
+      &:after,&:before {
+      content: ' ';
+      position: absolute;
+      background-color: #d8dee8;;
+      width: 1px;
+      margin-top: 3px;
+      height: 21px;
+    }
+
+    &:after {
+      right: 23px;
+    }
+
+    &:before {
+      left: 23px;
+    }
+    }
+
+  }
+
+  &__totalsub {
+    font-family: $neo;
+    font-size: rem-calc(12px);
+    color: $primaryColor;
+  }
+
+  &__btn {
+    padding: rem-calc(10px);
+    margin-top: rem-calc(10px);
+    color: $primaryColor;
+    border-color: $primaryColor;
+    @include media-breakpoint-down(xs) {
+      border-radius: 0;
+      border-right-width: 0;
+      border-left-width: 0;
+      width: 50%;
+    }
+
+    &.is-first {
+      border-left-width: 1px;
+       @include media-breakpoint-up(sm) {
+
+        margin-left: rem-calc(20px);
+        border-left-width: 1px;
+       }
+    }
+  }
+}

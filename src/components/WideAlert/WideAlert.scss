@@ -1,0 +1,32 @@
+@import 'base';
+.WideAlert {
+  padding: rem-calc(12px);
+  background-color: #610dd6;
+  font-family: $neo;
+  font-size: rem-calc(17px);
+  color: #f2e1fa;
+
+  &__number {
+  	padding: 8px 7px 5px;
+	border-radius: 4px;
+	background-color: #ffcf40;
+	font-family: $neo;
+  position: relative;
+	font-size: rem-calc(16px);
+  display: inline-block;
+	font-weight: 700;
+	color: #610dd6;
+  // animation: zoomInWideAlertNumber 400ms ease-in-out forwards;
+  }
+}
+
+@keyframes zoomInWideAlertNumber {
+  from {
+    transform: scale(1.5) rotate(30deg);
+    opacity: .2;
+  }
+  to {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}

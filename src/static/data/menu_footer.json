@@ -1,0 +1,26 @@
+[
+  {
+    "title": "global.about_center",
+    "route": "/our_vision"
+  },
+  {
+    "title": "global.call_us",
+    "route": "/contact"
+  },
+  {
+    "title": "global.privacy_policy",
+    "route": "/privacy"
+  },
+  {
+    "title": "global.usage_rules",
+    "route": "/usage"
+  },
+  {
+    "title": "global.return_policy",
+    "route": "/return"
+  },
+  {
+    "title": "global.faq",
+    "route": "/support/faq"
+  }
+]

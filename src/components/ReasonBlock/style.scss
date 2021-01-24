@@ -1,0 +1,38 @@
+@import 'base';
+
+.c-reason-block {
+  background-color: $white-color;
+  border-radius: $border-radius;
+  overflow: hidden;
+  height: 291px;
+
+  &.is-hidden {
+    height: 166px;
+  }
+  &__title {
+    font-size: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 1.8;
+    height: 84px;
+
+    &.no-desc {
+      height: 90px;
+    }
+  }
+
+  &__desc {
+    height: 118px;
+    overflow: hidden;
+    font-size: 14px;
+
+    &.is-hidden {
+      visibility: hidden;
+      display: none;
+    }
+  }
+
+  &__button {
+    border-radius: 0 0 .25rem .25rem;
+  }
+}

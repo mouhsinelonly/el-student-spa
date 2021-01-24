@@ -1,0 +1,80 @@
+$black-color: #000;
+$white-color: #fff;
+
+$library-border-color: #d6d1ce;
+$library-primary: #6e5340;
+$library-bg-light: #eff0eb;
+
+$brand-purple: #a173c4;
+$brand-brown: #6e5340;
+$neo: 'NeoSansArabic';
+$helvetica: 'Helvetica Neue';
+$brand-caramel: #a0a0a0;
+
+$paymentview-zindex:1051;
+$registrar-fees-notification-zindex:1039;
+$registrar-fees-notification-drop-zindex:1038;
+$session-test-zindex:1053;
+$chatbox-trigger-zindex:1052;
+$chatbox-zindex:1053;
+$network-error-z-index:201;
+$line-heading-z-index: 2;
+$video-confirm-available-z-index: 199;
+$video-confirm-bar-z-index: 198;
+$student-navbar-z-index: 2;
+$student-navbar-dropdown-z-index: 5;
+$student-forum-editor-toolbar-z-index: 11;
+$libraryuser-navbar-dropdown-z-index: 5;
+$element-menu-z-index: 202;
+$ticket-departments-z-index: 10;
+
+$v2-border-color: #dadce4;
+$v2-text-light: #868d9d;
+$v2-text-dark: #3d4d71;
+
+$lib-primary: #795e4b;
+$lib-secondary: #cbad62;
+
+@keyframes placeHolderShimmer{
+  0% {
+    background-position: -468px 0
+  }
+  100% {
+    background-position: 468px 0
+  }
+}
+@keyframes blink{
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes upanddown{
+  0% {
+    top: 5%;
+  }
+  50% {
+    top: 95%;
+  }
+  100% {
+    top: 5%;
+  }
+}
+
+@keyframes librarypackage{
+  0%,20% {
+    transform: scale(1.1) rotate(5deg);
+    opacity: .5;
+  }
+  20%,40% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+

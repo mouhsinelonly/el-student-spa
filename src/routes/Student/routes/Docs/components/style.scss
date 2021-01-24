@@ -1,0 +1,75 @@
+@import 'base';
+
+.p-student-docs {
+&__container {
+  padding-bottom: $spacer-y * 5;
+}
+
+&__heading {
+  color: $gray-dark;
+  font-size: 32px;
+  font-weight: 700;
+  padding: $spacer-y * 4 0;
+}
+&__list {
+  list-style: none;
+  counter-reset: statements-rules-counter;
+  
+  li {
+  counter-increment: statements-rules-counter;
+  position: relative;
+
+  &::before {
+    content: counter(statements-rules-counter);
+    font-weight: bold;
+    position: absolute;
+    --size: 20px;
+    font-size: 12px;
+    right: calc(-1 * var(--size));
+    line-height: var(--size);
+    width: var(--size);
+    height: var(--size);
+    top: 18px;
+    color: #fff;
+    background-color: #777d84;
+    border-radius: 50%;
+    text-align: center;
+
+      @include media-breakpoint-up(md) {
+      right: calc(-1 * var(--size) - 10px);
+      }
+    }
+  }
+}
+&__documents {
+  &__item {
+    background-color: $white-color;
+
+    @include media-breakpoint-up(sm) {
+      border-radius: $border-radius;
+    }
+
+    &-title {
+      font-size: 20px;
+      line-height: 1.8;
+      @include media-breakpoint-up(sm) {
+        height: 72px;
+      }
+    }
+
+    &-content {
+
+      @include media-breakpoint-up(sm) {
+        height: 87px;
+      }
+    }
+
+    &-download {
+      &:hover,
+      &:focus {
+        background-color: $brand-success;
+      }
+    }
+  }
+}
+}

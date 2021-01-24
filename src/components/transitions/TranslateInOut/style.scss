@@ -1,0 +1,18 @@
+.fade-enter {
+    opacity: .01;
+    background-color: #fff;
+    &.fade-enter-active {
+        transition: opacity 500ms ease-in;
+        opacity: 1;
+        background-color: black;
+    }
+}
+
+.fade-exit {
+  opacity: 1;
+
+  &.fade-exit-active {
+    opacity: .01;
+    transition: opacity 300ms ease-in;
+  }
+}

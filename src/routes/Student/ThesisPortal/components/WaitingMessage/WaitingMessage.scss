@@ -1,0 +1,9 @@
+@import 'base';
+
+.Thesis-WaitingMessage {
+	border-top: solid 4px $brand-info;
+
+	&__title {
+		color: $brand-info;
+	}
+}

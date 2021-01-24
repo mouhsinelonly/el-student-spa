@@ -1,0 +1,45 @@
+@import 'base';
+
+.c-rules-list {
+&__container {
+  background-color: $white-color;
+  border-radius: $border-radius;
+}
+
+&__title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+&__footer {
+  border-top: solid $gray-light 1px;
+}
+&__rules {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  &__item {
+    font-size: 15px;
+    color: $gray;
+    line-height: 2;
+    padding-right: 26px;
+    position: relative;
+
+    &-number {
+      text-align: center;
+      font-size: 13px;
+      right: 0;
+      top: $spacer-y / 2;
+      line-height: 1.5;
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      background-color: $gray;
+      color: $white-color;
+      border-radius: 100%;
+      position: absolute;
+    }
+  }
+}
+}

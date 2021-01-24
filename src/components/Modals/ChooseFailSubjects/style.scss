@@ -1,0 +1,81 @@
+@import 'base';
+
+.c-choose-fail-modal {
+  &__warning {
+    background-color: #fff5c7;
+    border-top: solid #edecd4 1px;
+    border-bottom: solid #edecd4 1px;
+    color: #978046;
+  }
+  &__gray-container {
+    background-color: #f7f8fa;
+    border-bottom: solid #dad7e1 1px;
+    // border-top: solid #dad7e1 1px;
+    color: #97999c;
+  }
+
+  &__success-modal-body,
+  &__success-p {
+     @include media-breakpoint-up(sm) {
+      padding: $spacer-x * 3;
+     }
+  }
+  &__checkbox {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+
+    &:disabled {
+      background-color: transparent;
+      opacity: .2;
+    }
+  }
+  &__rules, &__rules * {
+    color: #1f2225;
+  }
+  &__body {
+     background-color: $gray-lightest;
+     // border-top: solid $gray-light 2px;
+     // border-bottom: solid $gray-light 2px;
+     padding:0;
+     border-bottom-width:0;
+  }
+
+  &__header {
+     border-bottom-width: 0;
+  }
+  &__footer {
+     border-top-width: 0;
+  }
+  &__table {
+     td,th ,thead th,tfoot td ,thead,tfoot {
+        border-width:0;
+     }
+
+     thead th {
+        color:#97999c;
+        font-size: 16px;
+        -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  font-weight: 200;
+     }
+
+     tbody tr td {
+           border-top: solid $gray-lighter 1px;
+     }
+
+
+     tbody td {
+        &:first-child {
+           font-weight: 700;
+        }
+     }
+  }
+
+  &__tfoot {
+     background-color:#edffed;
+     border-bottom:solid #afddaf 1px;
+     border-top:solid #afddaf 1px
+  }
+}

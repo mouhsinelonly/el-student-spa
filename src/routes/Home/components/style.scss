@@ -1,0 +1,9 @@
+@import 'base';
+
+.c-home-page {
+  // padding-top: rem-calc(96px);
+
+  @include media-breakpoint-down(sm) {
+    // padding-top: rem-calc(110px);
+  }
+}

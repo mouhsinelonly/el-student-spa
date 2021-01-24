@@ -1,0 +1,18 @@
+@import 'base';
+
+.c-registration-refused {
+&__container {
+  min-height: 600px;
+}
+
+&__panel {
+  background-color: $white-color;
+  box-shadow: rgba(#97a0b6 ,.3) 0 2px 4px;
+  border:solid $gray-light 1px;
+  border-radius: $border-radius;
+
+  &__footer {
+    border-top: solid $gray-light 1px;
+  }
+}
+}

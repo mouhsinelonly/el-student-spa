@@ -1,0 +1,52 @@
+@import 'base';
+
+.SubjectSession {
+  @include background-retina('../../../../../../static/img/SessionBlock_bg.png', '../../../../../../static/img/SessionBlock_bg@2x.png', 132px, 132px);
+  background-repeat: no-repeat;
+  background-position: right 40px top -44px;
+
+  @include media-breakpoint-down(xs) {
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  &__header {
+    font-family: $neo;
+    font-size: rem-calc(20px);
+    color: #50555a;
+  }
+  &__date {
+    font-family: $neo;
+    font-weight: 700;
+    font-size: rem-calc(36px);
+    color: #50555a;
+  }
+  &__lessons {
+    border: solid #edf0f4 0;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    line-height: 2;
+    font-family: $neo;
+    font-size: rem-calc(16px);
+    color: #50555a;
+  }
+  &__time {
+    font-family: $neo;
+    font-size: rem-calc(20px);
+    color: #50555a;
+
+    &.is-past {
+      font-size: rem-calc(16px);
+    }
+  }
+  &__title {
+    font-family: $neo;
+    font-size: rem-calc(18px);
+    color: #50555a;
+  }
+
+  &.is-placeholder &__date, &.is-placeholder &__time {
+    color: #b9c2cb;
+  }
+}

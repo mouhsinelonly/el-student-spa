@@ -1,0 +1,188 @@
+@import 'base';
+
+.c-library-research-hero {
+  position: relative;
+  
+  &__header {
+    &-item {
+      display: inline-block;
+      color: #afa6a0;
+      font-size: 16px;
+      padding: 10px 20px 8px;
+      border-radius: 0 5px 0 0;
+      border: solid #d6d1ce 1px;
+      background-color: #eff0eb;
+      border-bottom-width: 0;
+      margin-bottom: 0;
+      cursor: pointer;
+
+      &.is-active {
+        cursor: default;
+        color: #6e5340;
+        background-color: $white-color;
+      }
+      &:last-child {
+        border-right-width: 0;
+            border-radius: 5px 0 0 0;
+      }
+    }
+  }
+  .Select.is-focused:not(.is-open) > .Select-control {
+    border-color: #d6d1ce;
+    box-shadow: none;
+  }
+  .Select-placeholder {
+    padding: 8px 20px 6px;
+  }
+  .Select-control {
+    padding: 6px 20px 10px;
+    border-radius: 5px 0 5px 5px;
+    color: #afa6a0;
+    background-color: $white-color;
+    border: solid #d6d1ce 1px;
+  }
+  .Select--multi .Select-value {
+    background-color: #eff0eb;
+    border-color: #d6d1ce;
+    padding: 3px;
+    border-radius: 3px;
+    color: #6e5340;
+  }
+  .Select--multi.Select--rtl .Select-value-icon {
+    border-left-width: 0;
+    position: absolute;
+    left: 5px;
+    top: -1px;
+    color: #bfb9b3;
+    font-size: 28px;
+
+    &:hover {
+      background-color: transparent !important;
+    }
+  }
+  .Select-input {
+    color: #6e5340;
+    padding-top: 5px;
+  }
+  .Select-value {
+    padding-left: 30px !important;
+    position: relative;
+  }
+  &__cats {
+    padding: 10px 20px 8px;
+    border-radius: 5px;
+    color: #afa6a0;
+    cursor: pointer;
+    background-color: $white-color;
+    border: solid #d6d1ce 1px;
+
+    &.is-open {
+      border-radius: 5px 5px 0 0;
+    }
+    &-list {
+      list-style-type: none;
+    }
+
+    &-tag {
+      background-color: #f9f4da;
+      display: inline-block;
+      list-style-type: none;
+      color: #ac6b17;
+      padding: 10px;
+      border: solid #dac09b 1px;
+      border-radius: 3px;
+      position: relative;
+      overflow: hidden;
+      cursor: default;
+      padding-left: 50px;
+      margin-left: 10px;
+
+      &-arrow {
+        position: absolute;
+        left: 10px;
+        top: -3px;
+        cursor: pointer;
+        font-size: 40px;
+        font-weight: 100;
+      }
+    }
+
+    &-item {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      color: #6e5340;
+      cursor: pointer;
+      position: relative;
+      padding: 15px;
+      border-bottom: solid #d6d1ce 1px;
+
+      i {
+        cursor: pointer;
+      }
+
+      &-arrow {
+        position: absolute;
+        left: 13px;
+        top: 10px;
+        font-size: 25px;
+        font-weight: 100;
+      }
+
+      &.is-active, &:hover {
+        background-color: #f9f4da;
+        border-bottom-color: #dac09b;
+        color: #ac6b17;
+        // font-weight: 700;
+      }
+
+      &:hover i.is-active {
+        // @include sprite($icon-checkbox-brown-minus);
+        background-position: $icon-checkbox-brown-minus-offset-x $icon-checkbox-brown-minus-offset-y;
+      }
+    }
+  }
+
+  &__filters {
+    background-color: $white-color;
+    height: 500px;
+    width: 100%;
+    z-index: 10;
+    overflow: hidden;
+    position: absolute;
+    border: solid #d6d1ce 1px;
+    border-top-width: 0;
+
+      &-right, &-left {
+        height: 100%;
+        position: relative;
+      }
+
+      &-right {
+        border-left: solid #d6d1ce 1px;
+      }
+
+      &-all-books {
+        background-color: #eff0eb;
+      }
+      &-all-cats, &-all-books {
+        color: #6e5340;
+        padding: 15px;
+        border-bottom: solid #d6d1ce 1px;
+      }
+    }
+
+    &__books {
+    &-item {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      cursor: pointer;
+      overflow: hidden;
+      color: #6e5340;
+
+      &.is-active {
+        color: #ac6b17;
+      }
+    }
+  }
+}

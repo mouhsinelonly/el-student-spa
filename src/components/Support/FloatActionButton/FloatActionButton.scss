@@ -1,0 +1,47 @@
+@import 'base';
+
+.c-chatbox-button {
+	position:fixed;
+	right:50px;
+	bottom:50px;
+  z-index: $chatbox-trigger-zindex;
+  transform: translateX(0);
+  box-shadow: 0 10px 20px rgba(0,0,0, .19), 0 6px 6px rgba(0,0,0, .23);
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(.2,.5,.3,1);
+  @include media-breakpoint-down(sm) {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    padding: 0;
+    right: 20px;
+    bottom: 20px;
+  }
+  &.is-chatbox-open {
+   transform: translateX(200px);
+   // right: 24px;
+   // z-index: 888;
+   // border-radius: 5px;
+   // width: 303px;
+   // bottom: 24px;
+   // height: 48px;
+   }
+   &__text {
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+   }
+  &__badge {
+    // @include bounce(infinite, 2s);
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    border-radius: 100%;
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+    padding-top: 4px;
+    background-color: $brand-success;
+  }
+}

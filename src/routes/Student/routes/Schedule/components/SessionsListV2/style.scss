@@ -1,0 +1,36 @@
+@import 'base.scss';
+
+.c-student-sessionv2-row {
+  border-bottom: solid #a4acb5 1px;
+
+
+  &__subject {
+    font-weight: 700;
+    font-size: 14px;
+  }
+  &__load {
+    display: inline-block;
+  }
+  &__comp {
+    font-size: 14px;
+  }
+  &__date {
+    font-size: 12px;
+    // padding-left: 10px !important;
+    margin-left: 10px;
+  }
+  &__day:after {
+    display: inline-block;
+    content: '\2B24';
+    font-size: 5px;
+    margin: 0 8px;
+    position: relative;
+    bottom: 3px;
+  }
+
+  td {
+    vertical-align: middle;
+    border-top-width: 0;
+    padding: 30px 20px;
+  }
+}

@@ -1,0 +1,23 @@
+@import 'base';
+
+.c-research-form {
+  overflow: hidden;
+  max-height: 100%;
+
+  @include background-retina('../../../../../../static/img/lightbulb-man.png', '../../../../../../static/img/lightbulb-man@2x.png', 259px, 424px);
+  background-repeat: no-repeat;
+  height: 100%;
+  display: block;
+  background-position: bottom 100px right 100px;
+
+  @include media-breakpoint-down(xs) {
+    background-position: bottom 180px right 80px;
+  }
+  &__back-arrow {
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    right: 10px;
+    top: 20px;
+  }
+}

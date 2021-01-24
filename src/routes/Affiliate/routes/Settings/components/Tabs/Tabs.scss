@@ -1,0 +1,38 @@
+@import 'base';
+.Affiliate-Settings-Tabs {
+	margin-top: rem-calc(150px);
+	padding-left: 0;
+	padding-right: 0;
+
+	border-bottom: solid #b9c2cb 1px;
+	&__list {
+		text-align: center;
+		list-style-type: none;
+	}
+
+	&__item {
+		padding-top: rem-calc(22px);
+		padding-bottom: rem-calc(22px);
+		display: inline-block;
+		width: (100% / 3);
+		font-size: rem-calc(18px);
+		color: #777d84;
+		cursor: pointer;
+		position: relative;
+
+		&.is-active {
+			font-weight: 700;
+			color: #0b3342;
+
+			&:after {
+				background-color: #0b3342;
+				content: ' ';
+				position: absolute;
+				bottom: -3px;
+				left: 0;
+				width: 100%;
+				height: rem-calc(6px);
+			}
+		}
+	}
+}

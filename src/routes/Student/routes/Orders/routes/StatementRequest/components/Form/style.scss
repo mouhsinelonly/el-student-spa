@@ -1,0 +1,26 @@
+@import 'base';
+
+.c-statement-request {
+  &__label {
+    border-radius: rem-calc(25px);
+    padding: rem-calc(10px) rem-calc(20px);
+    border: solid #dad7e1 1px;
+    color: #777d84;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    vertical-align: top;
+    &.is-selected {
+      color: $white-color;
+      background-color: $brand-success;
+      border-color: $brand-success;
+    }
+  }
+
+  &__files {
+    border-top: solid $gray-lighter 1px;
+    background-color: #f7f8fa;
+  }
+}

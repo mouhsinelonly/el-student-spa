@@ -1,0 +1,29 @@
+@import 'base';
+
+.c-exam-row-excuse-table {
+  border-top: solid $gray-lighter 1px;
+  overflow: hidden;
+  position: relative;
+
+  &__checkall {
+    font-size: 14px;
+    top: 35px;
+    position: absolute;
+    left: 47px;
+  }
+
+  &__footer {
+    border-top: solid $gray-lighter 1px;
+    position: relative;
+  }
+
+  &__prev {
+    text-decoration: underline;
+    position: absolute;
+    right: 20px;
+    margin-top: -5px;
+    cursor: pointer;
+    top: 50%;
+    color: $gray;
+  }
+}

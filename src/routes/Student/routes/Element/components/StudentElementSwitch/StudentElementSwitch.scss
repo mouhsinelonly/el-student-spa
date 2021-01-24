@@ -1,0 +1,113 @@
+@import 'base';
+
+.StudentElementSwitch__is-active {
+		position: sticky;
+		top: 0;
+		z-index: 3;
+		background-color: #edf0f4;
+	}
+.StudentElementSwitch {
+	padding: 10px 0;
+
+	@include media-breakpoint-up(sm) {
+		padding:30px .9375rem;
+	}
+	&__columns {
+		@include media-breakpoint-down(xs) {
+			padding: 0;
+		}
+	}
+	&__select-cont {
+		vertical-align: middle;
+		position: relative;
+		overflow: hidden;
+		display: inline-block;
+
+		i {
+			position: absolute;
+			left: 7px;
+			top: 7px;
+		}
+	}
+	&__select {
+		width: 100%;
+		appearance: none;
+		height: 40px;
+		margin-left: 10px;
+		outline: none;
+		
+		&.is-mobile {
+			// width: calc(100% - 60px);
+		}
+
+		&:focus, &:hover, &:active {
+			background-color: #242627;
+			color: $white-color;
+			border-color: #242627;
+		}
+	}
+	&__control {
+		color: #50555a;
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+		display: inline-block;
+		padding: 7px 0;
+		position: relative;
+		margin-right: 10px;
+		&.is-full {
+			margin-right: 0;
+		}
+		@include media-breakpoint-up(sm) {
+			i {
+			margin-left: 5px;
+		}
+			width: auto;
+			padding: 7px 20px;
+			
+			&.is-full {
+				width: 100%;
+				display: block;
+			}
+			
+			height: auto;
+			border-radius: 20px;
+		}
+
+		&.is-active {
+			background-color: #242627;
+			color: $white-color;
+			border-color: #242627;
+		}
+	}
+
+	&__item {
+    font-size: 14px;
+    position: relative;
+    padding-left: $spacer;
+
+    &:after {
+      content: '•';
+      position: absolute;
+      left: $spacer/3;
+      top: 3px;
+      color: $gray-light;
+    }
+
+    &:last-child {
+      &:after {
+        visibility: hidden;
+        display: none;
+      }
+    }
+
+    &__link {
+      color: rgba($gray-dark, .8);
+      // transition: color 300ms;
+      &:hover,&.is-active {
+        font-weight: 700;
+        color: $gray-dark;
+      }
+    }
+  }
+}

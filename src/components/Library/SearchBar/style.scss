@@ -1,0 +1,41 @@
+@import 'base';
+
+.c-library-search-bar {
+  &__query {
+    background-color: $library-bg-light;
+    border-bottom: $library-border-color solid 1px;
+  }
+
+  &__back {
+    margin-top: 10px;
+    position: absolute;
+    padding: 0;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+
+  &__input {
+    border-color: $library-border-color;
+    border-left-width: 0;
+    transition: border-color 300ms;
+    font-family: $font-family-sans-serif;
+
+    &:focus {
+      border-color: $library-primary;
+    }
+  }
+
+  &__btn {
+    background-color: $library-primary;
+    border-color: $library-primary;
+    color: $white-color;
+
+    &:hover, &:focus {
+      background-color: lighten($library-primary, 10);
+      color: $white-color;
+      border-color: lighten($library-primary, 10);
+    }
+  }
+}
+

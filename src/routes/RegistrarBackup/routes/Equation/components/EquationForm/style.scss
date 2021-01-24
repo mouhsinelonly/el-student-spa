@@ -1,0 +1,25 @@
+@import "base.scss";
+
+.c-reg-equation-form {
+&__panel {
+	border-radius: $border-radius;
+	background-color: #FFF;
+	border: solid $gray-light 2px;
+	box-shadow: rgba($gray, .3) 0 3px 19px;
+}
+
+&__label {
+	font-size: 18px;
+}
+
+&__label-danger {
+	color: $brand-danger;
+
+}
+
+&__gray-container {
+	background-color: #f7f8fa;
+	border-top: solid #dad7e1 1px;
+	border-bottom: solid #dad7e1 1px;
+}
+}

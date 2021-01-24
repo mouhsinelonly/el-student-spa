@@ -1,0 +1,55 @@
+@import 'base';
+
+.v2-ticket-student-excuses {
+  border-bottom: solid $v2-border-color 1px;
+
+  &__title {
+    font-size: rem-calc(14px);
+    font-weight: 700;
+    color: $v2-text-dark;
+  }
+
+  &__item {
+    font-size: rem-calc(13px);
+    color: $v2-text-light;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &__type {
+    background: none;
+    border: none;
+    color: gray;
+    outline: none;
+    appearance: none;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzU0NTQ1NCI+PHBhdGggZD0iTTcgMTBsNSA1IDUtNXoiPjwvcGF0aD48L3N2Zz4=);
+    background-position: left 50%;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: #5f6368;
+    font-size: 14px;
+    font-weight: 400;
+    height: 22px;
+    margin: 0;
+    padding: 0 2px 0 24px;
+    text-overflow: ellipsis;
+    white-space: pre-wrap;
+  }
+
+  &__info {
+    font-size: rem-calc(13px);
+    color: $v2-text-light;
+  }
+
+  td {
+    width: 50%;
+  }
+
+  &__comment {
+    background-color: #eeeeee;
+    color: $v2-text-light;
+    font-size: rem-calc(13px);
+  }
+}

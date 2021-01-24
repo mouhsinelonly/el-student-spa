@@ -1,0 +1,9 @@
+@import 'base';
+
+.LearningResources {
+  &__header {
+    font-family: $neo;
+    font-size: rem-calc(32px);
+    color: #50555a;
+  }
+}

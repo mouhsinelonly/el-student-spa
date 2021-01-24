@@ -1,0 +1,86 @@
+@import 'base';
+
+.c-ticket-single {
+  position: relative;
+  height: 100%;
+  &__input {
+     min-height: 50px;
+     width: 100%;
+     padding-left: 40px;
+    &:active, &:focus {
+      box-shadow: rgba($brand-info, .3) 0 0 7px;
+    }
+
+    &::placeholder {
+      padding-top: 7px;
+    }
+  }
+  &__form {
+    background-color: #f5f5f5;
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+    left: 0;
+
+    &__cont {
+      position: relative;
+    }
+    &__clip {
+      cursor: pointer;
+      position: absolute;
+      left: $spacer-x / 2;
+      top: $spacer-x;
+    }
+  }
+
+  &__header {
+    color: #50555a;
+    font-size: 18px;
+  }
+  &__replies {
+    list-style-type: none;
+
+    &-scroll {
+      overflow: scroll;
+      position: absolute;
+      top: 40px;
+      bottom: 138px;
+      width: 100%;
+    }
+
+    &__reply {
+      word-wrap: break-word;
+      max-width: 100%;
+      overflow: hidden;
+      display: inline-block;
+      font-size: 14px;
+      // min-width: 30%;
+      margin-bottom: 0;
+      padding: 15px;
+      padding-bottom: 10px;
+      position: relative;
+        // border-radius: $border-radius-lg;
+
+      &.is-mine {
+        background-color: $brand-info;
+        color: $white-color;
+        border-radius: 15px 5px 15px 15px;
+      }
+      &-check {
+        margin-left: $spacer-y / 3;
+      }
+      &.is-other {
+        background-color: $white-color;
+        border-radius: 5px 15px 15px 15px;
+      }
+      &.is-deleted {
+        background-color: #fdf9be;
+        color: #783205;
+      }
+      &__time {
+        color: #abb0b6;
+        font-size: 12px;
+      }
+    }
+  }
+}

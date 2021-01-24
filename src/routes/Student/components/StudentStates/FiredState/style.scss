@@ -1,0 +1,10 @@
+@import 'base';
+
+.form {
+  background-color: $white-color;
+  color: #50555a;
+
+  &__title {
+    font-size: 23px;
+  }
+}

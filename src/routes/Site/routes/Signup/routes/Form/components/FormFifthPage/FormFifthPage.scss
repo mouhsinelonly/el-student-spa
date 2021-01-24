@@ -1,0 +1,26 @@
+@import "base.scss";
+
+.c-form-fifth-page {
+	&__degrees-container {
+		border-top:solid #dfdfdf 1px;
+		position: relative;
+
+		&__remove {
+			position: absolute;
+			left: 0;
+			font-size: 20px;
+			font-family: "Helvetica Neue";
+			cursor:pointer;
+			font-weight: 700;
+			color: $brand-danger;
+			background-color: transparent;
+			border:none;
+			top: 10px;
+			border-radius:100%;
+		}
+	}
+
+	&__cta {
+		color: $brand-info;
+	}
+}

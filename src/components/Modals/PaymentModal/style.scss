@@ -1,0 +1,69 @@
+@import 'base';
+
+.c-payment-modal {
+  &__gray-container {
+    background-color: #f7f8fa;
+    border-bottom: solid #dad7e1 1px;
+    border-top: solid #dad7e1 1px;
+    color: $gray;
+  }
+
+  &__success-modal-body,
+  &__success-p{
+     @include media-breakpoint-up(sm) {
+      padding: $spacer-x * 3;
+     }
+  }
+
+
+  &__body {
+     border-top: solid $gray-light 2px;
+     // border-bottom: solid $gray-light 2px;
+     padding:0;
+     border-bottom-width:0;
+  }
+
+  &__header {
+     border-bottom-width: 0;
+  }
+  &__footer {
+
+     border-top-width: 0;
+
+     &__later {
+      @include media-breakpoint-up(xs) {
+        margin-right: $spacer-x;
+      }
+     }
+  }
+  &__table {
+     td,th ,thead th,tfoot td ,thead,tfoot {
+        border-width:0;
+     }
+
+     thead th {
+        color:#a6afba;
+        font-size: 15px;
+     }
+
+     tbody tr td {
+           border-top: solid $gray-lighter 1px;
+     }
+
+
+     tbody td {
+        &:first-child {
+           font-weight: 700;
+        }
+     }
+  }
+
+  &__tfoot {
+     background-color: $gray-lightest;
+     border-bottom:solid $gray-light 1px;
+     border-top:solid $gray-light 1px
+  }
+  &__info {
+     border-top:solid $gray-light 1px
+  }
+}

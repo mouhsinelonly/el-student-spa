@@ -1,0 +1,159 @@
+@import 'base';
+
+.p-student-results {
+  &:first-child &__header {
+    border-top-width: 0;
+  }
+
+  &__header-container {
+    position: relative;
+  }
+  &__header {
+    background-color: $white-color;
+    border-bottom: solid $gray-light 1px;
+    border-top: solid $gray-light 1px;
+
+    &__gpa {
+      border-radius: $border-radius;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    padding: 5px 10px;
+    border:solid $gray-lighter 1px;
+
+    &-number {
+      font-weight: 700;
+      font-size: 32px;
+    }
+    }
+
+    &__yeardate {
+      font-size: 15px;
+      color: #777d84;
+    }
+
+    &__nav {
+      position: absolute;
+      padding: 2px 15px 0px;
+      border-radius: 20px;
+
+      &.prev {
+        left: 0;
+      }
+
+      &.next {
+        right: 0;
+      }
+    }
+    &__yearname {
+      margin: 0;
+      position: relative;
+      display: inline-block;
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    &__adjusyearname {
+      margin: 0;
+      color: #777d84;
+      font-weight: normal;
+      display: inline-block;
+      font-size: 16px;
+
+      @include media-breakpoint-down(sm) {
+        display: none;
+        visibility: hidden;
+      }
+    }
+  }
+
+  &__terms {
+    list-style-type: none;
+    position: relative;
+    display: block;
+
+    &:after {
+      content: ' ';
+      width: 1px;
+      background-color: #b9c2cb;
+      height: 90%;
+      left: 50%;
+      display: block;
+      top: 0;
+      z-index: 1;
+      position: absolute;
+    }
+
+    &__item {
+      z-index: 2;
+      position: relative;
+      &-title {
+        background-color: $white-color;
+        border-radius: 40px;
+        width: 200px;
+        border: solid $gray-light 1px;
+      }
+
+      &-subjects {
+        background-color: $white-color;
+        border: solid $gray-light 2px;
+        border-radius: $border-radius;
+      }
+    }
+  }
+
+  &__subjects {
+    background-color: $white-color;
+    border: solid $gray-light 2px;
+    border-radius: $border-radius;
+    .table {
+      margin-bottom: 0;
+      border-collapse: collapse;
+    }
+    thead th {
+      color: #a6afba;
+      border: none;
+      font-size: 13px;
+      font-weight: 100;
+    }
+    tr {
+      &.fail {
+        color: #777d84;
+        background-color: #f7f8fa;
+      }
+    }
+    tfoot {
+      border-top: solid $gray-light 1px;
+
+      &.success {
+        background-color: #edffed;
+        // border-top-color: $brand-success;
+      }
+
+      &.fail {
+        background-color: #ffeded;
+        // border-top-color: $brand-danger;
+      }
+
+      &.active {
+
+      }
+    }
+    td {
+      font-size: 14px;
+
+      &.bold {
+        font-weight: 700;
+      }
+      &.success {
+        color: $brand-success;
+      }
+      &.study {
+        color: $brand-info;
+      }
+      &.fail {
+        color: $brand-danger;
+      }
+    }
+  }
+}

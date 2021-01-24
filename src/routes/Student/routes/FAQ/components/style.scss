@@ -1,0 +1,20 @@
+@import 'base';
+
+.p-faq {
+  min-height: 100%;
+  background: $white-color;
+
+  &__header {
+    background-color: $gray-lighter;
+    border-bottom: solid $gray-light 1px;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  &__content {
+    background-color: $white-color;
+  }
+}

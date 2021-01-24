@@ -1,0 +1,32 @@
+@import 'base';
+
+.c-book-indexes {
+  &__item {
+    position: relative;
+    list-style-type: none;
+    border-bottom: solid #b9c2cb 1px;
+    font-family: Adobe;
+    color: #1f1f1f;
+    font-size: 20px;
+    cursor: pointer;
+    &:last-child {
+      border-bottom-width: 0;
+    }
+    &.is-current {
+      &:hover {
+        background-color: #fff;
+      }
+    }
+    &:hover {
+      background-color: #edf0f4;
+    }
+    &-number {
+      font-family: NeoSansArabic;
+      font-size: 13px;
+      position: absolute;
+      left: 20px;
+      color: #777d84;
+      top: 20px;
+    }
+  }
+}

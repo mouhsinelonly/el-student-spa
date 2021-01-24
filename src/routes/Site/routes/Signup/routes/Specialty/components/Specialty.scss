@@ -1,0 +1,70 @@
+@import "base.scss";
+
+.signup-specialty-page {
+&__container {
+	padding-top: 60px;
+	padding-bottom: 80px;
+}
+&__loading {
+	padding: 200px 0;
+}
+&__slide {
+	&__center {
+		padding: 0;
+
+		@include media-breakpoint-up(md) {
+			padding-left:50px;
+			padding-right:50px;
+		}
+	}
+}
+&__btn-slider-nav {
+	background-color: transparent;
+	border: none;
+
+	&:disabled {
+		background-color: transparent;
+		border: none;
+	}
+}
+
+&__price-title {
+	border-bottom: solid $gray-lighter 1px;
+	display: inline-block;
+}
+&__heading {
+	font-size: 40px;
+	font-weight: 700;
+}
+
+&__description {
+	line-height: 1&__5;
+	padding: 100px 0;
+}
+
+&__dots {
+	margin: 30px 0;
+
+	&__item {
+		outline: none !important;
+		cursor:pointer;
+		display: inline-block;
+		width:26px;
+		height: 9px;
+		border:none;
+		background-color: #dfdfdf;
+		margin:0 5px;
+
+		&.is-active {
+			background-color: $brand-primary;
+		}
+	}
+}
+
+&__cta-button {
+	margin-top: 70px;
+	margin-bottom: 70px;
+	font-size: 26px;
+	padding: 20px 0;
+}
+}

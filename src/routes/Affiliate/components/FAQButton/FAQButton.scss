@@ -1,0 +1,15 @@
+@import 'base';
+
+.FAQButton {
+padding: 6px 10px;
+border: 1px solid #dddddd;
+border-radius: 4px;
+background-color: #ffffff;
+font-family: $neo;
+width: rem-calc(343px);
+display: block;
+font-size: rem-calc(16px);
+color: #50555a;
+margin-bottom: rem-calc(86px);
+margin-top: rem-calc(86px);
+}

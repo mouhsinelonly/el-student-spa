@@ -1,0 +1,34 @@
+@import 'base';
+
+.ChooseCertificateDay {
+	height: 167px;
+	&__btn {
+		&:hover {
+			background-color: $brand-success;
+			border-top-color: $brand-success;
+			color: $white-color;
+		}
+	}
+
+	&__remaining {
+		color: #777d84;
+	}
+
+	&__disabled {
+		background:#f7f8fa;
+	}
+	&__chosen {
+		background-color: $brand-success;
+		color: #fff;
+	}
+
+	&__chosen &__btn {
+		background-color: $brand-success;
+		border-top-color: darken($brand-success, 10);
+		pointer-events: none;
+		color: $white-color;
+	}
+	&__chosen &__remaining {
+		color: #fff;
+	}
+}

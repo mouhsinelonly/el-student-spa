@@ -1,0 +1,31 @@
+@import "base";
+
+.p-upload-photo {
+  padding: $spacer-y * 5 0;
+
+  &__dropzone {
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #edf0f4;
+    width: 100%;
+    padding: $spacer-y * 4 0;
+    box-shadow: inset #fff 0px 0px 0 10px;
+    transition: box-shadow 300ms;
+    cursor: pointer;
+    border-radius: 5px;
+    border: solid #a8b5c0 1px;
+    height: 190px;
+    max-width: 154px;
+
+    &:hover {
+      box-shadow: inset #fff 0px 0px 0 5px;
+    }
+    &.has-photo {
+      padding: 5px;
+    }
+    &__photo {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

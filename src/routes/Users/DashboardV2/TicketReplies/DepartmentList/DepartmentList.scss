@@ -1,0 +1,27 @@
+@import 'base';
+
+.DepartmentList {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  margin-right: -80px;
+  list-style-type: none;
+  top: rem-calc(60px);
+  // background-color: $white-color;
+  z-index: $ticket-departments-z-index;
+
+  &__item {
+    padding: rem-calc(10px) rem-calc(10px);
+    border-top: solid $gray-light 1px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(79, 97, 135, .05);
+    }
+
+    &:first-child {
+      border-top-width: 0;
+      overflow: hidden;
+    }
+  }
+}

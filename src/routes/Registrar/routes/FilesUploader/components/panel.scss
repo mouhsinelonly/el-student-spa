@@ -1,0 +1,26 @@
+@import "base.scss";
+
+.p-files-uploader {
+  &__exit {
+    width: 100%;
+    @include media-breakpoint-up(md) {
+      position: relative;
+      top: -60px;
+      width: auto;
+    }
+  }
+}
+.c-reg-files-up-panel {
+&__container {
+	background-color: #FFF;
+	border:solid $gray-light 2px;
+	overflow: hidden;
+	border-radius: $border-radius;
+	box-shadow: rgba(#97a0b6 , .3) 0 3px 19px;
+}
+
+&__content {
+	background-color: $gray-lightest;
+	border-bottom: solid $gray-light 1px;
+}
+}

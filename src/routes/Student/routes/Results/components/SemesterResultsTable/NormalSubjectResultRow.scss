@@ -1,0 +1,55 @@
+@import 'base';
+
+.semesterresult {
+  &__normal {
+
+  }
+
+  &__tip {
+    position: absolute;
+    top: -82px;
+    left: 50%;
+    display: none;
+    background-color: #344142;
+    color: $white-color;
+    padding: 10px 10px 13px;
+    border-radius: 5px;
+    font-family: "Helvetica Neue";
+    width: 120px;
+    margin-left: -60px;
+
+    &:after, &:before {
+      top: 100%;
+      left: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      margin-left: 20px;
+    }
+
+    &:after {
+      border-top-color: #344142;
+      border-width: 8px;
+      margin-left: -8px;
+    }
+    &:before {
+      border-top-color: #344142;
+      border-width: 8px;
+      margin-left: -8px;
+    }
+  }
+  &__checkbox:hover &__tip {
+    display: block;
+  }
+  &__checkbox {
+    position: relative;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+}

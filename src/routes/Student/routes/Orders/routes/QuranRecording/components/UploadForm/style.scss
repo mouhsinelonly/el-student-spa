@@ -1,0 +1,18 @@
+@import 'base';
+
+.c-student-delay-order-upload-form {
+  &__upload-form {
+    background-color: $gray-lightest;
+
+    &__footer {
+      background-color: $white-color;
+      border-top: solid $gray-lighter 1px;
+    }
+
+    &__thumb {
+      border:solid $gray-light 2px;
+      border-radius: $border-radius;
+      height: 100px;
+    }
+  }
+}

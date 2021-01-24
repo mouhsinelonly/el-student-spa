@@ -1,0 +1,42 @@
+@import  'base.scss';
+
+.ThesisWorkSteps {
+
+	&__item {
+		display: flex;
+		font-size: 12px;
+		color: #777d84;
+	}
+	&__position {
+		width: 30px;
+		margin-left: 10px;
+		height: 30px;
+		background-color: #b9c2cb;
+		color: #fff;
+		font-size: 12px;
+		border-radius: 100%;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+	}
+
+	&__item.is-active {
+		color: #50555a;
+		font-weight: bold;
+	}
+	.is-active &__position {
+		background-color: #550bbd;
+	}
+	.is-done &__position {
+		background-color: #fff;
+		color: #550bbd;
+		.material-icons {
+			font-size: 18px;
+		}
+	}
+	&__subtitle {
+		font-weight: 200;
+	}
+}

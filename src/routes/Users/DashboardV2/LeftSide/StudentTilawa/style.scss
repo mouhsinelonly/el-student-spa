@@ -1,0 +1,75 @@
+@import 'base';
+
+.v2-ticket-student-tilawa {
+  border-bottom: solid $v2-border-color 1px;
+  font-size: rem-calc(13px);
+  color: $v2-text-light;
+
+  &__row {
+    border-bottom: solid $v2-border-color 1px;
+
+    &:last-child {
+      border-bottom-width: 0;
+    }
+  }
+
+  &__title {
+    font-size: rem-calc(14px);
+    font-weight: 700;
+    color: $v2-text-dark;
+  }
+
+  &__notilawa {
+    font-size: rem-calc(13px);
+    color: $v2-text-light;
+  }
+
+  &__video {
+    background-color: #868d9c;
+    border-radius: rem-calc(3px);
+    overflow: hidden;
+  }
+
+  &__record {
+    position: relative;
+
+    &-controls {
+      font-size: rem-calc(13px);
+
+      position: relative;
+      padding-bottom: rem-calc(5px);
+      margin-bottom: rem-calc(5px);
+    }
+
+    &-control {
+      font-size: rem-calc(16px);
+
+      position: absolute;
+      line-height: 1.3;
+      padding: 0;
+      left: 0;
+      border: none;
+      background-color: #858c9c;
+      color: $white-color;
+      border-radius: 100%;
+      width: rem-calc(16px);
+      height: rem-calc(16px);
+
+      &:disabled {
+        background-color: #ced3de;
+      }
+      &:last-child {
+        left: rem-calc(25px);
+      }
+    }
+    &-subjectname {
+      font-size: rem-calc(13px);
+      color: $v2-text-dark;
+    }
+  }
+  &__comment {
+    background-color: #eeeeee;
+    color: $v2-text-light;
+    font-size: rem-calc(13px);
+  }
+}

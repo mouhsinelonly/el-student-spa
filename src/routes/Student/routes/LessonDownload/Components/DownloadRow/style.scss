@@ -1,0 +1,46 @@
+@import 'base';
+
+.c-l-d-row {
+  border-bottom: solid $gray-lighter 1px;
+
+  &__first {
+    @include media-breakpoint-down(xs) {
+      margin-bottom: rem-calc(20px);
+    }
+  }
+  &__action {
+    position: relative;
+    font-size: rem-calc(14px);
+    padding-right: rem-calc(45px);
+
+    &:focus,&:active {
+      color: $gray-dark;
+    }
+
+    &:hover {
+      background-color: $gray-lightest;
+      color: $gray-dark;
+    }
+
+    .icon {
+      position: absolute;
+      top: rem-calc(12px);
+      right: rem-calc(14px);
+    }
+
+    &:after {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: rem-calc(39px);
+        width: 1px;
+        height: 100%;
+        background-color: #dad7e1;
+    }
+
+    &-size {
+      font-size: rem-calc(11px);
+    }
+  }
+}

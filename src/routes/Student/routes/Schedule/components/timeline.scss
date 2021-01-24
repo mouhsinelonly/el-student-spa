@@ -1,0 +1,56 @@
+@import 'base';
+
+.vis-timeline {
+  border-top: solid 1px;
+  background-color: #edf0f4;
+  overflow: visible !important;
+  margin-top: 30px;
+}
+.timeline-group {
+  &__sessions,
+  &__exams {
+    // height: 60px !important;
+  }
+}
+.timeline-item {
+  &__sessions,
+  &__semester,
+  &__events,
+  &__exams {
+    font-weight: 100;
+    font-size: 12px;
+  }
+  &__sessions, &__sessions.vis-item {
+  background-color: rgba(#f2e3aa, .7) !important;
+  color: #594825 !important;
+  border: none !important;
+  }
+  &__events, &__events.vis-item {
+  background-color: rgba(#e993a4, .7) !important;
+  color: #181818 !important;
+  border: none !important;
+  }
+  &__exams, &__exams.vis-item {
+  background-color: rgba(#acea95, .7) !important;
+  color: #25594c !important;
+  border: none !important;
+  }
+  &__semester, &__semester.vis-item {
+  background-color: rgba(#a5d7ee, .7) !important;
+  color: #254959 !important;
+  border: none !important;
+  }
+}
+.vis-current-time {
+  background-color: #ff2800 !important;
+  width: 4px !important;
+}
+.vis-item {}
+// .vis-top {top: -30px !important}
+
+.vis-panel.vis-bottom, .vis-panel.vis-center, .vis-panel.vis-left, .vis-panel.vis-right, .vis-panel.vis-top,.vis-timeline,.vis-group,.vis-item {
+  border-color: #b9c2cb !important;
+}
+.vis-time-axis .vis-text, .vis-labelset .vis-label .vis-inner {
+  font-size: 13px;
+}

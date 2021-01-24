@@ -1,0 +1,37 @@
+@import 'base';
+
+.MarketShipBlock {
+	&__adress {
+		display: flex;
+		flex-wrap: wrap;
+
+		&-item {
+			flex: 1;
+			height: 34px;
+			padding: 0px 10px 0px 0px;
+			border: 1px solid #777d84;
+			border-radius: 4px;
+			background-color: #ffffff;
+			font-size: 12px;
+			color: #777d84;
+			outline: none;
+
+			&:first-child {
+				margin-left: 10px;
+			}
+
+			&.has-danger {
+				border-color: $brand-danger;
+				color: $brand-danger;
+				background-color: lighten($brand-danger, 45);
+			}
+		}
+	}
+
+	&__header {
+		height: 12px;
+		margin-top: 10px;
+		font-size: 10px;
+		color: #777d84;
+	}
+}

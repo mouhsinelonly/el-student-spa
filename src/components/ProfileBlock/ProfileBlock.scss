@@ -1,0 +1,34 @@
+@import 'base';
+
+.c-ProfileBlock {
+  position: relative;
+  padding-right: rem-calc(50px);
+  padding-top: rem-calc(5px);
+  display: inline-block;
+  padding-bottom: rem-calc(5px);
+  &__photo {
+    width: rem-calc(45px);
+    height: rem-calc(45px);
+    border-radius: 50%;
+    vertical-align: middle;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    background-color: #ebebeb;
+  }
+
+  &__name {
+    padding-top: rem-calc(7px);
+    font-family: $neo;
+    font-size: rem-calc(14px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #50555a;
+  }
+
+  &__role {
+    font-family: $helvetica;
+    font-size: rem-calc(12px);
+    color: #777d84;
+  }
+}

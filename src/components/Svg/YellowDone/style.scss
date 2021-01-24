@@ -1,0 +1,81 @@
+.Svg__YellowDone__path {
+  stroke-dasharray: 150;
+  stroke: #000;
+  stroke-width: 0;
+  stroke-dashoffset: 150;
+  // opacity: 0;
+  transform: scale(1.4);
+  transform-origin: center center;
+  animation: Svg__YellowDone__dash 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+.Svg__YellowDone {
+  transform-origin: center center;
+  animation: Svg__YellowDone__bounceIn .8s forwards;
+}
+
+@keyframes Svg__YellowDone__dash {
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes Svg__YellowDone {
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes Svg__YellowDone__zoomOut {
+  to {
+    transform: scale(1) rotate(0deg);
+  }
+}
+@keyframes Svg__YellowDone__zoomOut2 {
+  to {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes Svg__YellowDone__bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  // 80% {
+  //   -webkit-transform: scale3d(0.97, 0.97, 0.97);
+  //   transform: scale3d(0.97, 0.97, 0.97);
+  // }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}

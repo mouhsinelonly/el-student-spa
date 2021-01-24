@@ -1,0 +1,47 @@
+@import 'base';
+
+.c-footer__menu {
+  margin: 0;
+  padding: 0;
+  @include clearfix;
+  @include media-breakpoint-down(xs) {
+    margin-top: 30px;
+  }
+  &__item {
+    width: 33%;
+    float: right;
+    line-height: rem-calc(35px);
+    list-style-type: none;
+    padding: 0 20px;
+
+    &:first-child {
+      // padding-right: 0;
+    }
+
+    @include media-breakpoint-down(xs) {
+      padding: 0 14px;
+      float: none;
+      font-size: 16px;
+      margin-bottom: 10px;
+      clear: both;
+      display: inline-block;
+
+      &:first-child {
+        padding-right: 6px;
+        padding-left: 6px;
+      }
+    }
+
+    a {
+      color: #344142;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      &.is-active {
+        color: $brand-primary;
+      }
+    }
+  }
+}

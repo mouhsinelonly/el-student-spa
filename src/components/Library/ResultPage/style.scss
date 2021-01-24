@@ -1,0 +1,32 @@
+@import 'base';
+
+.c-library-search-result-book__pages {
+    cursor: pointer;
+    position: relative;
+    // background-color: $white-color;
+    // z-index: 10;
+    &-shadow {
+      background: linear-gradient(to top, #ffffff 0%, transparent 80%);
+      height: 100%;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+    }
+
+    &__meta {
+    color: #777d84;
+    font-size: 15px;
+  }
+  &__content {
+    line-height: 1.5;
+    font-family: Adobe;
+    font-size: 22px;
+    margin: 20px 0;
+    border-top: 1px solid #eff0eb;
+
+    span {
+      color: $brand-warning !important;
+    }
+  }
+  }

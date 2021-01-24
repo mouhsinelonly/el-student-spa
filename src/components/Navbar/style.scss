@@ -1,0 +1,8 @@
+@import 'base';
+
+.c-navbar {
+  &__shadow {
+  	box-shadow: rgba(#97a0b6, .3) 0 1px 5px;
+  	background-color: #FFF;
+  }
+}

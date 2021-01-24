@@ -1,0 +1,53 @@
+@import 'base';
+
+.c-exam-row-excuse-element {
+  position: relative;
+  margin-bottom: 8px;
+  font-size: 14px;
+  cursor: default;
+  border: solid $gray-lighter 0;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  transition: box-shadow 300ms, transform 300ms;
+
+  color: $gray;
+
+  @include media-breakpoint-up(sm) {
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-radius: 5px;
+  }
+  @include media-breakpoint-down(xs) {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  &.can-checked {
+    cursor: pointer;
+
+    &:hover {
+       box-shadow: rgba(#000000, .1) 0 1px 1px;
+      transform: scale(1.01);
+    }
+  }
+  &.is-checked {
+    box-shadow: rgba(#000000, .1) 0 1px 1px;
+    transform: scale(1.01);
+  }
+
+  &__tip {
+    color: #777d84;
+    padding: 10px;
+    font-size: 14px;
+    // display: none;
+  }
+  &__status {
+    position: relative;
+  }
+  &__plus {
+    position: absolute;
+    left: 10px;
+    font-size: 30px;
+    top: 4px;
+    line-height: 1;
+  }
+}

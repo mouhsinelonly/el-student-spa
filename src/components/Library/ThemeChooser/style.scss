@@ -1,0 +1,47 @@
+@import 'base';
+
+.c-theme-chooser {
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  z-index: 10;
+  width: 300px;
+  color: #777d84;
+
+  &__item {
+    list-style-type: none;
+    &:first-child {
+      border-bottom: solid #b9c2cb 1px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0;
+      width: 24px;
+      height: 24px;
+      position: relative;
+      top: -2px;
+    }
+    .btn-white-border {
+      border-color: #344142;
+      border-width: 2px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 1.3;
+      background-color: $white-color;
+    }
+    .btn-white {
+      border-color: #b9c2cb;
+    }
+
+    .btn-black {
+      border-color: #3c3c3c;
+      background-color: #3c3c3c;
+    }
+
+    .btn-caramel {
+      background-color: #f8f2e3;
+      border-color: #dcd4c0;
+    }
+  }
+}

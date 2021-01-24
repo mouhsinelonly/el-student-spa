@@ -1,0 +1,48 @@
+@import 'base';
+
+.student-community-create {
+&__input-container {
+  background-color: $white-color;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  border-radius: $border-radius;
+  overflow: hidden;
+}
+&__content {
+  width: 100%;
+  border: none;
+  min-height: 300px;
+  font-size: 16px;
+  padding: 20px;
+  border-top: solid $gray-light 1px;
+  &:hover, &:focus {
+    // border-top-color: $brand-success;
+    box-shadow: none;
+    outline: none;
+  }
+  &::placeholder {
+    color: #b9c2cb;
+  }
+}
+&__subject {
+  border-width:0;
+  display: block;
+  padding: $spacer * 3;
+  font-size: 19px;
+  width: 100%;
+  text-align: center;
+  outline:none;
+
+  &::placeholder {
+    color: #b9c2cb;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+&__title {
+
+}
+}

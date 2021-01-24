@@ -1,0 +1,20 @@
+@import 'base';
+
+.c-chatbox-new-form {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  input {
+    min-height: 50px;
+    &:active, &:focus {
+      box-shadow: rgba($brand-info, .3) 0 0 7px;
+    }
+  }
+
+  &__textarea {
+    min-height: 50px;
+    line-height: 34px;
+  }
+}

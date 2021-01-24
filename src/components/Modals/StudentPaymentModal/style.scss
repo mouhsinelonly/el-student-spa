@@ -1,0 +1,125 @@
+@import 'base';
+
+.c-student-payment-modal {
+  &__gray-container {
+    background-color: #f7f8fa;
+    border-bottom: solid #dad7e1 1px;
+    border-top: solid #dad7e1 1px;
+    color: $gray;
+  }
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
+    padding: 2px;
+    color: $brand-danger;
+    border: solid $brand-danger 1px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  &__logout {
+    cursor: pointer;
+  }
+  &__later {
+    @include media-breakpoint-up(sm) {
+      margin-right: $spacer-x * 2;
+    }
+  }
+  &__success-modal-body,
+  &__success-p {
+    @include media-breakpoint-up(sm) {
+      padding: $spacer-x * 3;
+    }
+  }
+
+  &__body {
+    background-color: $gray-lightest;
+    border-top: solid $gray-light 2px;
+    // border-bottom: solid $gray-light 2px;
+    padding: 0;
+    border-bottom-width: 0;
+  }
+
+  &__header {
+    border-bottom-width: 0;
+  }
+  &__footer {
+    border-top-width: 0;
+  }
+  &__table {
+    td,
+    th,
+    thead th,
+    tfoot td,
+    thead,
+    tfoot {
+      border-width: 0;
+    }
+
+    thead th {
+      color: #a6afba;
+      font-size: 15px;
+    }
+
+    tbody tr td {
+      border-top: solid $gray-lighter 1px;
+    }
+
+    tbody td {
+      &:first-child {
+        font-weight: 700;
+      }
+    }
+  }
+  &__bottom-btn {
+    width: 30%;
+    margin: 0 5px;
+    border-radius: 0;
+    border-width: 0;
+    position: relative;
+
+    @include media-breakpoint-down(sm) {
+      width: 50%;
+      display: inline-block;
+      margin: 0 auto !important;
+
+      &:after {
+        display: none !important;
+      }
+
+      &:first-child {
+        &:after {
+          display: block !important;
+        }
+      }
+
+      &:last-child {
+        width: 100%;
+        border-top: solid $gray-lighter 1px;
+      }
+    }
+
+    &:after {
+      position: absolute;
+      content: ' ';
+      top: rem-calc(9px);
+      width: 1px;
+      height: 50%;
+      left: 0;
+      background-color: $gray-light;
+    }
+
+    &:last-child {
+      &:after {
+        display: none;
+        content: '';
+      }
+    }
+  }
+  &__tfoot {
+    // background-color: #edffed;
+    border-bottom: solid $gray-lighter 1px;
+    border-top: solid $gray-lighter 1px;
+  }
+}

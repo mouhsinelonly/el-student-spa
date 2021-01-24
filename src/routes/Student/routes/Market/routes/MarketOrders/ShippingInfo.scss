@@ -1,0 +1,17 @@
+.Market-ShippingInfo {
+	padding: 20px 20px 20px 0;
+	border-radius: 4px;
+	background-color: #ffffff;
+	background-size: cover;
+	border-right: solid #00c674 5px;
+	font-size: 16px;
+	color: #777d84;
+
+	&__icon {
+		color: #00c674;
+		vertical-align: middle;
+		display: inline-block;
+		margin-left: 10px;
+		font-size: 28px;
+	}
+}

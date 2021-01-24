@@ -1,0 +1,42 @@
+@import 'base.scss';
+
+.youtube-modal {
+&__icon {
+  margin-top: 5px;
+  transform: scale(.77);
+}
+
+&__indicator {
+  position: relative;
+  display: inline-block;
+
+  &:after {
+    width:16px;
+    height: 16px;
+    background-color: $gray-light;
+    content: ' ';
+    position: absolute;
+    bottom: 14px;
+    right: 12px;
+    border-radius: 100%;
+    display: block;
+  }
+
+  &.is-active {
+    &:after {
+      background-color: $brand-success;
+      animation-name: blink;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: easein;
+
+    }
+  }
+}
+}
+
+@keyframes blink {
+  0% {opacity: 1}
+  50% {opacity: 0}
+  100% {opacity:1}
+}

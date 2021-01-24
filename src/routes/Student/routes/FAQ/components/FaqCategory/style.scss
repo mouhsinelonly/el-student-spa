@@ -1,0 +1,13 @@
+@import 'base';
+
+.c-faq-category {
+  &__title {
+    a {
+      color: #343341;
+
+      &:hover {
+        color: #343341;
+      }
+    }
+  }
+}

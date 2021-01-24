@@ -1,0 +1,76 @@
+@import 'base';
+
+.p-WaitingList {
+  &__container {
+    padding-top: 60px;
+    padding-bottom: 200px;
+  }
+
+  &__howto {
+    z-index: 10;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background-color: $gray-lighter;
+    color: $gray-dark;
+    border-radius: 30px;
+    padding: rem-calc(10px) 0 rem-calc(10px) rem-calc(30px);
+
+
+    &.is-ltr {
+      right: auto;
+      left: 40px;
+      padding: rem-calc(10px) rem-calc(30px) rem-calc(10px) 0;
+
+      i {
+        margin-left: -3px;
+        margin-right: rem-calc(20px);
+      }
+    }
+    i {
+      line-height: 0;
+      vertical-align: middle;
+      display: inline-block;
+      margin-left: rem-calc(20px);
+      font-size: rem-calc(50px);
+      margin-right: -3px;
+      color: #de4745;
+    }
+
+    &:hover {
+      background-color: #de4745;
+      color: $white-color;
+
+      i {
+        color: $white-color;
+      }
+    }
+
+    @include media-breakpoint-down(xs) {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 0;
+
+      &.is-ltr {
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.WaitingListSuccess {
+  &__icon {
+    font-size: rem-calc(60px);
+    border-radius: 100%;
+    color: #3da089;
+    box-shadow: inset #3da089 0 0 0 7px, 0 0 1px 10px #3da08947, 0 0 1px 23px #3da08914;
+  }
+  &__title {
+    font-weight: 700;
+    color: #3da089;
+    font-size: rem-calc(18px);
+  }
+}

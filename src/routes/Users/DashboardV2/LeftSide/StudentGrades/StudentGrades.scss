@@ -1,0 +1,45 @@
+@import 'base.scss';
+
+.Users-StudentGrades {
+  &__container {
+    position: fixed;
+    cursor: pointer;
+    background-color: $white-color;
+    overflow-x: scroll;
+    position: relative;
+    margin-top: -1px;
+    border-top: solid $v2-border-color 1px;
+    font-size: rem-calc(12px);
+    height: 100%;
+    display: block;
+  }
+  &__title,
+  &__item-header {
+    font-size: rem-calc(14px);
+    font-weight: 700;
+    color: $v2-text-dark;
+  }
+
+  &__item-clock {
+    display: block;
+    width: 13px;
+    font-size: rem-calc(14px);
+    margin: 0 auto;
+  }
+  &__item-name {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__item-bl {
+    border-left: solid $v2-border-color 1px;
+  }
+  &__item {
+    > div {
+      padding: rem-calc(5px) 0;
+      height: 100%;
+      position: relative;
+    }
+    border-bottom: solid $v2-border-color 1px;
+  }
+}

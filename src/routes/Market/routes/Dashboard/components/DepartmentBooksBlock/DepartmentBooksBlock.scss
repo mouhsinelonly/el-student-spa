@@ -1,0 +1,30 @@
+@import 'base';
+
+.DepartmentBooksBlock {
+	overflow: hidden;
+	background-color: #2f2933;
+	border-radius: 4px;
+	position: relative;
+	color: #fff;
+	padding-bottom: 50px !important;
+	@include media-breakpoint-up(sm) {
+		padding-bottom: 10px;
+	}
+	&__cover {
+		height: 220px;
+		@include media-breakpoint-up(sm) {
+			position: absolute;
+		}
+		bottom: 0;
+
+		img {
+			bottom: 0;
+		}
+	}
+
+	button {
+		position: absolute;
+		left: 20px;
+		bottom: 20px;
+	}
+}

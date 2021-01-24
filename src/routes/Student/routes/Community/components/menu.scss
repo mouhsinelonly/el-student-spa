@@ -1,0 +1,118 @@
+@import 'base.scss';
+
+
+.c-student-community-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: rem-calc(20px) rem-calc(14px) rem-calc(20px);
+
+  @include media-breakpoint-up(sm) {
+    margin:$spacer * 2  0;
+    border-bottom: solid #b9c2cb 1px;
+    margin: 0;
+  }
+  @include media-breakpoint-down(xs) {
+  &__search {
+
+      &:active,&:hover,&:focus {
+        border-width: 0;
+        height: 35px;
+        background-color: transparent !important;
+        color: #777d84 !important;
+      }
+    }
+  }
+  &__item {
+
+     @include media-breakpoint-up(sm) {
+      background-color: transparent;
+      padding-left: $spacer-x * 3;
+     }
+
+    display: inline-block;
+
+    @include media-breakpoint-down(sm) {
+        padding: rem-calc(8px) rem-calc(14px);
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+        border-left-width: 1px;
+        border-style: solid;
+
+        border-color: #b9c2cb;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        background-color: #ffffff;
+
+        &.is-mine {
+          border-right-width: 0;
+        }
+        &.is-recent {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          border-right-width: 1px;
+          border-left-width: 0;
+          border-top-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+        }
+      }
+
+    &__action {
+      cursor: pointer;
+    }
+
+    &.is-active {
+      background-color: #50555a;
+      color: $white-color;
+      border-color: #50555a;
+      @include media-breakpoint-up(sm) {
+        background-color: transparent;
+        border-color: transparent;
+        color: #777d84;
+        div {
+          border-bottom: solid 4px #777d84;
+          font-weight: 700;
+        }
+      }
+    }
+
+    &.is-last {
+      width: 150px;
+      height: 42px;
+      border-right-width: 1px;
+      padding-left: 0;
+      padding-top: 11px;
+      border-radius: 49px;
+      margin-top: 20px;
+      float:left;
+      margin-top: 0;
+
+      @include media-breakpoint-up(md) {
+        width: 300px;
+        height: auto;
+      }
+    }
+
+    &__form {
+        display: inline-block;
+        vertical-align: middle;
+        transform: translateY(-9px);
+
+        input {
+          background-color: transparent;
+          border-color: transparent;
+
+          &:focus {
+            border-color: transparent;
+          }
+        }
+
+        button {
+          background-color: transparent;
+          font-size: 16px;
+          color: #777d84;
+          border-color: transparent;
+          font-weight: 700;
+        }
+      }
+  }
+}

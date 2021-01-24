@@ -1,0 +1,61 @@
+@import 'base';
+
+.LibraryPageModal {
+	background-color: #fff;
+	-webkit-perspective: 1000;
+	perspective: 1000;
+  	transform-origin: center;
+
+	&__folders {
+		background-color: #fff;
+		border-radius: 5px;
+		padding: 10px;
+		width: 300px;
+		position: absolute;
+		max-width: 100%;
+	}
+	&__folders-item {
+	  border-radius: 5px;
+	  cursor: pointer;
+	  padding: 5px;
+
+	  &:hover {
+	  	background-color: $gray-lighter;	  	
+	  	color: $gray-dark;	  	
+	  }
+
+	  &.is-selected {
+	  	background-color: $brand-success;
+	  	color: #fff;
+	  }
+	}
+	&__folders-items {
+		max-height: 100px;
+    	padding: 10px;
+    	max-height: 100px;
+    	overflow: scroll;
+    	background: #fafafa;
+    	text-align: right;
+    	color: #757474;
+	}
+	&__actions {
+		position: fixed;
+		bottom: rem-calc(20px);
+		width: 100%;
+    	left: 0;
+    	right: 0;
+    	padding: 20px;
+	}
+
+	&__add, &__close, &__browse {
+		background-color: #fff;
+	}
+	&__add {
+		background-color: #a3deca;
+		color: #516966;
+
+		&:hover {
+			background-color: lighten(#a3deca, 5);
+		}
+	}
+}

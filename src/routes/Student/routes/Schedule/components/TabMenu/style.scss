@@ -1,0 +1,18 @@
+@import 'base';
+
+.c-student-tabmenu {
+  background-color: $white-color;
+
+  &__list {
+    list-style-type: none;
+
+    &__item {
+      display: inline-block;
+      cursor: pointer;
+
+      &.is-active {
+        border-bottom: solid $gray-dark 3px;
+      }
+    }
+  }
+}

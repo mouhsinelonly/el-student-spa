@@ -1,0 +1,36 @@
+@import 'base';
+$light-color: #777d84;
+
+.exams-countdown-header {
+  background-color: $white-color;
+  position: relative;
+
+  &__title {
+    font-size: rem-calc(23px);
+  }
+
+  &__time {
+    left: rem-calc(20px);
+    padding-left: rem-calc(30px);
+    position: absolute;
+    top: rem-calc(20px);
+
+    &-minutes {
+      color: $brand-success;
+      font-size: rem-calc(32px);
+      font-weight: 700;
+    }
+
+    &-label {
+      color: $light-color;
+      font-size: rem-calc(12px);
+    }
+  }
+
+  &__progress {
+    height: 6px;
+    position: relative;
+    top: -1px;
+    transition: width 300ms;
+  }
+}

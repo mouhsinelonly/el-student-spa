@@ -1,0 +1,34 @@
+@import 'base';
+
+.LibraryFolders {
+	&__item {
+		position: relative;
+		border-radius: 5px;
+		overflow: hidden;
+		padding-right: 40px !important;
+		display: block;
+		
+		&-title {
+			color: #515456;
+		}
+
+		&-num {
+			position: absolute;
+			left: 32px;
+			top: 32px;
+		}
+		&:before {
+			content: ' ';
+			z-index: -1;
+			position: absolute;
+			right: -25px;
+			border-radius: 50%;
+			top: 50%;
+			margin-top: -25px;
+			background-color: #fff;
+			border: solid 8px #fcedaa;
+			width: 50px;
+			height: 50px;
+		}
+	}
+}

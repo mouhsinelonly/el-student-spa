@@ -1,0 +1,94 @@
+@import 'base';
+
+.MarketHeader {
+	background-color: #fff;
+	position: relative;
+	z-index: 2;
+	// top: 67px;
+	// position: sticky;
+	// z-index: 99;
+	&__home {
+		top: 12px;
+		position: relative;
+		color: #50555a;
+
+		i {
+			vertical-align: middle;
+			display: inline-block;
+		}
+	}
+	&__btn {
+		border-radius: 20px;
+		position: relative;
+		// width: 46%;
+
+		@include media-breakpoint-up(sm) {
+			// width: 40%;
+		}
+		margin-left: 20px;
+
+		&:last-child {
+			margin-left: 0;
+		}
+
+		&.is-green {
+			background-color: #edffee;
+			border-color: #adccaf;
+
+
+			&:hover {
+				background-color: #00c674 !important;
+				border-color: #00c674 !important;
+				color: #fff;
+
+				i {
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	&__icon {
+		position: absolute;
+		right: 10px;
+		top: 5px;
+		display: inline-block;
+		vertical-align: middle;
+
+		&.is-green {
+			color: #00c674;
+		}
+	}
+	&__badge {
+		position: absolute;
+		left: 10px;
+		top: 7px;
+		line-height: 1.2;
+		background-color: #edf0f4;
+		color: #777d84;
+		border-radius: 20px;
+		padding: 3px 10px 2px;
+		font-size: 14px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	&__badge.is-green {
+		background-color: #00c674;
+		color: #fff;
+
+	}
+
+	&.is-orders {
+		color: $gray;
+		font-size: 24px;
+
+		i {
+			vertical-align: middle;
+			font-size: 34px;
+			margin-left: 20px;
+			display: inline-block;
+			color: $gray;
+		}
+	}
+}

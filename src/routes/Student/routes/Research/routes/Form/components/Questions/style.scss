@@ -1,0 +1,66 @@
+@import 'base';
+
+.c-research-questions {
+  padding-bottom: 79px;
+  // height: 600px;
+  overflow: scroll;
+
+  &__field {
+    transition: opacity 200ms;
+    &.is-hidden {
+      opacity: .2;
+
+    }
+  }
+  &__image {
+    width: rem-calc(150px);
+    height: auto;
+    display: block;
+    margin-bottom: rem-calc(10px);
+  }
+  &__label {
+    font-size: 23px;
+    font-family: NeoSansArabic;
+  }
+  &__text {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    padding: 50px;
+    outline: none;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+    transition: opacity 200ms;
+    &.is-hidden {
+      opacity: .2;
+    }
+  }
+
+  &__actions {
+    border-top: solid #dad7e1 1px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: $white-color;
+    width: 100%;
+    @include media-breakpoint-down (xs) {
+      text-align: center;
+    }
+    &-percent {
+      color: #777d84;
+      font-size: 15px;
+    }
+
+    .btn {
+      @include media-breakpoint-up (sm) {
+        margin-top: -30px;
+      }
+      @include media-breakpoint-down (xs) {
+        margin-top: 20px;
+      }
+    }
+  }
+}

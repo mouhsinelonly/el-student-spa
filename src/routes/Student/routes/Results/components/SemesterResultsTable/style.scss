@@ -1,0 +1,61 @@
+@import 'base.scss';
+
+.c-student-results {
+  background-color: $white-color;
+  border: solid $gray-light 2px;
+  border-radius: $border-radius;
+
+  &__send {
+    display: block;
+    width: 340px;
+  }
+    .table {
+      margin-bottom: 0;
+      border-collapse: collapse;
+    }
+    thead th {
+      color: #a6afba;
+      border: none;
+      font-size: 13px;
+      font-weight: 100;
+    }
+    tr {
+      &.fail {
+        color: #777d84;
+        background-color: #f7f8fa;
+      }
+    }
+    tfoot {
+      border-top: solid $gray-light 1px;
+
+      &.success {
+        background-color: #edffed;
+        // border-top-color: $brand-success;
+      }
+
+      &.fail {
+        background-color: #ffeded;
+        // border-top-color: $brand-danger;
+      }
+
+      &.active {
+
+      }
+    }
+    td {
+      font-size: 14px;
+
+      &.bold {
+        font-weight: 700;
+      }
+      &.success {
+        color: $brand-success;
+      }
+      &.study {
+        color: $brand-info;
+      }
+      &.fail {
+        color: $brand-danger;
+      }
+    }
+}

@@ -1,0 +1,15 @@
+@import 'base';
+
+.c-statements-payment {
+  &__header {
+    padding-right: rem-calc(50px);
+  }
+  &__amount {
+    font-size: rem-calc(73px);
+    color: $brand-success;
+    font-weight: 700;
+    position: absolute;
+    top: rem-calc(30px);
+    right: rem-calc(30px);
+  }
+}

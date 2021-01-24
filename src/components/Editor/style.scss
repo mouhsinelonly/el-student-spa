@@ -1,0 +1,55 @@
+@import 'base';
+
+.RichEditor-styleButton {
+  border-width: 0;
+  background-color: transparent;
+  border: solid #b9c2cb 1px;
+  border-radius: 3px;
+  i {
+    vertical-align: middle;
+  }
+  &.RichEditor-activeButton {
+    background-color: #b9c2cb;
+    border-color: #b9c2cb;
+    // color: $white-color;
+  }
+}
+.RichEditor__toolbar {
+  position: sticky;
+  z-index: $student-forum-editor-toolbar-z-index;
+  top: 0;
+  border-radius: 5px 5px 0 0;
+  bottom: 20px;
+  border-bottom: solid #b9c2cb 1px;
+  background-color: #fff;
+}
+.RichEditor-editor {
+  min-height: 10px;
+  position: relative;
+
+  &.is-open {
+    animation: openRichEditor 500ms forwards;
+  }
+}
+@keyframes openRichEditor {
+  to {
+    min-height: 300px;
+  }
+}
+.RichEditor-root {
+  // overflow: hidden;
+  border-radius: 5px;
+  border: solid #b9c2cb 1px;
+  background-color: $white-color;
+}
+.public-DraftEditorPlaceholder-root {
+  display: inline-block;
+}
+
+.public-DraftEditorPlaceholder-root {
+  color: #777d84;
+  font-size: rem-calc(15px);
+  position: absolute;
+  top: 20px;
+  right: 16px;
+}

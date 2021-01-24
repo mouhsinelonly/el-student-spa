@@ -1,0 +1,19 @@
+@import 'base';
+
+.OpenViduCall {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	padding: 10px;
+	width: 150px;
+	min-height: 26px;
+	z-index: 10;
+	color: $white-color;
+	border-radius: 5px;
+	background-color: $brand-success;
+
+	&.is-bottom {
+		top: auto;
+		bottom: 10px;
+	}
+}

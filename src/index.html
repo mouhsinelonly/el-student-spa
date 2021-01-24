@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ar" dir='rtl'>
+<head>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="preconnect" href="//fonts.googleapis.com">
+<link rel="preconnect" href="//fonts.gstatic.com">
+  <script>
+    var re = /index\.html/g
+    if (re.test(window.location)) {
+      window.location = '/'
+    }
+    document.oncontextmenu = function() { 
+    return false; 
+};
+document.onmousedown = disableRightclick;
+function disableRightclick(evt){
+    if(evt.button == 2){
+        return false;    
+    }
+}
+
+  </script>
+  <title>مركز التعلم عن بعد - كلية العلوم الشرعية</title>
+  <meta charset="utf-8" />
+  <meta name="google-site-verification" content="dNX13csx9qUIuhHQHVzdwL-asbqscN2iCnMVcehjjQw" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#fff" />
+  <style>
+    @font-face {
+      font-family: 'Material Icons';
+      font-display: swap;
+    }
+  body {
+    background-color: #edf0f4;
+  }
+  @keyframes initialrotate {
+    100% { transform: rotate(360deg); }
+  }
+  @keyframes initialdash {
+    0% {
+      stroke-dasharray: 1,150;
+      stroke-dashoffset: 0;
+    }
+    50% {
+      stroke-dasharray: 90,150;
+      stroke-dashoffset: -35;
+    }
+    100% {
+      stroke-dasharray: 90,150;
+      stroke-dashoffset: -124;
+    }
+  }
+  .initload {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .initload__spinner-container {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-left: -25px;
+    margin-top: -25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: initialrotate 2s linear infinite;
+  }
+  .initload__path {
+    stroke-dasharray: 1,150;
+    stroke-dashoffset: 0;
+    stroke: rgba(27, 154, 89, 0.7);
+    stroke-linecap: round;
+    animation: initialdash 1.5s ease-in-out infinite;
+  }
+</style>
+  <meta name="description" content="هل أنت مهتم بدراسة العلوم الشرعية على الإنترنت؟ نحن نقدم شهادة و برامج البكالوريوس والماجستير في العلوم الشرعية ، وكلها عبر الإنترنت.">
+
+</head>
+<body>
+  <div id="root" style="min-height: 100%; height: 100%">
+    <div class="initload">
+      <svg class="initload__spinner-container" viewBox="0 0 43 43">
+        <circle class="initload__path" cx="21.5" cy="21.5" r="20" fill="none" stroke-width="3"></circle>
+      </svg>
+      <noscript>Your browser does not support JavaScript!</noscript>
+      <noscript>المتصفح الذي تستخدمه لا يدعم جافاسكريبت</noscript>
+    </div>
+  </div>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/7.2.8/adapter.min.js"></script>
+<!-- Facebook Pixel Code -->
+<script>
+  if(navigator.userAgent !== 'ReactSnap' && typeof __DEV__ !== 'undefined' && !__DEV__) {
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '396781324279058');
+    fbq('track', 'PageView');
+  }
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=396781324279058&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+</body>
+</html>

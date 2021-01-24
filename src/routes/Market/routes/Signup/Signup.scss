@@ -1,0 +1,43 @@
+@import 'base';
+
+.Library-Signup {
+  min-height: 100%;
+  background-color: #eff0eb;
+
+  &__header {
+    font-family: $neo;
+    font-size: rem-calc(36px);
+    color: #382f2a;
+    font-weight: 700;
+  }
+
+  &__form {
+    background-color: $white-color;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+    border-radius: rem-calc(6px);
+  }
+
+  &__footer {
+    border-top: solid #b9c2cb 1px;
+    position: relative;
+
+    &-back {
+      padding: 5px 0;
+      font-size: rem-calc(14px);
+      color: #777d84;
+      border-radius: 0;
+      display: block;
+      text-align: center;
+      background-color: transparent;
+      border-bottom: solid #b9c2cb 1px;
+      margin: 0 auto rem-calc(30px);
+
+      @include media-breakpoint-up(md) {
+        right: 50px;
+        margin-top: rem-calc(-19px);
+        position: absolute;
+        top: 50%;
+      }
+    }
+  }
+}

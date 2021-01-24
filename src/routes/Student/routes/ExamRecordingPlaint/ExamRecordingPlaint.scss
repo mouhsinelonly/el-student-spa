@@ -1,0 +1,14 @@
+.ExamRecordingPlaint {
+  &__reason {
+    width: 100%;
+    min-height: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    border-width: 0;
+
+    &:hover, &:focus {
+      outline: none;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import "base";
+
+.registrar-dashboard {
+  &__heading {
+  	font-size: (44 / 16) + rem;
+  }
+
+  &__container {
+  	min-height: 600px;
+  }
+}

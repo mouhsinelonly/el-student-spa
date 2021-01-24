@@ -1,0 +1,28 @@
+@import "base.scss";
+
+.c-form-select {
+  font-family: "Helvetica Neue";
+  height: 53px;
+  // padding-top: 24px;
+  display:block;
+  background-color: $gray-lightest;
+  border-color: $gray-light;
+  font-size: 14px;
+
+
+  &.has-error {
+    border-color: $brand-danger;
+    box-shadow: $brand-danger 0 0 0 1px;
+    // background-color: lighten($brand-danger, 43);
+  }
+  &.has-success {
+    box-shadow: $brand-success 0 0 0 2px;
+    border-color: transparent;
+    // background-color: lighten($brand-success, 43);
+  }
+
+&__label-danger {
+  font-size: 11px;
+  color: $brand-danger;
+}
+}

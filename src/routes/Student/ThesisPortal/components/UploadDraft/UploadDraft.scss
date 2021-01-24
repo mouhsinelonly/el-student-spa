@@ -1,0 +1,115 @@
+@import 'base';
+
+.Thesis-UploadDraft {
+
+	&__heading {
+		color: #777d84;
+		font-size: 14px;
+	}
+	progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+   appearance: none;
+
+  width: 100%;
+  height: 6px;
+}
+progress[value]::-webkit-progress-value {
+	background-color: #610dd6;
+}
+progress[value]::-webkit-progress-bar {
+  background-color: #edf0f4;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+	position: relative;
+	overflow: hidden;
+	.btn {
+		position: relative;
+		border-radius: 0;
+		border-width: 0;
+		background-color: #f7f8fa;
+		border-top-width: 1px;
+
+		&:hover {
+			background-color: #610dd6;
+			color: #fff;
+
+			i {
+				color: lighten(#610dd6, 20);
+				opacity: 1;
+				bottom: -20px;
+			}
+		}
+	}
+
+	&-title {
+		color: #777d84;
+	}
+
+	&__cloud {
+		font-size: 80px;
+		transition: bottom 300ms;
+		position: absolute;
+		left: 40px;
+		opacity: .1;
+		bottom: -30px;
+	}
+	&__input {
+		position: absolute;
+		width: 200%;
+		height: 100%;
+		top: 0;
+		right: 0;
+		cursor: pointer;
+		left: 0;
+		opacity: 0;
+		margin-right: -100px;
+		bottom: 0;
+		background-color: #fff;
+	}
+
+	&__done {
+		position: relative;
+		border: solid #e0e0e0 0;
+		border-top-width: 1px;
+		background-color: #f7f8fa;
+		border-bottom-width: 1px;
+		&-type {
+		background: #fff;
+		padding-left: 2px;
+		box-shadow: $gray-light 0 0 1px;
+		padding-right: 2px;
+		border: #fff solid 5px;
+		border-radius: 5px;
+	}
+		&-delete {
+			position: absolute;
+			top: 35px;
+			background: transparent;
+			padding: 0;
+			border-width: 0;
+			left: 15px;
+			color: $gray-dark !important;
+			font-size: 24px !important;
+
+			&:hover {
+				color: $brand-danger !important;
+			}
+		}
+		&-heading {
+			font-size: rem-calc(12px) !important;
+		}
+
+		&-input {
+			resize: none;
+			display: block;
+			outline: none;
+			padding: 3px;
+			width: 100%;
+			height: 50px;
+			border-width: 0;
+		}
+	}
+}

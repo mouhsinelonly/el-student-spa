@@ -1,0 +1,63 @@
+@import 'base';
+
+.payments-container {
+  // background-color: $gray-light;
+  min-height: 600px;
+
+  &__heading {
+    font-size: 32px;
+    color: $gray-dark;
+    font-weight: 700;
+  }
+
+  &__invoices {
+    list-style-type: none;
+
+    &__amount {
+      font-size: 14px;
+    }
+
+    &__date {
+      font-size: 15px;
+      color: $gray;
+    }
+
+    &__item {
+      position: relative;
+      border-radius: $border-radius;
+      background-color: $white-color;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    &__items {
+      height: 0;
+      overflow: hidden;
+      transition: height 1s;
+
+      &.is-visible {
+        height: auto;
+      }
+    }
+  }
+
+  &__footer {
+    background-color: #edffed;
+  }
+
+  &__switch-button {
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    transition: background-color 500ms;
+  }
+
+  &__table {
+    font-size: 14px;
+  }
+
+  &__semester-name {
+    font-size: 20px;
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,30 @@
+@import 'base';
+
+.choose-spcialty {
+  background-color: #212a2b;
+
+  &__title {
+    color: $white-color;
+    font-size: rem-calc(22px);
+  }
+
+  &__sublink {
+    cursor: pointer;
+    color: #899d9e;
+    font-size: rem-calc(15px);
+
+    &:visited {
+      color: #899d9e;
+    }
+
+    &:hover,
+    &:active {
+      color: $white-color;
+    }
+  }
+
+  &__minimized {
+    color: #899d9e;
+    padding-top: rem-calc(10px);
+  }
+}

@@ -1,0 +1,535 @@
+/* font converted using font-converter.net. thank you! */
+@font-face {
+  font-family: 'NeoSansArabic';
+  font-display: swap;
+  // src: url('../static/fonts/NeoSansArabic.eot'); /* IE9 Compat Modes */
+  src: url('../static/fonts/NeoSansArabic.eot?#iefix') format('embedded-opentype'),
+    url('../static/fonts/NeoSansArabic.woff2') format('woff2'), url('../static/fonts/NeoSansArabic.woff') format('woff'),
+    url('../static/fonts/NeoSansArabic.ttf') format('truetype'), url('../static/fonts/NeoSansArabic.svg') format('svg'); /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Adobe';
+  font-display: swap;
+  src: url('../static/fonts/AdobeArabic-Regular.woff') format('woff'),
+    url('../static/fonts/AdobeArabic-Regular.ttf') format('truetype'),
+    url('../static/fonts/AdobeArabic-Regular.woff2') format('woff2'),
+    url('../static/fonts/AdobeArabic-Regular.eot?#iefix') format('embedded-opentype');
+}
+@font-face {
+  font-family: 'Helvetica Neue';
+  font-display: swap;
+  src: url('../static/fonts/HelveticaNeueLTW20-Light.woff') format('woff'),
+    url('../static/fonts/HelveticaNeueLTW20-Light.svg') format('svg'),
+    url('../static/fonts/HelveticaNeueLTW20-Light.eot') format('embedded-opentype');
+}
+// @font-face {
+//     font-family: "KFC Naskh";
+//     src:
+//     url('../static/fonts/KFC_naskh.otf') format('opentype');
+// }
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/materialicons/v48/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  font-display: swap;
+  font-weight: 700;
+  src: url('../static/fonts/HelveticaNeueLTW20-Bold.woff') format('woff'),
+    url('../static/fonts/HelveticaNeueLTW20-Bold.svg') format('svg'),
+    url('../static/fonts/HelveticaNeueLTW20-Bold.eot') format('embedded-opentype');
+}
+
+@font-face {
+  font-display: swap;
+}
+:global {
+  @import 'base';
+  @import 'icons';
+  // Reset and dependencies
+  @import 'bootstrap/normalize';
+  // @import "bootstrap/print";
+
+  // Core CSS
+  @import 'bootstrap/reboot';
+  @import 'bootstrap/type';
+  @import 'bootstrap/images';
+  // @import "bootstrap/code";
+  @import 'bootstrap/grid';
+  @import 'bootstrap/tables';
+  @import 'bootstrap/forms';
+  @import 'bootstrap/buttons';
+
+  // // Components
+
+  @import 'bootstrap/dropdown';
+  @import "bootstrap/button-group";
+  @import 'bootstrap/input-group';
+  // @import "bootstrap/custom-forms";
+  @import 'bootstrap/nav';
+  @import 'bootstrap/navbar';
+  @import 'bootstrap/card';
+  //@import "bootstrap/breadcrumb";
+  @import 'bootstrap/pagination';
+  //@import "bootstrap/pager";
+  @import 'bootstrap/labels';
+  //@import "bootstrap/jumbotron";
+  @import 'bootstrap/alert';
+  @import 'bootstrap/progress';
+  @import 'bootstrap/media';
+  @import 'bootstrap/list-group';
+  @import 'bootstrap/responsive-embed';
+  @import 'bootstrap/close';
+  // @import "quill.base.min";
+
+  // // Components w/ JavaScript
+  @import 'bootstrap/modal';
+  // @import "bootstrap/tooltip";
+  //@import "bootstrap/popover";
+  //@import "bootstrap/carousel";
+
+  // // Utility classes
+  @import 'bootstrap/utilities';
+  @import 'bootstrap/utilities-background';
+  @import 'bootstrap/utilities-spacing';
+  @import 'bootstrap/utilities-responsive';
+  // @import "datepicker/datepicker";
+
+  // @import '~normalize.css/normalize';
+
+  // Some best-practice CSS that's useful for most apps
+  // Just remove them if they're not what you want
+  html {
+    box-sizing: border-box;
+  }
+
+  html {
+    height: 100%;
+  }
+  body {
+    height: 100%;
+    overflow-x: hidden !important;
+    overflow-y: scroll !important;
+  }
+
+  body {
+    // padding-top: 50px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @include media-breakpoint-up(sm) {
+      // padding-top: 96px;
+    }
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  .no-overflow {
+    overflow: hidden;
+  }
+  .btn-curved {
+    border-radius: 20px;
+  }
+  .btn {
+    font-family: NeoSansArabic, Helvetica, Arial, sans-serif !important;
+  }
+  p {
+    font-family: 'Helvetica Neue';
+    color: #777d84;
+    font-size: 16px;
+  }
+
+  .slider-frame {
+    height: 300px !important;
+  }
+  .slider-slide {
+    padding: 20px;
+  }
+
+  .text-purple {
+    color: #990ef0;
+  }
+
+  .text-pink {
+    color: #f45481;
+  }
+
+  .btn-light {
+    background-color: #f7f8fa;
+    color: #50555a;
+    border-color: #dad7e1;
+
+    &:hover {
+      color: $gray-dark;
+    }
+  }
+
+  .btn-yellowish {
+    background-color: #f2efe9;
+    color: #817047;
+    border-color: #d0c5a8;
+
+    &:hover {
+      color: $gray-dark;
+    }
+  }
+  .btn-white {
+    background-color: #fff;
+    color: $gray;
+    border-color: #dad7e1;
+  }
+  .btn-white-light {
+    background-color: #fff;
+    color: $gray;
+    border-color: #dad7e1;
+  }
+  .btn-dark-gray {
+    background-color: $gray-dark;
+    color: #fff;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: #fff;
+      background-color: lighten($gray-dark, 20%);
+    }
+  }
+  .btn-gray {
+    background-color: $gray;
+    color: #fff;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: #fff;
+    }
+  }
+
+  .text-gray {
+    color: $gray;
+  }
+
+  .react-date-field--theme-default {
+    width: 100%;
+    border-color: $gray-light;
+    border-radius: 5px;
+  }
+  .react-date-field__input {
+    padding: 0.375rem 0.75rem;
+    height: 53px;
+  }
+  .react-date-field__calendar-icon-inner {
+    visibility: hidden;
+  }
+  .react-date-field__calendar-icon {
+    background: url('../static/img/icons/icon-calendar-gray.png') no-repeat;
+    border: none !important;
+    padding: 0;
+    left: 5px;
+    margin: 0;
+    width: 25px;
+    margin-right: 5px;
+    height: $icon-calendar-gray-height;
+    &:after,
+    &:before {
+      content: '';
+      display: none;
+    }
+  }
+
+  .example-enter {
+    opacity: 0.01;
+  }
+
+  .example-enter.example-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+  }
+
+  .example-leave {
+    opacity: 1;
+  }
+
+  .example-leave.example-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+  }
+  .example-appear {
+    transform: translateY(100px);
+  }
+
+  .example-appear.example-appear-active {
+    transform: translateY(0);
+    transition: transform 500ms ease-in;
+  }
+  .react-opacity-enter {
+    opacity: 0.01;
+  }
+
+  .react-opacity-enter.react-opacity-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+  }
+
+  .react-opacity-leave {
+    opacity: 1;
+  }
+
+  .react-opacity-leave.react-opacity-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+  }
+
+  button,
+  button:focus {
+    outline: none;
+  }
+
+  button[disabled] {
+    background-color: #b9c2cb;
+    border-color: #b9c2cb;
+    color: #fff;
+  }
+  // .quill-contents {
+  //   background-color: #FFF;
+  //   height: 200px !important;
+  //   padding: 20px;
+  //   font-size: 16px !important;
+  //   font-family: "Helvetica Neue" !important;
+  // }
+  // .ql-snow.ql-toolbar {
+  //   background-color: #f7f8fa;
+  //   border-top: solid $gray-light 1px;
+  //   border-bottom: solid $gray-light 1px;
+  // }
+  // .ql-snow.ql-toolbar .ql-picker.ql-size .ql-picker-label, .ql-snow.ql-toolbar .ql-picker.ql-font .ql-picker-label  {
+  //   padding-right: 16px !important;
+  // }
+
+  // .ql-editor ol ,.ql-editor ul {
+  //   margin-right: 20px !important;
+  // }
+  .shadow-modal {
+    background-color: #fff;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.25);
+  }
+  .my-panel-white {
+    background-color: $white-color;
+    border-radius: 5px; // to be replaced by $border-radius;
+  }
+  .shadow-1 {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+
+  .shadow-2 {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+
+  .shadow-3 {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+
+  .shadow-4 {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+
+  .shadow-5 {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  }
+
+  .btn-info-light {
+    background-color: #e0f6ff;
+    color: #009ee0;
+  }
+  .btn-grey-outline {
+    background-color: transparent;
+    border-color: #899d9e;
+    color: #899d9e;
+  }
+
+  .btn-purple-outline {
+    background-color: transparent;
+    border-color: #990ef0;
+    color: #990ef0;
+
+    &:hover {
+      background-color: #990ef0;
+      color: #fff;
+    }
+  }
+  .btn-white-outline {
+    background-color: transparent;
+    border-color: #b9c2cb;
+    color: #50555a;
+
+    &:hover {
+      background-color: #50555a;
+      color: #fff;
+    }
+  }
+  .btn-bluelight-outline {
+    background-color: transparent;
+    border-color: #009ee0;
+    color: #009ee0;
+
+    &:hover, &:focus, &:active {
+      background-color: #009ee0 !important;
+      color: #fff;
+    }
+  }
+
+  .btn-purple-light {
+    background-color: rgba(#550bbd, .1);
+    border-color: transparent;
+    color: #550bbd;
+
+    &:hover {
+      background-color: #550bbd;
+      color: #fff;
+      background-color: #550bbd;
+    }
+  }
+
+  .btn-success-light {
+    background-color: #edffed;
+    color: #00c674;
+  }
+
+  .btn-purple {
+    background-color: #990ef0;
+    color: $white-color;
+
+    &:hover, &:active {
+      color: $white-color;
+    }
+  }
+  .btn-purple-dark {
+    background-color: #610dd6;
+    color: $white-color;
+
+    &:hover, &:active {
+      color: $white-color;
+    }
+  }
+  .is-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0
+  }
+  .btn-brown {
+    background-color: #6e5340;
+    color: #fff;
+  }
+  .btn-brown-outline {
+    background-color: transparent;
+    border-color: #6e5340;
+    color: #6e5340;
+  }
+
+  .btn-danger-light {
+    background-color: #ffeded;
+    color: #df2525;
+  }
+
+  .btn-warning-light {
+    background-color: #fff1d6;
+    color: #f77b23;
+  }
+
+  .p-r-0-lg {
+    @include media-breakpoint-up (lg) {
+      padding-right: 0;
+    }
+  }
+  .p-l-0-lg {
+    @include media-breakpoint-up (lg) {
+      padding-left: 0;
+    }
+  }
+
+  .p-r-0-xs {
+    @include media-breakpoint-down (xs) {
+      padding-right: 0;
+    }
+  }
+  .p-l-0-xs {
+    @include media-breakpoint-down (xs) {
+      padding-left: 0;
+    }
+  }
+  .is-inline {
+    vertical-align: middle;
+    display: inline-block;
+  }
+  /**
+ * Note: I have omitted any vendor-prefixes for clarity.
+ * Adding them is left as an exercise for the reader.
+ */
+  .headroom--pinned {
+    transform: translateY(0%);
+  }
+  .headroom--unpinned {
+    transform: translateY(-100%);
+  }
+  .tooltip-tickets {
+   color:$white-color;
+   background-color: $v2-text-dark !important;
+   &.place-top {
+     &:after {
+       border-top-color: $v2-text-dark !important;
+       border-top-style: solid !important;
+       border-top-width: 6px !important;
+     }
+   }
+  }
+  .__react_component_tooltip {
+    left: auto !important;
+    right: 0;
+  }
+  
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+.is-blinking {
+      animation-name: DotNavBlink;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+          animation-timing-function: easein;
+    }
+@keyframes DotNavBlink {
+  0% {opacity: 1}
+  50% {opacity: 0}
+  100% {opacity:1}
+}
+
+.font-helvetica {
+  font-family: $helvetica;
+}
+.font-adobe {
+  font-family: Adobe;
+}
+}

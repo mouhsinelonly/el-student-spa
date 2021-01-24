@@ -1,0 +1,15 @@
+[
+    {
+        "color": "purple",
+        "icon": "certificat",
+        "title": "registration.feature_1_title",
+        "content": "registration.feature_1_content",
+        "hint": "registration.feature_1_hint"
+    },
+    {
+        "color": "purple",
+        "icon": "laptop",
+        "title": "registration.feature_3_title",
+        "content": "registration.feature_3_content"
+    }
+]

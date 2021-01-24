@@ -1,0 +1,56 @@
+@import 'base';
+
+.c-vlog-Header {
+  &__title {
+    font-family: $neo;
+    font-size: rem-calc(27px);
+    color: #50555a;
+    font-weight: 700;
+  }
+
+  &__desc {
+    font-family: $helvetica;
+    font-size: rem-calc(16px);
+    color: #777d84;
+  }
+
+  &__stats {
+    display: block;
+    margin: 0 auto;
+    width: 251px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    > div {
+      position: relative;
+
+      &:first-child:before {
+        content: ' ';
+        position: absolute;
+        left: 0;
+        margin-top: rem-calc(10px);
+        width: 1px;
+        background-color: #d8dee8;
+        height: 48px;
+      }
+    }
+
+    &-big {
+      line-height: .7;
+      padding-top: 12px;
+      font-family: $neo;
+      font-weight: 700;
+      font-size: rem-calc(48px);
+      color: #610dd6;
+
+      &.is-second {
+        color: #b80dd6;
+      }
+    }
+    &-small {
+      color: #610dd6;
+      &.is-second {
+        color: #b80dd6;
+      }
+    }
+  }
+}

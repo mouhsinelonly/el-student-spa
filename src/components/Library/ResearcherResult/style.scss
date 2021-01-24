@@ -1,0 +1,20 @@
+@import 'base';
+
+.ResearcherResult {
+  &__page {
+    cursor: pointer;
+    mark {
+      background-color: transparent;
+      color: #ef8508;
+      font-weight: 700;
+    }
+    font-family: Adobe;
+    color: #1f1f1f;
+    font-size: rem-calc(22px) !important;
+  }
+
+  &__meta {
+    color: #777d84;
+    font-size: rem-calc(14px);
+  }
+}

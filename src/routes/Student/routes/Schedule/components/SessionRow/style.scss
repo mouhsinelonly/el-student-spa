@@ -1,0 +1,9 @@
+@import 'base.scss';
+
+.c-student-session-row {
+  border-bottom: solid $gray-light 1px;
+
+  td {
+  border-top-width: 0;
+  }
+}

@@ -1,0 +1,19 @@
+[
+    {
+        "icon": "calendar",
+        "title": "registration.feature_4_title",
+        "content": "registration.feature_4_content"
+    },
+    {
+        "color": "purple",
+        "icon": "ichecklist-purple",
+        "title": "registration.feature_5_title",
+        "hint": "registration.feature_5_hint",
+        "content": "registration.feature_5_content"
+    },
+    {
+        "icon": "card",
+        "title": "registration.feature_6_title",
+        "content": "registration.feature_6_content"
+    }
+]

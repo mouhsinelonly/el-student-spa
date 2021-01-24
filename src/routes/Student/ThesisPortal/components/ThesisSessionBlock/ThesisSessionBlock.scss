@@ -1,0 +1,32 @@
+.ThesisSessionBlock {
+	display: flex;
+	align-items: center;
+
+	&__cta {
+		margin-right: auto;
+
+		&.is-future {
+			pointer-events: none;
+		}
+
+		&:not(.is-future) {
+			&:hover, &:focus {
+			background-color: #04a979;
+			border-color: #04a979;
+			color: #fff;
+			}
+		}
+	}
+
+	&__img {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		overflow: hidden;
+	}
+
+	&__info {
+		display: flex;
+		align-items: center;
+	}
+}

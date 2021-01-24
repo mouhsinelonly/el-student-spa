@@ -1,0 +1,31 @@
+@import 'base';
+
+.AffiliateRuleRow {
+	font-family: $helvetica;
+	font-size: rem-calc(18px);
+	color: #777d84;
+	margin-bottom: rem-calc(34px);
+	counter-increment: affiliate-rules-counter;
+	position: relative;
+	line-height: rem-calc(28px);
+
+  &::before {
+	  content: counter(affiliate-rules-counter);
+	  font-weight: bold;
+	  position: absolute;
+	  --size: 50px;
+	  right: calc(-1 * var(--size) - 4px);
+	  line-height: var(--size);
+	  width: var(--size);
+	  height: var(--size);
+	  top: 0;
+	  color: #003247;
+	  background-color: #e0f6ff;
+	  border-radius: 50%;
+	  text-align: center;
+
+	  @include media-breakpoint-up(md) {
+	  	right: calc(-1 * var(--size) - 50px);
+	  }
+	}
+}

@@ -1,0 +1,73 @@
+
+.Svg__Trophy {
+  overflow: visible !important;
+  position: relative;
+  &__holder {
+    z-index: 2;
+  }
+  &__particle {
+    z-index: 1;
+  animation: infinite 1s linear;
+  position: absolute;
+  transform-origin: center center;
+  // top: 0px;
+  &.is-first {
+    animation-name: fadeUp_first;
+    animation-duration: 1.8s;
+    animation-delay: .1ms;
+  }
+  &.is-second {
+    animation-name: fadeUp_second;
+    animation-duration: 2.1s;
+    animation-delay: .3ms;
+  }
+  &.is-third {
+    animation-name: fadeUp_third;
+    animation-duration: 2s;
+    animation-delay: .5ms;
+  }
+}
+}
+
+@keyframes fadeUp_first {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px) translateX(-40px) scale(.35) ;
+  }
+  50% {
+    opacity: .4;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-145px) translateX(-40px) scale(.32);
+  }
+}
+
+@keyframes fadeUp_second {
+  0% {
+    opacity: 0;
+
+    transform: translateY(-15px) translateX(0px) scale(.4);
+  }
+  50% {
+    opacity: .3;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-145px) translateX(0px) scale(.3);
+  }
+}
+
+@keyframes fadeUp_third {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px) translateX(40px) scale(.35);
+  }
+  50% {
+    opacity: .6;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-145px) translateX(40px) scale(.28);
+  }
+}

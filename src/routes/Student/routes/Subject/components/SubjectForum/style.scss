@@ -1,0 +1,172 @@
+@import 'base';
+
+.c-SubjectForum {
+
+  &__header {
+    font-family: $helvetica;
+    font-size: rem-calc(18px);
+    color: #50555a;
+  }
+  &__title {
+    font-family: $neo;
+    font-size: rem-calc(18px);
+    color: #50555a;
+    line-height: 2rem;
+  }
+  &__panel {
+    padding: rem-calc(20px);
+    @include media-breakpoint-up(sm) {
+      margin: rem-calc(40px);
+    }
+    @include media-breakpoint-up(md) {
+      margin: rem-calc(80px);
+    }
+    @include media-breakpoint-down(xs) {
+    border-radius: 0;
+  }
+  }
+  &__subheader {
+    font-family: $neo;
+    font-size: rem-calc(16px);
+    color: #50555a;
+    font-weight: 400;
+  }
+  &__post {
+    position: relative;
+    border-bottom: solid #edf0f4 1px;
+    font-family: $helvetica;
+    line-height: 2;
+    list-style-type: none;
+    font-size: rem-calc(15px);
+    color: #777d84;
+
+    &-created {
+      float: left;
+    }
+
+    &.is-teacher &-title {
+      padding-right: rem-calc(10px);
+    }
+
+    &-result {
+      float: right;
+      font-family: $neo;
+      font-size: rem-calc(12px);
+      color: #777d84;
+
+      i {
+        font-size: rem-calc(14px);
+        vertical-align: middle;
+      }
+    }
+    &-replies {
+      // position: relative;
+      &:before {
+        background-color: #edf0f4;
+        height: 1px;
+        content: ' ';
+        position: absolute;
+        // top: 0;
+        right: 0;
+        width: 100%;
+      }
+    }
+    &-title {
+
+      line-height: 1;
+      color: #50555a;
+    }
+    &-teacher {
+      padding-right: rem-calc(10px);
+      line-height: 1;
+      font-family: $helvetica;
+      font-size: rem-calc(12px);
+      color: #616b68;
+    }
+    &-avatar {
+      width: rem-calc(45px);
+      height: rem-calc(45px);
+      position: absolute;
+      right: 0;
+      border-radius: 100%;
+      border: solid #ebebeb 1px;
+    }
+    &:last-child {
+      border-bottom-width: 0;
+    }
+
+    &.is-child {
+      padding-left: 0 !important;
+      // margin-right: 49px;
+    }
+  }
+  &__avatar-cont {
+    width: rem-calc(250px);
+    position: relative;
+    margin: 0 auto;
+    padding-right: rem-calc(60px);
+  }
+  &__avatar {
+    position: absolute;
+    right: 0px;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    border: solid #ebebeb 1px;
+  }
+  &__start {
+    font-family: $neo;
+    font-size: rem-calc(24px);
+    color: #50555a;
+  }
+  &__teacherName {
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+    padding-top: rem-calc(5px);
+    font-family: $neo;
+    font-size: rem-calc(14px);
+    color: #50555a;
+  }
+  &__teacherPos {
+    margin: 0;
+    padding: 0;
+    font-family: $neo;
+    font-size: rem-calc(12px);
+    color: #777d84;
+  }
+
+  &__nopart {
+    &-title {
+      font-family: $neo;
+      font-size: rem-calc(16px);
+      color: #50555a;
+    }
+
+    &-content {
+      font-family: $helvetica;
+      font-size: rem-calc(15px);
+      color: #777d84;
+    }
+  }
+
+  &-YourGrade {
+    display: inline-block;
+    border: 1px solid #cacfcd;
+    border-radius: 4px;
+    font-family: $neo;
+    font-size: rem-calc(12px);
+    color: #777d84;
+    padding: 6px 15px 3px;
+
+    b {
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+      font-family: $neo;
+      font-size: rem-calc(30px);
+      color: $brand-success;
+    }
+  }
+}

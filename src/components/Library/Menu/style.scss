@@ -1,0 +1,72 @@
+@import 'base';
+
+.c-book-browse-menu {
+  // sticky
+  &__sticky {
+    background-color: $white-color;
+    z-index: 3;
+    // position: relative;
+    transition: background-color 300ms, opacity 300ms;
+    &.is-black {
+      background-color: #3c3c3c;
+    }
+    &.is-caramel {
+      background-color: #f8f2e3;
+    }
+    &.is-hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  // header
+  &__header {
+    color: #344142;
+    position: relative;
+    // background-color: $white-color;
+    border-bottom: solid #b9c2cb 2px;
+    transition: border-color 300ms, color 300ms;
+    &.is-black {
+      border-bottom-color: #545454;
+      color: $brand-caramel;
+    }
+    &.is-caramel {
+      border-bottom-color: #ded9cc;
+      color: #344142;
+    }
+  }
+  // menu
+  &__menu {
+      display: inline-block;
+      &-item {
+        cursor: pointer;
+
+        display: inline-block;
+        list-style-type: none;
+      }
+
+      @include media-breakpoint-down(xs) {
+        width: 100%;
+        margin-top: 30px !important;
+      }
+    }
+  // tools
+  &__tools {
+      float: left;
+      @include media-breakpoint-down(xs) {
+        position: relative;
+        top: -75px;
+        left: -10px;
+      }
+
+      display: inline-block;
+      &-item {
+        vertical-align: top;
+        width: 50px;
+        height: 30px;
+        cursor: pointer;
+        display: inline-block;
+        list-style-type: none;
+      }
+    }
+}

@@ -1,0 +1,37 @@
+@import 'base';
+
+.c-notifications {
+&__radar {
+  width: 22px;
+  height: 22px;
+  background-color: $brand-success;
+  border-radius: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  color:$white-color;
+  font-family: 'Helvetica Neue';
+  font-size: 14px;
+  line-height: 1.3;
+  box-shadow: $white-color 0 0 0 3px,rgba($brand-success, .33) 0 0 0 4px, $white-color 0 0 0 6px, rgba($brand-success, .24) 0 0 0 7px;
+  text-align: center;
+  animation-name: radar;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-timing-function:linear;
+  animation-origin: center center;
+
+  @include media-breakpoint-down(sm) {
+    width: 12px;
+    height: 12px;
+    font-size: 10px;
+    line-height: 1;
+  }
+}
+}
+
+@keyframes radar {
+  0% {box-shadow:$white-color 0 0 0 0,rgba($brand-success, .23) 0 0 0 0, $white-color 0 0 0 0, rgba($brand-success, .14) 0 0 0 0;}
+  50% {box-shadow:$white-color 0 0 0 3px,rgba($brand-success, .23) 0 0 0 4px, $white-color 0 0 0 6px, rgba($brand-success, .14) 0 0 0 7px;}
+  100% {box-shadow:$white-color 0 0 0 6px,$white-color 0 0 0 8px, $white-color 0 0 0 12px, $white-color 0 0 0 14px;}
+
+}

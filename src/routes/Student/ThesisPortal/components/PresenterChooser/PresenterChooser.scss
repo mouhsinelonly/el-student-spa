@@ -1,0 +1,52 @@
+@import 'base';
+
+.PresenterChooser {
+	@include media-breakpoint-up(xl) {
+		padding-left: 120px;
+		padding-right: 120px;
+	}
+	&__item {
+		@include media-breakpoint-up(lg) {
+
+
+		}
+		overflow: hidden;
+		&-job {
+			font-size: rem-calc(14px);
+			height: 50px;
+		}
+		&-cover {
+			border: solid 1px $gray-lighter;
+			border-radius: 100%;
+			width: 90px;
+			height: 90px;
+			display: inline-block;
+			overflow: hidden;
+		}
+
+		&-interests {
+			color: $gray;
+			height: 206px;
+			overflow: hidden;
+			border-top: solid $gray-lighter 1px;
+			background-color: $gray-lightest;
+
+			h6 {
+				color: $black-color;
+			}
+
+			p {
+				font-size: rem-calc(14px);
+			}
+		}
+	    .btn {
+	    	padding: 10px 0;
+	    }
+		.btn-white {
+			color: $gray-dark;
+			border-width: 0;
+			border-top-width: 1px;
+			border-top-color: $gray-lighter;
+		}
+	}
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "icon": "minimize-cyan",
+    "color": "cyan",
+    "title": "about.goals_title",
+    "content": "about.goals_content"
+  },
+  {
+    "icon": "send-blue",
+    "color": "blue",
+    "title": "about.message_title",
+    "content": "about.message_content"
+  },
+  {
+    "icon": "eye-orange",
+    "color": "orange",
+    "title": "about.vision_title",
+    "content": "about.vision_content"
+  }
+]

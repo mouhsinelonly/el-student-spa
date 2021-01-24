@@ -1,0 +1,62 @@
+/*
+Application Settings Go Here
+------------------------------------
+This file acts as a bundler for all variables/mixins/themes, so they
+can easily be swapped out without `core.scss` ever having to know.
+
+For example:
+
+@import './variables/colors';
+@import './variables/components';
+@import './themes/default';
+*/
+
+/*!
+ * Bootstrap v4.0.0-alpha.2 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+// Core variables and mixins
+@import 'sprite.scss';
+// @import "animatewithsass/animate.scss";
+@import "./bootstrap/variables";
+@import "./myvariables";
+@import "./bootstrap/mixins";
+
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+@function rem-calc($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+@mixin background-retina($normal, $retina, $width ,$height ,$contain: false) {
+    background-image: url($normal);
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+        background-image: url($retina);
+
+        @if $contain == true {
+            background-size: contain;
+        } @else {
+            background-size: $width $height;
+        }
+    }
+}
+/* Grow Shadow */
+
+.media-container {
+  width: 50% !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.media-box {
+  border: none !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+}

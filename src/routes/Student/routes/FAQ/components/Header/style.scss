@@ -1,0 +1,14 @@
+@import 'base';
+
+.c-faq-header {
+  background-color: $gray-lighter;
+  border-bottom: solid $gray-light 1px;
+
+  &__back {
+    color: #777d84;
+
+    &:hover {
+      color: $brand-success;
+    }
+  }
+}

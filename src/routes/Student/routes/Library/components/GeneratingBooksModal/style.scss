@@ -1,0 +1,15 @@
+@import 'base';
+
+.c-generatingbooks-modal {
+  background-color: $white-color;
+  bottom: 30px;
+  left: 30px;
+  position: fixed;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 15px 30px 10px;
+
+  &__loading {
+    display: inline-block;
+  }
+}

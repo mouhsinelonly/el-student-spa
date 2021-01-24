@@ -1,0 +1,124 @@
+@import 'base';
+$primaryColor: #610dd6;
+.c-vlog-Dashboard {
+  overflow: hidden;
+  &__back {
+    border-radius: 30px;
+    position: absolute;
+    top: rem-calc(50px);
+    right: rem-calc(50px);
+    border-color: $primaryColor;
+    background-color: #fff;
+    color: $primaryColor;
+    @include media-breakpoint-down(xs) {
+      right: 14px;
+      margin-top: 0 !important;
+      top: 28px;
+      z-index: 99;
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+.c-vlog-Home {
+  overflow: hidden;
+  padding-bottom: rem-calc(150px);
+  &__list {
+    font-family: $helvetica;
+    font-size: rem-calc(16px);
+    color: #777d84;
+    line-height: rem-calc(32px);
+  }
+
+  &__listhead {
+    font-family: $neo;
+    font-size: rem-calc(16px);
+    color: #50555a;
+    font-weight: 400;
+    line-height: rem-calc(32px);
+  }
+
+  &__action {
+    border-top: solid $primaryColor 1px;
+    display: block;
+    position: fixed;
+    background: $white-color;
+    width: 100%;
+    bottom: 0;
+    @include media-breakpoint-up(sm) {
+      padding: rem-calc(20px) 0;
+      border-top-color: #b9c2cb;
+    }
+
+    &-btn {
+      display: inline-block;
+      width: 50%;
+      border-width: 0;
+      font-family: $neo;
+      font-size: rem-calc(16px);
+      background-color: #fff;
+      color: $primaryColor;
+      border-radius: 0;
+      padding: rem-calc(20px) 0;
+
+       @include media-breakpoint-up(sm) {
+        width: 100%;
+        display: block;
+        display: inline-block;
+        border-radius: 4px;
+        padding: rem-calc(12px) rem-calc(40px);
+        width: auto;
+        border: solid $primaryColor 1px;
+       }
+        &.is-filled {
+          background-color: $primaryColor;
+          color: $white-color;
+        }
+       &:hover {
+        background-color: $primaryColor;
+        color: $white-color;
+       }
+    }
+  }
+
+  &:before {
+    content: ' ';
+    background: url('../../../../static/img/prize_bg_1.png') no-repeat right top;
+    transform: scale(.5);
+    transform-origin: right;
+    top: 50%;
+    right: rem-calc(50px);
+    opacity: .5;
+    position: absolute;
+    filter: blur(30px);
+    width: 100%;
+    height: 100%;
+
+    @include media-breakpoint-down(xs) {
+      right: -140px;
+    }
+  }
+
+  &:after {
+    @include media-breakpoint-down(xs) {
+      left: 0;
+      width: 150px;
+      background-position: right;
+      transform-origin: left;
+    }
+    content: ' ';
+    background: url('../../../../static/img/prize_bg_2.png') no-repeat left top;
+    transform: scale(.5);
+    transform-origin: left;
+    top: 10%;
+    left: rem-calc(50px);
+    opacity: .5;
+    position: absolute;
+    filter: blur(30px);
+    width: 100%;
+    height: 100%;
+  }
+}

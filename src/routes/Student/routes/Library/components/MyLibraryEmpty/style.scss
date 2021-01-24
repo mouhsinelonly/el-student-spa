@@ -1,0 +1,19 @@
+@import 'base';
+
+.c-my-library-empty {
+  &__text {
+    color: #777d84;
+    line-height: 2;
+  }
+
+  &__btn {
+    background-color: transparent;
+    color: $library-primary;
+    border-color: $library-primary;
+
+    &:hover {
+      background-color: $library-primary;
+      color: $white-color;
+    }
+  }
+}

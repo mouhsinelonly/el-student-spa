@@ -1,0 +1,73 @@
+@import 'base';
+
+.ChooseConformDate {
+	overflow: hidden;
+	&__body {
+		border-top: #dae0dd solid 1px;
+		background-color: #f7f8fa;
+		padding: rem-calc(20px);
+		overflow: hidden;
+		position: relative;
+
+		&-overlay {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			flex: 1;
+			align-items: center;
+			justify-content: center;
+			display: flex;
+			z-index: 10;
+			background: rgba(#000 ,.2);
+		}
+	}
+
+	&__select {
+		width: 310px;
+height: 40px;
+padding: 0px 12px 0px 0px;
+border: 1px solid #b9c2cb;
+border-radius: 4px;
+background-color: #ffffff;
+font-size: 14px;
+color: #50555a;
+margin-bottom: 50px;
+text-decoration: none solid rgb(80, 85, 90);
+text-align: right;
+	}
+
+	&__item {
+		height: 147px;
+	&__btn {
+		&:hover {
+			background-color: $brand-success;
+			border-top-color: $brand-success;
+			color: $white-color;
+		}
+	}
+
+	&__remaining {
+		color: #777d84;
+	}
+
+	&__disabled {
+		background:#f7f8fa;
+	}
+	&__chosen {
+		background-color: $brand-success;
+		color: #fff;
+	}
+
+	&__chosen &__btn {
+		background-color: $brand-success;
+		border-top-color: darken($brand-success, 10);
+		pointer-events: none;
+		color: $white-color;
+	}
+	&__chosen &__remaining {
+		color: #fff;
+	}
+	}
+}

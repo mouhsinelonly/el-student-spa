@@ -1,0 +1,46 @@
+@import 'base.scss';
+
+.p-signup-form {
+  &__heading {
+    font-size: 36px;
+    font-weight: 700;
+    padding: 50px 0 0;
+  }
+
+  &__hint {
+    font-size: 19px;
+    color: #575757;
+  }
+
+  &__footer {
+    padding: 30px 0;
+  }
+
+  &__requirement-box {
+    min-height: 127px;
+    height: 127px;
+    border: solid $gray-lighter 1px;
+    border-radius: 5px;
+    display: inline-block;
+    // float:right;
+    vertical-align: top;
+    background-color: #fff;
+    padding: 20px;
+    margin-left: 15px;
+
+    @include media-breakpoint-down(sm) {
+      min-height: 150px;
+    }
+    &__title {
+      font-family: 'Helvetica Neue';
+      margin-top: 10px;
+      font-size: 19px;
+      color: #777d84;
+    }
+
+    &__hint {
+      line-height: 1;
+      margin: 0;
+    }
+  }
+}

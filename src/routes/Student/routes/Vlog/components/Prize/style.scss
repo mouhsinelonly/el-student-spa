@@ -1,0 +1,40 @@
+@import 'base';
+
+.c-vlog-Prize {
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 2px rgba(72,65,49,0.4);
+  color: #330770;
+
+  &__header {
+    font-family: $neo;
+    font-size: rem-calc(16px);
+    color: #ffffff;
+    background-color: #610dd6;
+    font-weight: 700;
+  }
+
+  &__amount {
+    font-family: $neo;
+    font-size: rem-calc(50px);
+
+    font-weight: 700;
+  }
+
+  &.is-second &__header {
+      background-color: #990ef0;
+  }
+
+  &.is-third &__header {
+      background-color: #b80dd6;
+  }
+
+  &.is-second {
+    color: #990ef0;
+  }
+
+  &.is-third {
+    color: #b80dd6;
+  }
+}

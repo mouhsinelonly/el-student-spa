@@ -1,0 +1,61 @@
+@import 'base';
+
+.classroom-chooser-item-v2 {
+  &__disabled,
+  &__enabled {
+    border-bottom: solid #e4e2e9 1px;
+  }
+  &__enabled {
+    box-shadow: inset $white-color 0 0 0 2px;
+    // transform: scale(0);
+    transform-origin: top center;
+    // transition: transform 2s;
+
+    &.is-active {
+      // transform: scale(1);
+    }
+  }
+  &__disabled {
+    cursor: pointer;
+
+    &:last-child {
+      border-bottom-width: 0;
+    }
+    color: $gray;
+    &-title {
+      font-size: 18px;
+      margin: 0;
+      position: relative;
+      padding-right: 50px;
+      padding-top: 4px;
+
+      &:after {
+        @include media-breakpoint-up(md) {
+          position: absolute;
+          height: 100%;
+          width: 1px;
+          background-color: #e4e2e9;
+          left: $spacer-x;
+          top: 10%;
+          content: ' ';
+        }
+      }
+
+      .icon {
+        vertical-align: middle;
+        position: absolute;
+        right: 0;
+        top: -6px;
+      }
+    }
+
+    &-edit {
+      margin: 0;
+      padding: 0;
+      background-color: transparent;
+      border: none;
+      color: $gray;
+      border-bottom: solid $gray-light 1px;
+    }
+  }
+}

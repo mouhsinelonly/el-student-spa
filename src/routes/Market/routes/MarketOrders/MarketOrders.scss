@@ -1,0 +1,52 @@
+.MarketOrders{
+	&__item {
+		overflow: hidden;
+		border-radius: 4px;
+	  &-footer {
+		background-color: #f7f8fa;
+	  }
+	}
+
+	&__heading {
+		font-size: 10px;
+		color: #777d84;
+	}
+	&__heading2 {
+		font-size: 12px;
+		color: #50555a;
+	}
+
+	&__status {
+		width: 82px;
+		padding: 5px 20px;
+		height: 18px;
+		border-radius: 2px;
+		font-size: 12px;
+		user-select: none;
+		
+		&.is-waiting {
+			color: #ef0808;
+			background-color: #ffc7c7;
+		}
+		&.is-canceled {
+			color: #ef0808;
+			background-color: #ffc7c7;
+		}
+		&.is-processing {
+			color: #ef8508;
+			background-color: #fff5c7;
+		}
+		&.is-packaging, &.is-ready {
+			color: #009ee0;
+			background-color: #e0f6ff;
+		}
+		&.is-shipped {
+			color: #990ef0;
+			background-color: #ffeded;
+		}
+		&.is-received {
+			color: #04a979;
+			background-color: #c7ffc7;
+		}
+	}
+}

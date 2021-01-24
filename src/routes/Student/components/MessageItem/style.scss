@@ -1,0 +1,28 @@
+@import 'base.scss';
+
+.study-countdown {
+&__panel {
+  position: relative;
+  border-radius: $border-radius;
+  background-color: #FFF;
+  font-size: 17px;
+  overflow: hidden;
+  color: $gray;
+  box-shadow: rgba(#000, .2) 0 1px 3px;
+}
+
+&__close {
+  position: absolute;
+  border-radius: 40px;
+  left: 20px;
+  // padding: 0;
+  line-height: 1;
+  margin: 0;
+  // background-color: transparent;
+  // border-width: 0;
+  top: 20px;
+  // border-radius: 100%;
+  margin-top: - $icon-times-small-height/2;
+  cursor: pointer;
+}
+}

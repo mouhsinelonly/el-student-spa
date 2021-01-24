@@ -1,0 +1,129 @@
+@import 'base';
+
+.p-quran-subject {
+  -webkit-perspective: 1000;
+  transform-origin: center;
+
+  &__panel {
+    background-color: $white-color;
+    border-radius: $border-radius;
+  }
+
+  &__part {
+    font-size: 50px;
+    color: $gray-dark;
+    font-weight: 700;
+    font-family: 'NeoSansArabic';
+  }
+
+  &__range {
+    font-family: 'NeoSansArabic';
+    font-size: 17px;
+    color: $gray-dark;
+  }
+
+  &__more {
+    font-size: 14px;
+    font-weight: 700;
+    color: $gray-dark;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover {
+      color: $brand-success;
+    }
+  }
+
+  &__details {
+    list-style-type: none;
+  }
+
+  &__footer {
+    border-top: solid #b9c2cb 1px;
+    font-size: 14px;
+  }
+
+  &__ayat {
+    vertical-align: middle;
+    width: 45px;
+    display: inline-block;
+    height: 45px;
+    background-size: 45px;
+    background-image: url('../../../../../../static/img/ayat-icon@2x.png');
+    background-repeat: no-repeat;
+  }
+
+  &__app-store {
+    vertical-align: middle;
+    width: 70px;
+    display: inline-block;
+    height: 18px;
+    background-size: 70px;
+    background-image: url('../../../../../../static/img/app-store-icon@2x.png');
+    background-repeat: no-repeat;
+  }
+  &__play-store {
+    vertical-align: middle;
+    width: 89px;
+    display: inline-block;
+    height: 24px;
+    background-size: 90px;
+    background-image: url('../../../../../../static/img/google-play-icon@2x.png');
+    background-repeat: no-repeat;
+  }
+
+  &__course {
+    display: block;
+    color: #50555a;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform  .3s cubic-bezier(.25, .8, .25, 1);
+    backface-visibility: hidden;
+
+    &:focus,&:active {
+      color: #50555a
+    }
+
+    &:hover {
+      color: #50555a;
+      box-shadow: 0 3px 6px rgba(0,0,0, .16), 0 3px 6px rgba(0,0,0, .23);
+      transform: translate3d(0, 0, 30px);
+
+      i {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__course-cover {
+    overflow: hidden;
+    height: 190px;
+    position: relative;
+    background-color: #50555a;
+    -webkit-perspective: 1000;
+    transform-origin: center;
+    background-image: url('//img.youtube.com/vi/Ydq9Hx4kLuE/hqdefault.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    &:before {
+        content: ' ';
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color: rgba(0,0,0,.5);
+      }
+
+    i {
+      transition: transform  .3s cubic-bezier(.25, .8, .25, 1);
+      backface-visibility: hidden;
+      position: absolute;
+      top: 50%;
+      margin-top: -25px;
+      right: 50%;
+      margin-right: -25px;
+      font-size: 50px;
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import 'base.scss';
+
+body {
+    background-color: $gray-lighter;
+}
+.student-dashboard {
+
+  // overflow-x: hidden;
+  // overflow: scroll;
+	// background-color: $gray-lighter;
+	// min-height: 100%;
+  height: 100%;
+
+&__more-sessions {
+  cursor: pointer;
+  display: block;
+  color: $gray;
+  font-size: 14px;
+
+  &:hover {
+    color: $gray-dark;
+  }
+}
+&.is-library {
+  background-color: #ffffff;
+}
+&.is-nav-visible {
+  padding-top: rem-calc(67px);
+
+  @include media-breakpoint-down(sm) {
+    padding-top: rem-calc(60px);
+  }
+}
+&__loading-container {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+&__loading-indicator {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+&__body {
+  height: 100%;
+  // min-height: 100%;
+   // transition: transform 300ms ease-out;
+  // box-shadow: 0 0 15px 6px rgba($gray-dark ,.17);
+
+ &.is-chatbox-open {
+     // position: relative;
+     // transform: translateX(-300px);
+ }
+}
+}

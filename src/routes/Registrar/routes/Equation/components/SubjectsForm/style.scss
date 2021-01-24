@@ -1,0 +1,95 @@
+@import "base.scss";
+
+.c-reg-equ-subjects-form {
+&__panel {
+	border:solid $gray-light 2px;
+	box-shadow: rgba($gray, .3) 0 3px 19px;
+	border-radius: 5px;
+	overflow: hidden;
+	background-color: #FFF;
+
+	img {
+		width: 100%;
+	}
+}
+
+&__degree-header {
+	position: relative;
+}
+
+&__edit-button {
+	position: absolute;
+	left: 15px;
+	top: 10px;
+	color: $gray;
+
+	&:hover ,&:focus {
+		background-color: $brand-success;
+		color:#fff;
+		border-color: $brand-success;
+	}
+}
+
+&__subjects-list {
+
+}
+
+&__subject-row {
+	background-color: #FFF;
+	border:solid  $gray-lighter 2px;
+	list-style-type: none;
+	border-radius: $border-radius;
+	box-shadow: rgba($gray, .3) 0 2px 4px;
+	position: relative;
+
+	&__title {
+		font-size: 23px;
+		color:#777d84;
+		font-weight: 700;
+	}
+
+	&__meta {
+		font-size: 14px;
+		color:#777d84;
+	}
+
+	&__actions {
+		position: absolute;
+		left: 20px;
+		top: 25px;
+	}
+}
+
+&__container {
+	position: relative;
+}
+
+&__cta {
+	position: absolute;
+	top: -15px;
+	left: 20px;
+}
+
+&__btn-info {
+	background-color: #e0f6ff;
+	color: $brand-info;
+}
+&__btn-warning {
+	background-color: #fff5c7;
+	color: $brand-warning;
+}
+&__btn-success {
+	background-color: #c7ffc7;
+	color: $brand-success;
+}
+
+&__btn-info,&__btn-warning,&__btn-success {
+	position: relative;
+
+	i {
+		position: absolute;
+		top: 12px;
+		right: 15px;
+	}
+}
+}

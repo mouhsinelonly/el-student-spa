@@ -1,0 +1,243 @@
+@import 'base.scss';
+
+.libraryuser-navbar {
+&__navbar {
+  border-radius: 0;
+}
+
+&__bg {
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  left: 0;
+  top: 0;
+  border-radius:0 !important;
+  background-color: #344142;
+  transition-property: transform;
+  transition-duration: .25s;
+  will-change: transform;
+  transition-timing-function: cubic-bezier(.2,.5,.3,1);
+  @include media-breakpoint-down(xs) {
+    padding: 0;
+  }
+  &.is-library {
+    background-color: darken($library-primary, 20);
+  }
+}
+
+&__nav {
+  @include media-breakpoint-down(sm) {
+    margin-right: 0;
+    padding-right: 0;
+  }
+  @include media-breakpoint-up(sm) {
+    margin-top: 7px;
+  }
+}
+&__nav-item {
+  margin-right: 1.5rem !important;
+  @include media-breakpoint-down(lg) {
+    margin-right: 0 !important;
+  }
+  @include media-breakpoint-down(xs) {
+    margin-right: 1.5rem !important;
+  }
+}
+&__brand {
+  display: block;
+  margin: 0 auto;
+   @include media-breakpoint-down(sm) {
+   // float: none !important;
+   // clear: both;
+   display: inline-block;
+  }
+}
+&__logo-small {
+  width: 48px;
+}
+&__logo {
+  height: 43px;
+  width: 190px;
+
+  @include media-breakpoint-up(lg) {
+  width: auto;
+  }
+}
+
+&__nav-link {
+  font-size: 16px;
+  position: relative;
+  padding: 0 $spacer-x / 6;
+  @include media-breakpoint-up(lg) {
+    padding: 0 $spacer-x;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 16px;
+    color: #93a7a9 !important;
+    padding: 18px 0 !important;
+  }
+
+  &.is-library {
+    color: #b7b1ad !important;
+  }
+
+  &.active {
+    color: #fff !important;
+  }
+}
+&__user-avatar {
+  @include media-breakpoint-down(xs) {
+    padding: 0;
+  }
+  img {
+    width: 42px;
+    height: 42px;
+    overflow: hidden;
+    border-radius: 100%;
+    display: inline-block;
+    font-size: 37px;
+    text-indent: 0;
+    line-height: 36px;
+    color: #fff;
+    background-color: #02a978;
+
+    @include media-breakpoint-down(xs) {
+      width: 36px;
+      height: 36px;
+      display: inline-block;
+    }
+  }
+}
+&__user-info {
+  color: #93a7a9;
+
+  &.is-library {
+    color: #b7b1ad;
+  }
+  &__name {
+    overflow: hidden;
+    font-size: 13px;
+    text-overflow: ellipsis;
+  }
+
+  &__code {
+    width: 120px;
+    font-size: 12px;
+  }
+}
+
+&__drop-nav-item {
+  position: relative;
+  // width: 100%;
+  // max-width: 100%;
+  display: block;
+
+  @include media-breakpoint-up(lg) {
+    max-width: 217px;
+    display: inline-block;
+  }
+  @include media-breakpoint-down(lg) {
+    width: 190px;
+    padding-right: 0;
+    margin-right: 0 !important;
+    // margin-top: 20px;
+  }
+  @include media-breakpoint-down(xs) {
+    width: auto;
+    max-width: auto;
+    float: left !important;
+    margin-top: 10px;
+  }
+  &__trigger {
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 7px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+
+    @include media-breakpoint-down(xs) {
+      transform: scale(.6);
+      top: 25px;
+      left:3px;
+      background-color: #344142;
+      border-radius: 5px;
+    }
+  }
+
+  &__drop {
+    z-index: $libraryuser-navbar-dropdown-z-index;
+    width: 316px;
+    margin: 0;
+    padding: 0;
+    top: 45px;
+    position: absolute;
+    left: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0 , 0, .23);
+    background-color: #FFF;
+    li {
+      list-style-type: none;
+    }
+
+    color: #777d84;
+
+    &__half {
+      width: 50%;
+      margin: 0;
+      display: block;
+      float:right;
+
+      a {
+         overflow: hidden;
+        height: 114px;
+        display: block;
+        color :#777d84;
+        cursor: pointer;
+        padding: $spacer *1.5 $spacer;
+        &:hover {
+          background-color: $gray-lighter;
+        }
+      }
+
+      &:first-child {
+        box-shadow: #b9c2cb -1px 1px 0 0;
+      }
+
+      &:nth-child(4) {
+        border-top: solid #b9c2cb 1px;
+        border-right: solid #b9c2cb 1px;
+      }
+    }
+
+    &__full {
+      clear:both;
+      display: block;
+      color: #777d84 !important;
+      float:none;
+      cursor: pointer;
+      border-top: solid #b9c2cb 1px;
+      padding: $spacer;
+
+      &:hover {
+        background-color: $gray-lighter;
+      }
+    }
+
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+      /* right: 10px; */
+      /* left: 10px; */
+      margin-top: 15px;
+      position: fixed;
+    }
+  }
+}
+
+&__results-notification {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+}

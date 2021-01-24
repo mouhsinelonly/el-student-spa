@@ -1,0 +1,142 @@
+@import 'base.scss';
+
+.auth-page {
+
+  &__container {
+    min-height: 100%;
+    background: url('../../static/img/login-bg.jpg') no-repeat left -140px center;
+    background-size: cover;
+    padding-bottom: 200px;
+
+    &:after {
+      background: $gray-dark;
+      opacity: 0.8;
+      position: fixed;
+      z-index: 2;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      content: ' ';
+      display: block;
+      width: 100%;
+      min-height: 100%;
+    }
+  }
+
+  &__old-hint {
+    border-radius: $border-radius;
+    background-color: #f3eb8c;
+
+    p {
+      font-size: 14px;
+      color: #8e8154;
+    }
+
+    a {
+      text-decoration: underline;
+      cursor: pointer;
+      color: $brand-danger;
+    }
+  }
+  &__links {
+    list-style-type: none;
+    color: #fff;
+    margin: 0;
+    padding: $spacer-y *2 0;
+
+    &__item {
+      margin: 0 $spacer-x;
+      display: inline-block;
+      cursor: pointer;
+      border-bottom: solid 1px transparent;
+      padding-bottom: $spacer-x / 2;
+      &:hover {
+        border-bottom-color: #fff;
+      }
+    }
+  }
+
+  &__input {
+    border-width: 0;
+    color: #777d84;
+  }
+  &__login-container {
+    position: relative;
+    z-index: 3;
+  }
+
+  &__cta {
+    font-size: 16px;
+    display: block;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+    transition: width 2s, height 2s, padding 100ms;
+    padding: rem-calc(15px) 0;
+    
+    &.is-logging {
+      padding: 0;
+      border-radius: 100%;
+      width: 100px;
+      margin: 0;
+      height: 100px;
+      display: inline-block;
+      overflow: hidden;
+    }
+  }
+  &__password-group {
+    position: relative;
+
+    button {
+      cursor: pointer;
+      position: absolute;
+      background-color: transparent;
+      border: none;
+      left: 10px;
+      top: 18px;
+      font-size: 13px;
+      color: #777d84;
+    }
+  }
+  &__form {
+    &__header {
+      color: $white-color;
+    }
+    &__body {
+      padding-top: rem-calc(30px);
+    }
+  }
+  @include media-breakpoint-up(sm) {
+    &__cta {
+      display: inline-block;
+      width: auto;
+      padding-left: $spacer-x * 5;
+      padding-right: $spacer-x * 5;
+    }
+    &__input {
+      border-width: 1px;
+    }
+    &__container {
+      background-position: left center;
+    }
+      &__form {
+        background-color: #fff;
+      }
+      &__form {
+        overflow: hidden;
+        border-radius: $border-radius;
+
+        &__header {
+          padding: rem-calc(40px) rem-calc(30px);
+          color: $gray-dark;
+        }
+      }
+      &__form {
+        &__body {
+          padding: rem-calc(40px) rem-calc(30px);
+          border-top: solid #dad7e1 1px;
+          background-color: #f7f8fa;
+        }
+      }
+    }
+}

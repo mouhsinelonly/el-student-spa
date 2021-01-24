@@ -1,0 +1,25 @@
+@import 'base';
+
+.usersv2-navbar {
+  background-color: rgb(26, 41, 75);
+  color: $white-color;
+  border-radius: 0;
+
+  a {
+    cursor: pointer;
+    color: rgb(134, 146, 173);
+    &:hover {
+      color: $white-color;
+    }
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    &:disabled {
+      color: #556077;
+    }
+  }
+}

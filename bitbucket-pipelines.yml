@@ -1,0 +1,37 @@
+options:
+  docker: true
+
+pipelines:
+  default:
+    - step:
+        name: Build Docker image
+        deployment: staging
+        services:
+          - docker
+        script:
+          - export BITBUCKET_COMMIT_SHORT=$(echo $BITBUCKET_COMMIT | cut -c1-7)
+          - export IMAGE_NAME=$registryurl/$registrylogin/$DOCKER_CONTAINER:$BITBUCKET_COMMIT_SHORT
+          - docker login $registryurl --username $registrylogin --password $registrypass
+          - docker build -t $IMAGE_NAME .
+          - docker login $registryurl --username $registrylogin --password $registrypass
+          - docker push $IMAGE_NAME
+    - step:
+        name: Deploy to kuberneetes
+        trigger: automatic
+        deployment: production
+        script:
+          - export BITBUCKET_COMMIT_SHORT=$(echo $BITBUCKET_COMMIT | cut -c1-7)
+          # Download kubectl
+          - curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+          - chmod +x ./kubectl
+          - mv ./kubectl /usr/local/bin/kubectl
+          # Configure kubectl
+          - echo $KUBE_CERT_AU | base64 -d > ./kube_auth
+          - echo $KUBE_CERT_ADMIN | base64 -d > ./kube_admin
+          - echo $KUBE_CERT_KEY | base64 -d > ./kube_key
+          - export IMAGE_NAME=$registryurl/$registrylogin/$CONTAINER_NAME:$BITBUCKET_COMMIT_SHORT
+          - kubectl config set-cluster $KUBE_CLUSTER --server=$KUBE_SERVER --certificate-authority="$(pwd)/kube_auth" --embed-certs=true
+          - kubectl config set-credentials $KUBE_USER --certificate-authority="$(pwd)/kube_auth" --client-key="$(pwd)/kube_key" --client-certificate="$(pwd)/kube_admin" --embed-certs=true
+          - kubectl config set-context $KUBE_CONTEXT --cluster=$KUBE_CLUSTER --user=$KUBE_USER
+          - kubectl config use-context $KUBE_CONTEXT
+          - kubectl set image deployment/$DEPLOYMENT_NAME $DEPLOYMENT_NAME=$IMAGE_NAME

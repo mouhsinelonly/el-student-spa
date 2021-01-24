@@ -1,0 +1,20 @@
+.OvVideo {
+  &__track , &__progress {
+  	position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 6px;
+  }
+  &__track {
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    background-color: rgba(#fff, .7);
+  }
+  &__progress {
+  	max-width: 100%;
+    transition: width .5s;
+    background: #df2525;
+    z-index: 4 
+  }
+}

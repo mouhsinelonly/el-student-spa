@@ -1,0 +1,258 @@
+@import 'base';
+
+.Placeholders-RegistrationRow {
+  overflow: hidden;
+  max-height: 83px;
+  // box-shadow: 0 1px 3px rgba(0,0,0, .12), 0 1px 2px rgba(0,0,0, .24);
+  border-bottom: solid #e1e8f0 1px;
+  
+  @for $i from 1 through 4 {
+      &:nth-child(#{$i}) &__container:before  {
+        // animation-delay: ($i/1.05)+.1s;;
+      }
+    }
+
+  &__container {
+    background: #edf0f4;
+    height: 89px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    &:before {
+      animation-duration: 800ms;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+      animation-name: RegplaceHolderShimmer;
+      animation-timing-function: linear;
+      background-image: linear-gradient(to right, #edf0f4 0%, darken(#edf0f4, 5) 20%, #edf0f4 40%, #edf0f4 100%);
+      background-repeat: no-repeat;
+      background-size: 100% 89px;
+      content: ' ';
+      display: block;
+      height: 100%;
+      position: relative;
+    }
+  }
+  &.is-odd &__icon {
+    border-color: #f5f7fa;
+  }
+  &.is-odd &__white  {
+    background-color: #f5f7fa;
+  }
+  &__icon {
+    border-radius: 50%;
+    width: 35px;
+    border: 8px solid #fff;
+    height: 35px;
+    overflow: hidden;
+    background-color: transparent;
+    position: absolute;
+    top: 30px;
+    right: 25px;
+  }
+  &__white {
+    background-color: #fff;
+    position: absolute;
+    
+    &.is-fullbottom {
+      bottom: 0;
+      left: 0;
+      height: 25px;
+      right: 0;
+      width: 100%;
+    }
+    
+    &.is-fulltop {
+      top: 0;
+      left: 0;
+      height: 25px;
+      right: 0;
+      width: 100%;
+    }
+
+    &.is-moretop{
+      top: 14px;
+    left: 0;
+    height: 25px;
+    width: 150px;
+    }
+    
+    &.is-morebottom {
+      bottom: 15px;
+    left: 0;
+    height: 24px;
+    width: 130px;
+    }
+    
+    &.is-namebottom {
+      top: 36px;
+      height: 11px;
+      right: 80px;
+      width: 150px;
+    }
+    
+    &.is-datebottom {
+      top: 58px;
+      height: 11px;
+      right: 80px;
+      width: 150px;
+    }
+    
+    &.is-dateleft {
+      top: 46px;
+      height: 14px;
+      right: 144px;
+      width: 140px;
+    }
+    
+    &.is-stepleft {
+      top: 0;
+      height: 100%;
+      right: 440px;
+      width: 90px;
+    }
+    
+    &.is-countryleft {
+      top: 0;
+      height: 100%;
+      right: 580px;
+      width: 60px;
+    }
+    
+    &.is-cityleft {
+      top: 0;
+      height: 100%;
+      right: 690px;
+      width: 60px;
+    }
+    
+    &.is-whatsappleft {
+      top: 0;
+      height: 100%;
+      right: 850px;
+      width: 140px;
+    }
+
+    &.is-countrybottom {
+      top: 50px;
+      height: 100%;
+      right: 522px;
+      width: 100px;
+    }
+
+    &.is-countrytop {
+      top: 24px;
+      height: 15px;
+      right: 522px;
+      width: 100px;
+    }
+
+    &.is-citybottom {
+      top: 50px;
+      height: 100%;
+      right: 595px;
+      width: 100px;
+    }
+
+    &.is-numbertop {
+      top: 24px;
+      height: 15px;
+      right: 750px;
+      width: 100px;
+    }
+
+    &.is-numberbottom {
+      top: 50px;
+      height: 100%;
+      right: 750px;
+      width: 100px;
+    }
+
+    &.is-citytop {
+      top: 24px;
+      height: 15px;
+      right: 595px;
+      width: 100px;
+    }
+    
+    &.is-fullleft {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 30px;
+    }
+    
+    &.is-nameleft {
+      top: 0;
+      bottom: 0;
+      right: 200px;
+      height: 100%;
+      width: 91px;
+    }
+
+    &.is-icon-top {
+      top: 0;
+      width: 70px;
+      height: 36px;
+      right: 0;
+    }
+    &.is-icon-bottom {
+      bottom: 0;
+    width: 70px;
+    height: 26px;
+    right: 0;
+    }
+    &.is-icon-left {
+      top: 0;
+      width: 30px;
+      height: 100%;
+      right: 55px;
+    }
+    &.is-icon-right {
+      top: 0;
+      width: 30px;
+      height: 63px;
+      right: 0;
+    }
+
+    &.is-title-bottom {
+      height: 9px;
+      width: 100%;
+      right: 50px;
+      top: 8px;
+    }
+
+    &.is-title-left {
+      height: 10px;
+      width: 10px;
+      left: 0;
+      top: 0;
+    }
+
+    &.is-subtitle-bottom {
+      height: 25px;
+      width: 100%;
+      right: 50px;
+      top: 25px;
+    }
+    &.is-subtitle-left {
+      height: 9px;
+      width: 100px;
+      top: 16px;
+      left: 0;
+    }
+  }
+
+}
+
+@keyframes RegplaceHolderShimmer {
+    0% {
+        transform: translateX(-100%)
+    }
+
+    100% {
+        transform: translateX(100%)
+    }
+}

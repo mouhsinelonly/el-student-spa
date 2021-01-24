@@ -1,0 +1,39 @@
+@import 'base.scss';
+
+.Thesis-Chat {
+	z-index: 9999;
+	position: relative;
+	// position: absolute;
+	transform: translateX(-100%);
+	
+	&.is-visible {
+		transform: translateX(0);
+	}
+
+	@include media-breakpoint-up(sm) {
+		transform: translateX(0);
+		z-index: 0;
+	}
+
+	&__teacher-item {
+		display: flex;
+		border: 0 solid #e0e0e0;
+		border-top-width: 1px;
+		border-bottom-width: 1px;
+		background-color: #ffffff;
+
+		&-photo {
+			width: 40px;
+			height: 40px;
+			overflow: hidden;
+			border-radius: 50%;
+			flex-shrink: 0;
+		}
+
+		&-name {
+			font-size: 14px;
+			color: #50555a;
+			font-weight: 700;
+		}
+	}
+}

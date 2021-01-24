@@ -1,0 +1,24 @@
+@import 'base';
+
+.c-statements-request {
+  background-color: $white-color;
+
+  @include media-breakpoint-up(sm) {
+    border-radius: rem-calc(5px);
+  }
+
+  &__title {
+    font-size: rem-calc(20px);
+    color: #50555a;
+  }
+
+  &__date {
+    color: #777d84;
+    font-size: rem-calc(15px);
+  }
+
+  &__comment {
+    font-size: rem-calc(14px);
+    color: #777d84;
+  }
+}

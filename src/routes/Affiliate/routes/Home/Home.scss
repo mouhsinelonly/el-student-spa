@@ -1,0 +1,13 @@
+@import 'base';
+
+.Affiliate-Home {
+	background-color: #edf0f4;
+	padding-top: rem-calc(67px);
+	display: table;
+	width: 100%;
+    min-height: 100%;
+
+	&__navbar {
+		background-color: #091a1c;
+	}
+}

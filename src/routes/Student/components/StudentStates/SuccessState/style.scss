@@ -1,0 +1,49 @@
+@import 'base';
+
+.c-success-state {
+  &__footer {
+  display: block;
+  color: #899d9e;
+  font-size: 16px;
+  border-top: solid #344142 1px;
+}
+
+&__grades {
+  position: relative;
+
+  &__item {
+    &:after {
+      content: ' ';
+      position: absolute;
+      top: 12%;
+      height: 50%;
+      left: 0;
+      width: 1px;
+      background-color: #344142;
+    }
+
+    &:last-child {
+      &:after {
+        display: none;
+        visibility: hidden;
+      }
+    }
+
+    &.is-middle {
+      &:after {
+        height: 100%;
+      }
+    }
+  }
+}
+
+&__more-details {
+  position: relative;
+  z-index: 2;
+  background-color: #344142;
+
+  &:hover {
+    background-color: lighten(#344142, 10);
+  }
+}
+}

@@ -1,0 +1,77 @@
+@import 'base';
+
+.c-input-dropdown {
+  display: inline-block;
+  vertical-align: middle;
+  min-width: rem-calc(250px);
+  position: relative;
+  cursor: pointer;
+
+  &__selected {
+    border-radius: rem-calc(25px);
+    padding: rem-calc(10px) rem-calc(20px);
+    border: solid #dad7e1 1px;
+    color: #777d84;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &.is-selected {
+      color: $white-color;
+      background-color: $brand-success;
+      border-color: $brand-success;
+    }
+  }
+
+  &.is-open {
+    height: rem-calc(45px);
+  }
+
+  &__icon {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+  }
+
+  &__items {
+    z-index: 1;
+    display: none;
+    // transform: scale(.8);
+    // transition: transform 300ms, opacity 200ms;
+    // opacity: 0;
+    box-shadow: 0 0 20px rgba(0,0,0,.19), 0 0 6px rgba(0,0,0,.23);
+    position: absolute;
+    background-color: $white-color;
+    width: 100%;
+    // border: solid $gray-light 1px;
+    // border-top-width: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    top: rem-calc(-120px);
+    height: rem-calc(300px);
+    overflow: scroll;
+
+    &.is-open {
+      display: block;
+    //   transition: transform 0, opacity 0;
+    //   transform: scale(1);
+    //   opacity: 1;
+    }
+  }
+
+  &__item {
+
+    padding: rem-calc(10px);
+
+    &.is-selected {
+      background-color: $brand-success;
+      cursor: default;
+      color: $white-color;
+    }
+
+    &:hover:not(.is-selected) {
+      background: $gray-lighter;
+    }
+  }
+}

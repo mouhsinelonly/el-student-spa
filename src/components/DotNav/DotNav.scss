@@ -1,0 +1,30 @@
+@import "base.scss";
+
+.c-dotnav {
+	margin: 30px 0;
+
+	&__item {
+		cursor:pointer;
+		display: inline-block;
+		width:26px;
+		height: 9px;
+		border:none;
+		background-color: $gray-light;
+		margin:0 5px;
+
+		&.is-white {
+			background-color: #fff;
+		}
+
+		&.is-active {
+			background-color: $brand-success;
+		}
+
+		&.is-circular {
+			width: 10px;
+			height: 10px;
+			padding: 0;
+			border-radius: 100%;
+		}
+	}
+}

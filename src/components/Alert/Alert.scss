@@ -1,0 +1,13 @@
+@import 'base';
+
+.c-Alert {
+  border-radius: 4px;
+  font-family: $neo;
+  font-size: 16px;
+  padding: rem-calc(10px);
+  text-align: center;
+  &.is-info {
+    color: #009ee0;
+    background-color: #e0f6ff;
+  }
+}

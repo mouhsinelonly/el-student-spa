@@ -1,0 +1,93 @@
+@import 'base';
+
+.v2-ticket-form {
+  position: absolute;
+  bottom: rem-calc(20px);
+  right: 3%;
+  width: 94%;
+  textarea {
+    border: 0;
+    border-radius: rem-calc(3px);
+    border: solid $v2-border-color 1px;
+    min-height: rem-calc(160px);
+    resize: none;
+  }
+  &__video-thumb {
+    border-radius: 5px 5px 0 0;
+  }
+  &__actions {
+    height: rem-calc(40px);
+    position: absolute;
+    bottom: rem-calc(10px);
+    right: 0;
+    font-size: rem-calc(30px);
+    margin: 0 rem-calc(20px);
+  }
+
+  &__action {
+    border: none;
+    color: #979fb4;
+    background-color: #fff;
+    line-height: 1;
+    width: 30px;
+    height: 40px;
+    padding: 0;
+    &:hover, &.is-active {
+      color: #3d4d71;
+    }
+    &.is-rotate {
+      .material-icons {
+        transform: rotate(45deg);
+      }
+    }
+
+    &.is-small {
+      transform: scale(.5);
+      transform-origin: center center;
+      opacity: 0;
+      visibility: hidden;
+      transition: transform 500ms, opacity 300ms;
+    }
+
+    &.is-normal {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+    }
+  }
+
+  &__template {
+    display: block;
+    line-height: 1.5;
+    background-color: #fff;
+    color: #586575;
+    width: 100%;
+    border-width: 0;
+    border-radius: 0;
+    padding: rem-calc(10px);
+    height: rem-calc(50px);
+    appearance: none;
+    outline: none;
+    -webkit-appearance: none;
+    cursor:pointer;
+  }
+
+  &__send {
+    padding: rem-calc(10px) rem-calc(24px) rem-calc(4px) rem-calc(18px);
+    line-height: 1;
+    font-size: rem-calc(32px);
+    position: absolute;
+    z-index: 3;
+    bottom: rem-calc(10px);
+    left: rem-calc(10px);
+    border-radius: 5px;
+    background-color: #009ee1;
+    border-width: 0;
+    color: #fff;
+
+    .material-icons {
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+    }
+  }
+}

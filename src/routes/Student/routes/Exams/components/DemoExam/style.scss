@@ -1,0 +1,31 @@
+@import 'base';
+
+.c-demo-exam-row {
+  -webkit-perspective: 1000;
+  transform-origin: center;
+
+  &__panel {
+    background-color: #fff;
+    overflow: hidden;
+    margin-bottom: $spacer-y;
+    transition: transform  .3s cubic-bezier(.25, .8, .25, 1);
+    backface-visibility: hidden;
+    &:hover {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0,0,0, .23);
+      transform: translate3d(0, 0, 20px);
+    }
+  }
+
+  &__label {
+    vertical-align: middle;
+    display: inline-block;
+    padding: rem-calc(5px) rem-calc(15px);
+    background-color: #f0c224;
+    border-radius: rem-calc(20px);
+    font-size: rem-calc(12px);
+  }
+
+  .ladda-spinner > div {
+    top: rem-calc(20px) !important;
+  }
+}

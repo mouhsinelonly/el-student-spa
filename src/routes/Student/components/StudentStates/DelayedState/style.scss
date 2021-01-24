@@ -1,0 +1,18 @@
+@import 'base';
+
+.c-delayed-state {
+  .container {
+
+  }
+
+  &__title {
+    font-size: 24px;
+  }
+
+  &__footer {
+    display: block;
+    color: #899d9e;
+    font-size: 16px;
+    border-top: solid #344142 1px;
+  }
+}

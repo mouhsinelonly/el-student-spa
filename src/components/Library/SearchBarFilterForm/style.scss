@@ -1,0 +1,73 @@
+@import 'base';
+
+.c-library-searchbarfilter {
+  color: lighten($library-primary, 10);
+
+  &__text {
+    color: #a89e96;
+  }
+  &__radiolabel {
+    background-color: $white-color;
+    color: $library-primary;
+    margin: 0 10px 0 0;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 400ms, border-color 400ms, color 400ms;
+    padding: 7px 10px;
+    font-size: 14px;
+    border-radius: 30px;
+    border: solid $library-border-color 1px;
+
+    &.is-first {
+      margin-right: 0;
+    }
+
+    &.is-checked {
+      border: solid $library-primary 1px;
+      background-color: $library-primary;
+      color: $white-color;
+    }
+  }
+
+
+  &__radio {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__select {
+    font-family: $font-family-sans-serif;
+    height: 38px;
+    font-size: 14px;
+    display: block;
+    margin-left: 0;
+    width: 100%;
+    color: $library-primary;
+    border: solid $library-border-color 1px;
+    
+    appearance: none;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzU0NTQ1NCI+PHBhdGggZD0iTTcgMTBsNSA1IDUtNXoiPjwvcGF0aD48L3N2Zz4=);
+    background-position: left 50%;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    border-radius: 5px;
+    padding: 0 2px 0 24px;
+    text-overflow: ellipsis;
+    white-space: pre-wrap;
+    
+    @include media-breakpoint-down (sm) {
+      margin: 20px 0;
+    }
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+}

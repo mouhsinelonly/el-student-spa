@@ -1,0 +1,54 @@
+@import 'base';
+
+.p-student-orders {
+&__container {
+  padding-bottom: $spacer-y * 4;
+}
+
+&__heading {
+  color: $gray-dark;
+  font-size: 32px;
+  font-weight: 700;
+  padding: $spacer-y * 4 0;
+}
+
+&__orders {
+  list-style-type: none;
+
+  &__item {
+    border-radius: $border-radius;
+    background-color: $white-color;
+  }
+
+  &__item-date {
+    font-size: 14px;
+    color: $gray;
+  }
+  &__item-icon {
+    position: absolute;
+    right: $spacer-x;
+    top: 12px;
+  }
+
+  &__item-button {
+    position: relative;
+
+    &.is-info {
+      background-color: #e0f6ff;
+      color: #009ee0;
+    }
+    &.is-success {
+      background-color: #c7ffc7;
+      color: #00c674;
+    }
+    &.is-warning {
+      background-color: #ef8508;
+      color: #fff;
+    }
+    &.is-danger {
+      background-color: #fff5c7;
+      color: #ef8508;
+    }
+  }
+}
+}

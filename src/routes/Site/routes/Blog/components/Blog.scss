@@ -1,0 +1,45 @@
+@import "base";
+
+.blog-page {
+&__container {
+	padding-bottom: 130px;
+	@include clearfix;
+}
+
+&__header {
+	padding: 50px 0;
+}
+
+&__heading {
+	font-weight: 700;
+	font-size: 50px;
+	padding-top: 50px;
+
+}
+
+&__posts-container {
+	min-height: 400px;
+}
+
+&__post-item {
+	margin-bottom: 30px;
+}
+
+// search input
+&__search-input {
+	padding-top:12px;
+	padding-bottom: 12px;
+	background-color: #fff;
+	border-color:$gray-light;
+	border-width: 2px;
+	border-left-width: 0;
+}
+
+&__search-button {
+	padding-top:11px;
+	padding-bottom: 7px;
+	font-size: 20px;
+	font-weight: 700;
+	border-width: 2px;
+}
+}
